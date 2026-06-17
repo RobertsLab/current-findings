@@ -319,14 +319,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Current Findings are short, open scientific documents from Roberts Lab and collaborators. They may include preliminary analyses, technical notes, field reports, exploratory datasets, teaching-adjacent analyses, negative results, and small manuscripts that are useful to share but not necessarily suited for formal peer-reviewed publication.\nReports are not peer reviewed unless explicitly stated. They should be interpreted as working scientific communications. We welcome corrections, comments, reuse, and collaboration.\n\n\nReports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis\n\n\n\n\nThese reports are intended to support open science, transparency, early sharing, student training, and reuse of small scientific efforts that might otherwise remain hidden.\n\n\n\nBy default, reports on this site are not peer reviewed. Authors may revise reports over time. Readers should check the report date, version history, and data/code availability sections before reusing or citing a report.\n\n\n\nCorrections, comments, and suggestions are welcome through GitHub issues or direct correspondence with the report authors."
+    "text": "Current Findings are short, open scientific documents from Roberts Lab and collaborators. They may include preliminary analyses, technical notes, field reports, exploratory datasets, teaching-adjacent analyses, negative results, and small manuscripts that are useful to share but not necessarily suited for formal peer-reviewed publication.\nReports are not peer reviewed unless explicitly stated. They should be interpreted as working scientific communications. We welcome corrections, comments, reuse, and collaboration.\n\n\nReports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis\nThesis chapter\n\n\n\n\nThese reports are intended to support open science, transparency, early sharing, student training, and reuse of small scientific efforts that might otherwise remain hidden.\n\n\n\nBy default, reports on this site are not peer reviewed. Authors may revise reports over time. Readers should check the report date, version history, and data/code availability sections before reusing or citing a report.\n\n\n\nCorrections, comments, and suggestions are welcome through GitHub issues or direct correspondence with the report authors."
   },
   {
     "objectID": "about.html#report-types",
     "href": "about.html#report-types",
     "title": "About",
     "section": "",
-    "text": "Reports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis"
+    "text": "Reports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis\nThesis chapter"
   },
   {
     "objectID": "about.html#suggested-use",
@@ -354,7 +354,7 @@
     "href": "reports.html",
     "title": "Reports",
     "section": "",
-    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nImmune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease\n\n\nComparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease.\n\n\n\n\n\nJun 17, 2026\n\n\nHannah Nowers\n\n\n\n\n\n\n\nDNA methylation in Mytilus chilensis\n\n\nGenome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.\n\n\n\n\n\nAug 12, 2025\n\n\nCristian Gallardo, Valentina Venezuala, Steven Roberts\n\n\n\n\n\n\n\nComparative Genomic Analysis of Geoduck Clam (Panopea generosa)\n\n\nAnnotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.\n\n\n\n\n\nDec 31, 2022\n\n\nOlivia Cattau, Steven B. Roberts\n\n\n\n\n\n\n\nCharacterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)\n\n\nFine-scale histological staging of 70 geoduck gonad samples from November 2014 to January 2015 documents reproductive maturation and its variation over time.\n\n\n\n\n\nMar 1, 2016\n\n\nGrace Crandall, Steven Roberts\n\n\n\n\n\n\n\nEffect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress\n\n\nJuvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\n\n\nImpact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis\n\n\nRNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\nNo matching items"
+    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nImmune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease\n\n\nComparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease.\n\n\n\n\n\nJun 17, 2026\n\n\nHannah Nowers\n\n\n\n\n\n\n\nDNA methylation in Mytilus chilensis\n\n\nGenome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.\n\n\n\n\n\nAug 12, 2025\n\n\nCristian Gallardo, Valentina Venezuala, Steven Roberts\n\n\n\n\n\n\n\nPolyIC Immune Priming Protocols for Oysters\n\n\nSummary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.\n\n\n\n\n\nJun 27, 2024\n\n\nAriana S. Huffmyer, Steven Roberts\n\n\n\n\n\n\n\nComparative Genomic Analysis of Geoduck Clam (Panopea generosa)\n\n\nAnnotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.\n\n\n\n\n\nDec 31, 2022\n\n\nOlivia Cattau, Steven B. Roberts\n\n\n\n\n\n\n\nCharacterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)\n\n\nFine-scale histological staging of 70 geoduck gonad samples from November 2014 to January 2015 documents reproductive maturation and its variation over time.\n\n\n\n\n\nMar 1, 2016\n\n\nGrace Crandall, Steven Roberts\n\n\n\n\n\n\n\nEffect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress\n\n\nJuvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\n\n\nImpact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis\n\n\nRNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "reports/example-report/index.html",
@@ -544,5 +544,54 @@
     "title": "Impact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis",
     "section": "7 Version history",
     "text": "7 Version history\n\n\n\n\n\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nMigrated from Metzger_washington_0250O_10509.pdf (Chapter I)"
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html",
+    "href": "reports/polyic-immune-priming-protocols/index.html",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "",
+    "text": "Status\n\n\n\nThis report is a Methods Note. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#overview",
+    "href": "reports/polyic-immune-priming-protocols/index.html#overview",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "1 Overview",
+    "text": "1 Overview\nPoly(I:C) is a non-infectious elicitor and viral mimic in the form of synthetic double-stranded RNA (dsRNA). Poly(I:C) is a synthetic, double-stranded RNA molecule (polyribonucleotide) that has been widely used to induce a type I interferon (IFN) response in many species.\nIn oysters, it has been shown to produce a protective immune response (Lafont et al. 2023; Green and Montagnani 2013; Martins et al. 2020; Lorgeril et al. 2018)."
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#previous-protocols-in-the-roberts-lab",
+    "href": "reports/polyic-immune-priming-protocols/index.html#previous-protocols-in-the-roberts-lab",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "2 Previous Protocols in the Roberts Lab",
+    "text": "2 Previous Protocols in the Roberts Lab\nMatt George conducted previous work with PolyIC using injection methods in the lab. He ran tests comparing water bath vs. injection protocols, documented in his notebook (Parts 1, 2, and 3). In his tests, Matt used the following approach:\n\n“10 diploid and 10 triploid oysters (naive) were added to an emersion bath containing 500 mL of seawater containing 10 µg/mL Poly(I:C), with a bubbler. Lafont et al. 2017 found that emersion at 38 µg/mL worked for 24 hrs, so we will see.”\n\nMatt did not have follow-up documented in his notebook; Ariana Huffmyer will reach out to determine the results."
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#water-bathemersion-protocols-in-the-literature",
+    "href": "reports/polyic-immune-priming-protocols/index.html#water-bathemersion-protocols-in-the-literature",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "3 Water Bath/Emersion Protocols in the Literature",
+    "text": "3 Water Bath/Emersion Protocols in the Literature\nOne study has used emersion protocols for PolyIC exposure in oysters. (Lafont et al. 2023) found that emersion in PolyIC provided equal protection to injection methods, which are more commonly used. Injection protocols require anesthesia followed by direct injection into oyster tissues. If a water bath with PolyIC works equally well, it represents a much simpler and less invasive protocol.\nIn one of their experiments, (Lafont et al. 2023) exposed 20 oysters to either 0.76 µg/mL or 0.38 µg/mL PolyIC in 100 mL of seawater for 2.5 hours. Oysters then recovered in seawater for 24 hours before being challenged with pathogens (OsHV-1 or heat-killed Vibrio) to test immune response over 8 days.\nResults showed that survival was higher with PolyIC regardless of dose (~90% survival) compared to unprimed controls (~50% survival). This was comparable to survival observed with a high dose of injected PolyIC (~85% survival)."
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#suggested-protocol-for-point-whitney",
+    "href": "reports/polyic-immune-priming-protocols/index.html#suggested-protocol-for-point-whitney",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "4 Suggested Protocol for Point Whitney",
+    "text": "4 Suggested Protocol for Point Whitney\nBased on Matt George’s preliminary tests and the (Lafont et al. 2023) study, the following emersion parameters are proposed for oysters at Point Whitney:\n\nConcentration: 0.38 µg/mL Poly(I:C) in seawater\nDuration: 2.5 hour emersion\n\nManufacturer’s instructions for mixing Poly(I:C) solutions should be reviewed before implementation, as this reagent has not been used previously in this lab context."
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#suggested-citation",
+    "href": "reports/polyic-immune-priming-protocols/index.html#suggested-citation",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "5 Suggested citation",
+    "text": "5 Suggested citation\nHuffmyer, A. S., and S. B. Roberts. 2024. PolyIC Immune Priming Protocols for Oysters. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/polyic-immune-priming-protocols/"
+  },
+  {
+    "objectID": "reports/polyic-immune-priming-protocols/index.html#version-history",
+    "href": "reports/polyic-immune-priming-protocols/index.html#version-history",
+    "title": "PolyIC Immune Priming Protocols for Oysters",
+    "section": "6 Version history",
+    "text": "6 Version history\n\n\n\n\n\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nMigrated from “PolyIC Immune Priming Protocols – Ariana S Huffmyer – Research Scientist, University of Washington.pdf”"
   }
 ]

@@ -20,6 +20,7 @@ Reports may be labeled as:
 - Negative result
 - Student research note
 - Exploratory analysis
+- Thesis chapter
 
 ## Suggested use
 

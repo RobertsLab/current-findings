@@ -9,7 +9,7 @@ date-modified: "2026-06-17"
 description: "Comparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease."
 categories: [genomics, immunity, disease, echinoderms, functional-annotation, sea-star-wasting-disease]
 status: "Not peer reviewed"
-report_type: "Working manuscript"
+report_type: "Capstone Thesis"
 lab: "Roberts Lab"
 project: "SAFS Capstone Research"
 species:

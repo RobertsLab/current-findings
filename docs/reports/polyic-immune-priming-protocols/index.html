@@ -6,8 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ariana S. Huffmyer">
+<meta name="author" content="Steven Roberts">
+<meta name="dcterms.date" content="2024-06-27">
+<meta name="description" content="Summary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.">
 
-<title>Reports – Current Findings</title>
+<title>PolyIC Immune Priming Protocols for Oysters – Current Findings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +24,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./assets/logo.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,65 +92,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -139,10 +103,10 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Current Findings</span>
     </a>
   </div>
@@ -153,15 +117,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./reports.html" aria-current="page"> 
+    <a class="nav-link" href="../../reports.html"> 
 <span class="menu-text">Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -183,22 +147,79 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="YXF1YWN1bHR1cmU=">aquaculture <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Yml2YWx2ZXM=">bivalves <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29tcGFyYXRpdmUtZ2Vub21pY3M=">comparative-genomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlzZWFzZQ==">disease <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RE5BJTIwbWV0aHlsYXRpb24=">DNA methylation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWNoaW5vZGVybXM=">echinoderms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXBpZ2VuZXRpY3M=">epigenetics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXhhbXBsZQ==">example <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZnVuY3Rpb25hbC1hbm5vdGF0aW9u">functional-annotation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZS1leHByZXNzaW9u">gene-expression <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2Vub21pY3M=">genomics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Z2VvZHVjaw==">geoduck <span class="quarto-category-count">(2)</span></div><div class="category" data-category="aGlzdG9sb2d5">histology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1tdW5lLXByaW1pbmc=">immune-priming <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1tdW5pdHk=">immunity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1tdW5vbG9neQ==">immunology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bGFydmFl">larvae <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFuaWxhLWNsYW0=">manila-clam <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWV0aG9kcw==">methods <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bXVzc2Vscw==">mussels <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b2NlYW4tYWNpZGlmaWNhdGlvbg==">ocean-acidification <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3Blbi1zY2llbmNl">open-science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3lzdGVycw==">oysters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cXBjcg==">qpcr <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVwcm9kdWN0aW9u">reproduction <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cm5hLXNlcQ==">rna-seq <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VhLXN0YXItd2FzdGluZy1kaXNlYXNl">sea-star-wasting-disease <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2hlbGxmaXNo">shellfish <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGhlcm1hbC1zdHJlc3M=">thermal-stress <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dHJhbnNjcmlwdG9taWNz">transcriptomics <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a></li>
+  <li><a href="#previous-protocols-in-the-roberts-lab" id="toc-previous-protocols-in-the-roberts-lab" class="nav-link" data-scroll-target="#previous-protocols-in-the-roberts-lab"><span class="header-section-number">2</span> Previous Protocols in the Roberts Lab</a></li>
+  <li><a href="#water-bathemersion-protocols-in-the-literature" id="toc-water-bathemersion-protocols-in-the-literature" class="nav-link" data-scroll-target="#water-bathemersion-protocols-in-the-literature"><span class="header-section-number">3</span> Water Bath/Emersion Protocols in the Literature</a></li>
+  <li><a href="#suggested-protocol-for-point-whitney" id="toc-suggested-protocol-for-point-whitney" class="nav-link" data-scroll-target="#suggested-protocol-for-point-whitney"><span class="header-section-number">4</span> Suggested Protocol for Point Whitney</a></li>
+  <li><a href="#suggested-citation" id="toc-suggested-citation" class="nav-link" data-scroll-target="#suggested-citation"><span class="header-section-number">5</span> Suggested citation</a></li>
+  <li><a href="#version-history" id="toc-version-history" class="nav-link" data-scroll-target="#version-history"><span class="header-section-number">6</span> Version history</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reports</h1>
+<h1 class="title">PolyIC Immune Priming Protocols for Oysters</h1>
+<p class="subtitle lead">A short non-peer-reviewed scientific report</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">methods</div>
+    <div class="quarto-category">aquaculture</div>
+    <div class="quarto-category">oysters</div>
+    <div class="quarto-category">immunology</div>
+    <div class="quarto-category">immune-priming</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Summary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.
+  </div>
 </div>
 
-
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ariana S. Huffmyer </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Washington
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Steven Roberts </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Washington
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 27, 2024</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 17, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -207,177 +228,94 @@ window.Quarto = {
 </header>
 
 
-<p>Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.</p>
-<p>Unless explicitly stated, reports are not peer reviewed.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Status
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This report is a Methods Note. It has not been peer reviewed.</p>
+<p>It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.</p>
+</div>
+</div>
+<section id="overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="overview"><span class="header-section-number">1</span> Overview</h2>
+<p>Poly(I:C) is a non-infectious elicitor and viral mimic in the form of synthetic double-stranded RNA (dsRNA). Poly(I:C) is a synthetic, double-stranded RNA molecule (polyribonucleotide) that has been widely used to induce a type I interferon (IFN) response in many species.</p>
+<p>In oysters, it has been shown to produce a protective immune response <span class="citation" data-cites="lafont2023 green2013 martins2020 lorgeril2018">(<a href="#ref-lafont2023" role="doc-biblioref">Lafont et al. 2023</a>; <a href="#ref-green2013" role="doc-biblioref">Green and Montagnani 2013</a>; <a href="#ref-martins2020" role="doc-biblioref">Martins et al. 2020</a>; <a href="#ref-lorgeril2018" role="doc-biblioref">Lorgeril et al. 2018</a>)</span>.</p>
+</section>
+<section id="previous-protocols-in-the-roberts-lab" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="previous-protocols-in-the-roberts-lab"><span class="header-section-number">2</span> Previous Protocols in the Roberts Lab</h2>
+<p>Matt George conducted previous work with PolyIC using injection methods in the lab. He ran tests comparing water bath vs.&nbsp;injection protocols, documented in his notebook (Parts 1, 2, and 3). In his tests, Matt used the following approach:</p>
+<blockquote class="blockquote">
+<p>“10 diploid and 10 triploid oysters (naive) were added to an emersion bath containing 500 mL of seawater containing 10 µg/mL Poly(I:C), with a bubbler. Lafont et al.&nbsp;2017 found that emersion at 38 µg/mL worked for 24 hrs, so we will see.”</p>
+</blockquote>
+<p>Matt did not have follow-up documented in his notebook; Ariana Huffmyer will reach out to determine the results.</p>
+</section>
+<section id="water-bathemersion-protocols-in-the-literature" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="water-bathemersion-protocols-in-the-literature"><span class="header-section-number">3</span> Water Bath/Emersion Protocols in the Literature</h2>
+<p>One study has used emersion protocols for PolyIC exposure in oysters. <span class="citation" data-cites="lafont2023">(<a href="#ref-lafont2023" role="doc-biblioref">Lafont et al. 2023</a>)</span> found that emersion in PolyIC provided equal protection to injection methods, which are more commonly used. Injection protocols require anesthesia followed by direct injection into oyster tissues. If a water bath with PolyIC works equally well, it represents a much simpler and less invasive protocol.</p>
+<p>In one of their experiments, <span class="citation" data-cites="lafont2023">(<a href="#ref-lafont2023" role="doc-biblioref">Lafont et al. 2023</a>)</span> exposed 20 oysters to either 0.76 µg/mL or 0.38 µg/mL PolyIC in 100 mL of seawater for 2.5 hours. Oysters then recovered in seawater for 24 hours before being challenged with pathogens (OsHV-1 or heat-killed <em>Vibrio</em>) to test immune response over 8 days.</p>
+<p>Results showed that survival was higher with PolyIC regardless of dose (~90% survival) compared to unprimed controls (~50% survival). This was comparable to survival observed with a high dose of injected PolyIC (~85% survival).</p>
+</section>
+<section id="suggested-protocol-for-point-whitney" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="suggested-protocol-for-point-whitney"><span class="header-section-number">4</span> Suggested Protocol for Point Whitney</h2>
+<p>Based on Matt George’s preliminary tests and the <span class="citation" data-cites="lafont2023">(<a href="#ref-lafont2023" role="doc-biblioref">Lafont et al. 2023</a>)</span> study, the following emersion parameters are proposed for oysters at Point Whitney:</p>
+<ul>
+<li><strong>Concentration:</strong> 0.38 µg/mL Poly(I:C) in seawater</li>
+<li><strong>Duration:</strong> 2.5 hour emersion</li>
+</ul>
+<p>Manufacturer’s instructions for mixing Poly(I:C) solutions should be reviewed before implementation, as this reagent has not been used previously in this lab context.</p>
+</section>
+<section id="suggested-citation" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="suggested-citation"><span class="header-section-number">5</span> Suggested citation</h2>
+<p>Huffmyer, A. S., and S. B. Roberts. 2024. <em>PolyIC Immune Priming Protocols for Oysters</em>. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/polyic-immune-priming-protocols/</p>
+</section>
+<section id="version-history" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="version-history"><span class="header-section-number">6</span> Version history</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Date</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.1</td>
+<td>2026-06-17</td>
+<td>Migrated from “PolyIC Immune Priming Protocols – Ariana S Huffmyer – Research Scientist, University of Washington.pdf”</td>
+</tr>
+</tbody>
+</table>
 
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZXhhbXBsZSUyQ21ldGhvZHMlMkNvcGVuLXNjaWVuY2U=" data-listing-date-sort="1781679600000" data-listing-file-modified-sort="1781711539116" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/example-report/index.html" class="no-external">Example Current Findings Report</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/example-report/index.html" class="no-external">
-<p>Example report showing the standard structure for Current Findings.</p>
-</a></div>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-green2013" class="csl-entry" role="listitem">
+Green, Timothy J., and Caroline Montagnani. 2013. <span>“Poly <span>I:C</span> but Not <span>LPS</span> Induces a Protective Antiviral Immune Response in the Pacific Oyster (<em>Crassostrea Gigas</em>).”</span> <em>Fish and Shellfish Immunology</em> 35 (2): 501–5. <a href="https://doi.org/10.1016/j.fsi.2013.04.051">https://doi.org/10.1016/j.fsi.2013.04.051</a>.
 </div>
-<div class="metadata">
-<a href="./reports/example-report/index.html" class="no-external">
-<div class="listing-date">
-Jun 17, 2026
+<div id="ref-lafont2023" class="csl-entry" role="listitem">
+Lafont, Maxime, Agnès Vergnes, Jeremie Vidal-Dupiol, Julien de Lorgeril, Yannick Gueguen, Philippe Haffner, Bruno Petton, et al. 2023. <span>“Poly <span>I:C</span> Exposure Triggers an Antiviral Immune Priming in Oysters That Is Maintained over Several Weeks.”</span> <em>Frontiers in Immunology</em> 14: 1134786. <a href="https://doi.org/10.3389/fimmu.2023.1134786">https://doi.org/10.3389/fimmu.2023.1134786</a>.
 </div>
-<div class="listing-author">
-Steven Roberts
+<div id="ref-lorgeril2018" class="csl-entry" role="listitem">
+Lorgeril, Julien de, Agnès Lucasson, Bruno Petton, Eve Toulza, Salma Mouahid, Camille Clerissi, Jeremie Vidal-Dupiol, et al. 2018. <span>“Immune-Suppression by <span>OsHV-1</span> Viral Infection Causes Fatal Bacteraemia in <span>P</span>acific Oysters.”</span> <em>Nature Communications</em> 9: 4215. <a href="https://doi.org/10.1038/s41467-018-06659-3">https://doi.org/10.1038/s41467-018-06659-3</a>.
 </div>
-</a>
+<div id="ref-martins2020" class="csl-entry" role="listitem">
+Martins, Paulo C., Marcela A. Ramos, Mônica P. de Sá Rodrigues, Eric A. Barlaan, Patrícia A. Barroso, Diogo Galhardo, Itzel P. Pereira da Fonseca, Julien de Lorgeril, and Jean-Michel Escoubas. 2020. <span>“Immune Priming with Poly <span>I:C</span> Increases Antiviral Resistance and Induces Transcriptomic Reprogramming in <span>C</span>rassostrea Gigas Hemocytes.”</span> <em>Fish and Shellfish Immunology</em> 105: 346–55. <a href="https://doi.org/10.1016/j.fsi.2020.07.044">https://doi.org/10.1016/j.fsi.2020.07.044</a>.
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Z2Vub21pY3MlMkNpbW11bml0eSUyQ2Rpc2Vhc2UlMkNlY2hpbm9kZXJtcyUyQ2Z1bmN0aW9uYWwtYW5ub3RhdGlvbiUyQ3NlYS1zdGFyLXdhc3RpbmctZGlzZWFzZQ==" data-listing-date-sort="1781679600000" data-listing-file-modified-sort="1781720276769" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2805">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/sswd-immune-gene-abundance/index.html" class="no-external">Immune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/sswd-immune-gene-abundance/index.html" class="no-external">
-<p>Comparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/sswd-immune-gene-abundance/index.html" class="no-external">
-<div class="listing-date">
-Jun 17, 2026
-</div>
-<div class="listing-author">
-Hannah Nowers
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bXVzc2VscyUyQ2dlbm9taWNzJTJDZXBpZ2VuZXRpY3MlMkNhcXVhY3VsdHVyZSUyQ0ROQSUyMG1ldGh5bGF0aW9u" data-listing-date-sort="1754982000000" data-listing-file-modified-sort="1781712857709" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3378">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/chilean-mussel/index.html" class="no-external">DNA methylation in Mytilus chilensis</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/chilean-mussel/index.html" class="no-external">
-<p>Genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/chilean-mussel/index.html" class="no-external">
-<div class="listing-date">
-Aug 12, 2025
-</div>
-<div class="listing-author">
-Cristian Gallardo, Valentina Venezuala, Steven Roberts
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bWV0aG9kcyUyQ2FxdWFjdWx0dXJlJTJDb3lzdGVycyUyQ2ltbXVub2xvZ3klMkNpbW11bmUtcHJpbWluZw==" data-listing-date-sort="1719471600000" data-listing-file-modified-sort="1781720818286" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/polyic-immune-priming-protocols/index.html" class="no-external">PolyIC Immune Priming Protocols for Oysters</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/polyic-immune-priming-protocols/index.html" class="no-external">
-<p>Summary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/polyic-immune-priming-protocols/index.html" class="no-external">
-<div class="listing-date">
-Jun 27, 2024
-</div>
-<div class="listing-author">
-Ariana S. Huffmyer, Steven Roberts
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Z2Vub21pY3MlMkN0cmFuc2NyaXB0b21pY3MlMkNjb21wYXJhdGl2ZS1nZW5vbWljcyUyQ3JlcHJvZHVjdGlvbiUyQ2dlb2R1Y2slMkNhcXVhY3VsdHVyZQ==" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781713874415" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="25" data-listing-word-count-sort="4941">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/geoduck-comparative-genomics/index.html" class="no-external">Comparative Genomic Analysis of Geoduck Clam (Panopea generosa)</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/geoduck-comparative-genomics/index.html" class="no-external">
-<p>Annotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/geoduck-comparative-genomics/index.html" class="no-external">
-<div class="listing-date">
-Dec 31, 2022
-</div>
-<div class="listing-author">
-Olivia Cattau, Steven B. Roberts
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="cmVwcm9kdWN0aW9uJTJDaGlzdG9sb2d5JTJDYXF1YWN1bHR1cmUlMkNnZW9kdWNrJTJDc2hlbGxmaXNo" data-listing-date-sort="1456819200000" data-listing-file-modified-sort="1781715030018" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2960">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/geoduck-reproductive-maturation/index.html" class="no-external">Characterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/geoduck-reproductive-maturation/index.html" class="no-external">
-<p>Fine-scale histological staging of 70 geoduck gonad samples from November 2014 to January 2015 documents reproductive maturation and its variation over time.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/geoduck-reproductive-maturation/index.html" class="no-external">
-<div class="listing-date">
-Mar 1, 2016
-</div>
-<div class="listing-author">
-Grace Crandall, Steven Roberts
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RoZXJtYWwtc3RyZXNzJTJDZ2VuZS1leHByZXNzaW9uJTJDcXBjciUyQ2JpdmFsdmVzJTJDbWFuaWxhLWNsYW0=" data-listing-date-sort="1325404800000" data-listing-file-modified-sort="1781715362923" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3755">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/manila-clam-juvenile-pco2-thermal-stress/index.html" class="no-external">Effect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/manila-clam-juvenile-pco2-thermal-stress/index.html" class="no-external">
-<p>Juvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/manila-clam-juvenile-pco2-thermal-stress/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2012
-</div>
-<div class="listing-author">
-David C. Metzger, Steven Roberts
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RyYW5zY3JpcHRvbWljcyUyQ3JuYS1zZXElMkNiaXZhbHZlcyUyQ2xhcnZhZSUyQ21hbmlsYS1jbGFt" data-listing-date-sort="1325404800000" data-listing-file-modified-sort="1781720241400" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2852">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./reports/manila-clam-larvae-pco2-rnaseq/index.html" class="no-external">Impact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis</a>
-</h3>
-<div class="delink listing-description"><a href="./reports/manila-clam-larvae-pco2-rnaseq/index.html" class="no-external">
-<p>RNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./reports/manila-clam-larvae-pco2-rnaseq/index.html" class="no-external">
-<div class="listing-date">
-Jan 1, 2012
-</div>
-<div class="listing-author">
-David C. Metzger, Steven Roberts
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

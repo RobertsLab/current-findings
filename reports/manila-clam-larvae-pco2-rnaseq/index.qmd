@@ -11,7 +11,7 @@ date-modified: "2026-06-17"
 description: "RNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated."
 categories: [ocean-acidification, transcriptomics, rna-seq, bivalves, larvae, manila-clam]
 status: "Not peer reviewed"
-report_type: "Working manuscript"
+report_type: "Thesis chapter"
 lab: "Roberts Lab"
 project: "Manila clam ocean acidification"
 species:

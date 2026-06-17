@@ -1,0 +1,114 @@
+---
+title: "PolyIC Immune Priming Protocols for Oysters"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: Ariana S. Huffmyer
+    affiliation: University of Washington
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2024-06-27"
+date-modified: "2026-06-17"
+description: "Summary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures."
+categories: [methods, aquaculture, oysters, immunology, immune-priming]
+status: "Not peer reviewed"
+report_type: "Methods Note"
+lab: "Roberts Lab"
+project: "PolyIC immune priming"
+species:
+  - Crassostrea gigas
+topic:
+  - immune priming
+  - dsRNA
+  - bath exposure
+  - antiviral immunity
+  - Poly(I:C)
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+::: callout-warning
+## Status
+
+This report is a Methods Note. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses,
+technical observations, and exploratory work openly available.
+:::
+
+## Overview
+
+Poly(I:C) is a non-infectious elicitor and viral mimic in the form of
+synthetic double-stranded RNA (dsRNA). Poly(I:C) is a synthetic,
+double-stranded RNA molecule (polyribonucleotide) that has been widely
+used to induce a type I interferon (IFN) response in many species.
+
+In oysters, it has been shown to produce a protective immune response
+[@lafont2023; @green2013; @martins2020; @lorgeril2018].
+
+## Previous Protocols in the Roberts Lab
+
+Matt George conducted previous work with PolyIC using injection methods
+in the lab. He ran tests comparing water bath vs. injection protocols,
+documented in his notebook (Parts 1, 2, and 3). In his tests, Matt used
+the following approach:
+
+> "10 diploid and 10 triploid oysters (naive) were added to an emersion
+> bath containing 500 mL of seawater containing 10 µg/mL Poly(I:C), with
+> a bubbler. Lafont et al. 2017 found that emersion at 38 µg/mL worked
+> for 24 hrs, so we will see."
+
+Matt did not have follow-up documented in his notebook; Ariana Huffmyer
+will reach out to determine the results.
+
+## Water Bath/Emersion Protocols in the Literature
+
+One study has used emersion protocols for PolyIC exposure in oysters.
+[@lafont2023] found that emersion in PolyIC provided equal protection to
+injection methods, which are more commonly used. Injection protocols
+require anesthesia followed by direct injection into oyster tissues. If
+a water bath with PolyIC works equally well, it represents a much
+simpler and less invasive protocol.
+
+In one of their experiments, [@lafont2023] exposed 20 oysters to either
+0.76 µg/mL or 0.38 µg/mL PolyIC in 100 mL of seawater for 2.5 hours.
+Oysters then recovered in seawater for 24 hours before being challenged
+with pathogens (OsHV-1 or heat-killed *Vibrio*) to test immune response
+over 8 days.
+
+Results showed that survival was higher with PolyIC regardless of dose
+(\~90% survival) compared to unprimed controls (\~50% survival). This
+was comparable to survival observed with a high dose of injected PolyIC
+(\~85% survival).
+
+## Suggested Protocol for Point Whitney
+
+Based on Matt George's preliminary tests and the [@lafont2023] study,
+the following emersion parameters are proposed for oysters at Point
+Whitney:
+
+-   **Concentration:** 0.38 µg/mL Poly(I:C) in seawater
+-   **Duration:** 2.5 hour emersion
+
+Manufacturer's instructions for mixing Poly(I:C) solutions should be
+reviewed before implementation, as this reagent has not been used
+previously in this lab context.
+
+## Suggested citation
+
+Huffmyer, A. S., and S. B. Roberts. 2024. *PolyIC Immune Priming
+Protocols for Oysters*. Current Findings. Available at:
+https://robertslab.github.io/current-findings/reports/polyic-immune-priming-protocols/
+
+## Version history
+
+| Version | Date | Notes |
+|------------------------|------------------------|------------------------|
+| 0.1 | 2026-06-17 | Migrated from "PolyIC Immune Priming Protocols – Ariana S Huffmyer – Research Scientist, University of Washington.pdf" |
