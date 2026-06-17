@@ -4,8 +4,6 @@ subtitle: "A short non-peer-reviewed scientific report"
 author:
   - name: Ariana S. Huffmyer
     affiliation: University of Washington
-  - name: Steven Roberts
-    affiliation: University of Washington
 date: "2024-06-27"
 date-modified: "2026-06-17"
 description: "Summary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures."
