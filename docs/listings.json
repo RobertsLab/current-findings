@@ -3,7 +3,8 @@
     "listing": "/reports.html",
     "items": [
       "/reports/example-report/index.html",
-      "/reports/chilean-mussel/index.html"
+      "/reports/chilean-mussel/index.html",
+      "/reports/geoduck-comparative-genomics/index.html"
     ]
   }
 ]
