@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -15,9 +15,6 @@
 
 <title>DNA methylation in Mytilus chilensis – Current Findings</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -68,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -100,10 +98,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f3a7e4420bdcbdb5f5332fa4f27636c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -155,8 +153,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo light-content">
-    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo dark-content">
+    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Current Findings</span>
@@ -323,7 +320,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Status
+Status
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -337,7 +334,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Plain-language summary
+Plain-language summary
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -347,9 +344,9 @@ div.csl-indent {
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>Understanding how marine species respond to environmental heterogeneity is critical for conserving locally adapted populations and sustaining aquaculture practices in the face of global change. The Chilean blue mussel, Mytilus chilensis, a key endemic species in southern Chile, supports one of the world’s largest mussel aquaculture industries. However, the biological foundation of population-level adaptation in this species remains underexplored. Emerging evidence suggests that both genetic and epigenetic mechanisms—particularly DNA methylation—may contribute to phenotypic plasticity and local adaptation in marine invertebrates.</p>
-<p>Previous studies have revealed extensive transcriptomic and mitochondrial differences between M. chilensis populations from ecologically distinct seedbeds, such as Cochamó (41°S) and Yaldad (43°S), in the inner sea of Chiloé Island. These differences include differential expression of genes involved in immunity, metabolism, and cellular stress responses, as well as tissue-specific shifts in mitochondrial gene expression linked to local environmental pressures, including aquaculture practices and variable oxygenation levels <span class="citation" data-cites="yevenes2021adaptive yevenes2022adaptive">(<a href="#ref-yevenes2021adaptive" role="doc-biblioref">Yévenes et al. 2021</a>, <a href="#ref-yevenes2022adaptive" role="doc-biblioref">2022</a>)</span>. Experimental evidence from reciprocal transplants shows population-specific transcriptional responses and reduced growth performance upon translocation, highlighting functional divergence between seedbeds despite high larval connectivity <span class="citation" data-cites="yevenes2025decoding">(<a href="#ref-yevenes2025decoding" role="doc-biblioref">Yévenes et al. 2025</a>)</span>. As shown in <a href="#fig-study-locations" class="quarto-xref">Figure&nbsp;1</a> and detailed in <a href="#tbl-env-comparison" class="quarto-xref">Table&nbsp;1</a>, these two seedbeds exhibit contrasting environmental conditions, including differences in water temperature, salinity, depth, and aquaculture intensity that may contribute to the observed population-level adaptations.</p>
+<p>Previous studies have revealed extensive transcriptomic and mitochondrial differences between M. chilensis populations from ecologically distinct seedbeds, such as Cochamó (41°S) and Yaldad (43°S), in the inner sea of Chiloé Island. These differences include differential expression of genes involved in immunity, metabolism, and cellular stress responses, as well as tissue-specific shifts in mitochondrial gene expression linked to local environmental pressures, including aquaculture practices and variable oxygenation levels <span class="citation" data-cites="yevenes2021adaptive yevenes2022adaptive">(<a href="#ref-yevenes2021adaptive" role="doc-biblioref">Yévenes et al. 2021</a>, <a href="#ref-yevenes2022adaptive" role="doc-biblioref">2022</a>)</span>. Experimental evidence from reciprocal transplants shows population-specific transcriptional responses and reduced growth performance upon translocation, highlighting functional divergence between seedbeds despite high larval connectivity <span class="citation" data-cites="yevenes2025decoding">(<a href="#ref-yevenes2025decoding" role="doc-biblioref">Yévenes, Gajardo, and Gallardo-Escárate 2025</a>)</span>. As shown in <a href="#fig-study-locations" class="quarto-xref">Figure&nbsp;1</a> and detailed in <a href="#tbl-env-comparison" class="quarto-xref">Table&nbsp;1</a>, these two seedbeds exhibit contrasting environmental conditions, including differences in water temperature, salinity, depth, and aquaculture intensity that may contribute to the observed population-level adaptations.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if we're in HTML format and if leaflet is available</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if we're in HTML format and if leaflet is available</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>is_html <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">is_html_output</span>()</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>leaflet_available <span class="ot">&lt;-</span> <span class="fu">require</span>(leaflet, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -450,7 +447,7 @@ div.csl-indent {
 <span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add grid</span></span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grid</span>()</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="fig-study-locations" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-study-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -465,7 +462,7 @@ Figure&nbsp;1: Map showing the study locations Cochamó (41°S) and Yaldad (43°
 </div>
 <p><strong>Table 1.</strong> Environmental characteristics of the study locations in the inner sea of Chiloé Island, Chile.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create environmental comparison table</span></span>
@@ -513,7 +510,7 @@ Figure&nbsp;1: Map showing the study locations Cochamó (41°S) and Yaldad (43°
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Environmental Factor"</span>, <span class="st">"Cochamó (41°S)"</span>, <span class="st">"Yaldad (43°S)"</span>),</span>
 <span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>),</span>
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>      <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">linesep =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">linesep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="tbl-env-comparison" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-env-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -521,7 +518,7 @@ Table&nbsp;1: Environmental characteristics and aquaculture conditions at the tw
 </figcaption>
 <div aria-describedby="tbl-env-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell caption-top table table-sm table-striped small">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 23%">
 <col style="width: 41%">
@@ -592,7 +589,7 @@ Table&nbsp;1: Environmental characteristics and aquaculture conditions at the tw
 </figure>
 </div>
 </div>
-<p>In addition to gene expression differences, recent work has uncovered epigenetic signatures that may contribute to adaptive divergence. Long non-coding RNAs (lncRNAs) were found to be differentially expressed between Cochamó and Yaldad populations, with associated changes in immune and metabolic gene networks <span class="citation" data-cites="yevenes2023epigenetic">(<a href="#ref-yevenes2023epigenetic" role="doc-biblioref">Yévenes et al. 2023</a>)</span>. These findings underscore the potential for environmentally responsive regulatory elements—including DNA methylation—to mediate local adaptation.</p>
+<p>In addition to gene expression differences, recent work has uncovered epigenetic signatures that may contribute to adaptive divergence. Long non-coding RNAs (lncRNAs) were found to be differentially expressed between Cochamó and Yaldad populations, with associated changes in immune and metabolic gene networks <span class="citation" data-cites="yevenes2023epigenetic">(<a href="#ref-yevenes2023epigenetic" role="doc-biblioref">Yévenes, Gallardo-Escárate, and Gajardo 2023</a>)</span>. These findings underscore the potential for environmentally responsive regulatory elements—including DNA methylation—to mediate local adaptation.</p>
 <p>Yet, the role of DNA methylation in shaping population-specific responses in M. chilensis remains unexplored. DNA methylation, a heritable and reversible epigenetic modification, can influence gene expression and phenotypic traits without altering the underlying DNA sequence. In bivalves, DNA methylation is known to affect developmental and immune processes and may be responsive to environmental stressors such as hypoxia, toxins, and acidification—conditions that vary across the Chilean inner sea and have been shown to modulate gene expression and microbiota composition in M. chilensis <span class="citation" data-cites="montufar2024hypoxia castillo2017ocean montufar2025microbiota">(<a href="#ref-montufar2024hypoxia" role="doc-biblioref">Montúfar-Romero et al. 2024</a>, <a href="#ref-montufar2025microbiota" role="doc-biblioref">2025</a>; <a href="#ref-castillo2017ocean" role="doc-biblioref">Castillo et al. 2017</a>)</span>.</p>
 <p>In this study, we investigate genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds—Cochamó and Yaldad—with the aim of identifying differentially methylated regions (DMRs) that may underlie local adaptation. By integrating this epigenetic information with known patterns of gene expression and environmental context, we seek to illuminate the molecular basis of ecological divergence and contribute new insights into how environmental and anthropogenic forces shape genomic and epigenomic variation in a key aquaculture species.</p>
 </section>
@@ -620,15 +617,15 @@ Table&nbsp;1: Environmental characteristics and aquaculture conditions at the tw
 <p>Genome-wide cytosine methylation was assessed in CpG, CHG, and CHH contexts. Across samples, ~2.1–2.2 billion cytosines were examined. CpG methylation was the most prominent, with an average of ~36 million methylated CpGs and ~205 million unmethylated CpGs per sample, corresponding to a methylation rate of approximately 15%. In contrast, CHG and CHH methylation was much lower, with methylation levels below 1% in both contexts. These patterns are consistent with expectations for invertebrate methylomes, where methylation is primarily restricted to CpG sites.</p>
 <p>In total, 1117 differentially methylated loci (DMLs) were identified (see Methods and Supplementary Data). These DMLs were distributed across all chromosomes and classified as either hypomethylated or hypermethylated based on methylation difference.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggplot2' was built under R version 4.5.2</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'readr' was built under R version 4.5.2</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read methylKit output</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dml <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="st">"data/DML.txt"</span>, <span class="at">col_types =</span> <span class="fu">cols</span>())</span>
@@ -648,7 +645,7 @@ Table&nbsp;1: Environmental characteristics and aquaculture conditions at the tw
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"DMLs per Chromosome"</span>,</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of DMLs"</span>, <span class="at">x =</span> <span class="st">"Chromosome"</span>, <span class="at">fill =</span> <span class="st">"Status"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of DMLs"</span>, <span class="at">x =</span> <span class="st">"Chromosome"</span>, <span class="at">fill =</span> <span class="st">"Status"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-dml-chromosome" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -666,7 +663,7 @@ Figure&nbsp;2: Distribution of differentially methylated loci (DMLs) across chro
 <h2 data-number="3.1" class="anchored" data-anchor-id="chromosome-wide-distribution-of-dmls"><span class="header-section-number">3.1</span> Chromosome-wide Distribution of DMLs</h2>
 <p>To visualize the spatial distribution of differentially methylated loci across the genome, we created a comprehensive plot showing all chromosomes and the precise locations of DMLs within each chromosome. This visualization reveals the genomic landscape of epigenetic variation and identifies potential hotspots of methylation change.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
@@ -704,7 +701,7 @@ Figure&nbsp;2: Distribution of differentially methylated loci (DMLs) across chro
 <span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Methylation Status"</span>,</span>
 <span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Each point represents a DML. Red: hypermethylated in Yaldad, Blue: hypomethylated in Yaldad"</span></span>
 <span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste0</span>(x<span class="sc">/</span><span class="fl">1e6</span>, <span class="st">" Mb"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste0</span>(x<span class="sc">/</span><span class="fl">1e6</span>, <span class="st">" Mb"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-dml-genome-wide" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -790,7 +787,7 @@ Figure&nbsp;3: Distribution of differentially methylated loci (DMLs) across all 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-castillo2017ocean" class="csl-entry" role="listitem">
 Castillo, N, L M Saavedra, C A Vargas, C Gallardo-Escárate, and C Détrée. 2017. <span>“Ocean Acidification and Pathogen Exposure Modulate the Immune Response of the Edible Mussel *Mytilus Chilensis*.”</span> <em>Fish &amp; Shellfish Immunology</em> 70: 149–55. <a href="https://doi.org/10.1016/j.fsi.2017.08.047">https://doi.org/10.1016/j.fsi.2017.08.047</a>.
 </div>
@@ -810,7 +807,7 @@ Yévenes, M, C Gallardo-Escárate, and G Gajardo. 2023. <span>“Epigenetic Vari
 Yévenes, M, G Núñez-Acuña, C Gallardo-Escárate, and G Gajardo. 2021. <span>“Adaptive Differences in Gene Expression in Farm-Impacted Seedbeds of the Native Blue Mussel *Mytilus Chilensis*.”</span> <em>Frontiers in Genetics</em> 12: 666539. <a href="https://doi.org/10.3389/fgene.2021.666539">https://doi.org/10.3389/fgene.2021.666539</a>.
 </div>
 <div id="ref-yevenes2022adaptive" class="csl-entry" role="listitem">
-Yévenes, M, G Núñez-Acuña, C Gallardo-Escárate, and G Gajardo. 2022. <span>“Adaptive Mitochondrial Genome Functioning in Ecologically Different Farm-Impacted Natural Seedbeds of the Endemic Blue Mussel *Mytilus Chilensis*.”</span> <em>Comparative Biochemistry and Physiology Part D: Genomics and Proteomics</em> 42: 100955. <a href="https://doi.org/10.1016/j.cbd.2021.100955">https://doi.org/10.1016/j.cbd.2021.100955</a>.
+———. 2022. <span>“Adaptive Mitochondrial Genome Functioning in Ecologically Different Farm-Impacted Natural Seedbeds of the Endemic Blue Mussel *Mytilus Chilensis*.”</span> <em>Comparative Biochemistry and Physiology Part D: Genomics and Proteomics</em> 42: 100955. <a href="https://doi.org/10.1016/j.cbd.2021.100955">https://doi.org/10.1016/j.cbd.2021.100955</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -864,14 +861,13 @@ Yévenes, M, G Núñez-Acuña, C Gallardo-Escárate, and G Gajardo. 2022. <span>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
