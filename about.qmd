@@ -1,0 +1,34 @@
+---
+title: "About"
+---
+
+# About Current Findings
+
+Current Findings are short, open scientific documents from Roberts Lab and collaborators. They may include preliminary analyses, technical notes, field reports, exploratory datasets, teaching-adjacent analyses, negative results, and small manuscripts that are useful to share but not necessarily suited for formal peer-reviewed publication.
+
+Reports are not peer reviewed unless explicitly stated. They should be interpreted as working scientific communications. We welcome corrections, comments, reuse, and collaboration.
+
+## Report types
+
+Reports may be labeled as:
+
+- Working manuscript
+- Technical note
+- Dataset note
+- Field report
+- Methods note
+- Negative result
+- Student research note
+- Exploratory analysis
+
+## Suggested use
+
+These reports are intended to support open science, transparency, early sharing, student training, and reuse of small scientific efforts that might otherwise remain hidden.
+
+## Review status
+
+By default, reports on this site are not peer reviewed. Authors may revise reports over time. Readers should check the report date, version history, and data/code availability sections before reusing or citing a report.
+
+## Corrections and comments
+
+Corrections, comments, and suggestions are welcome through GitHub issues or direct correspondence with the report authors.

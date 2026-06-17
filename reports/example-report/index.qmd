@@ -1,0 +1,66 @@
+---
+title: "Example Current Findings Report"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2026-06-17"
+date-modified: "2026-06-17"
+description: "Example report showing the standard structure for Current Findings."
+categories: [example, methods, open-science]
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: "Current Findings"
+species: []
+topic: [open science, scientific communication]
+github_repo: "https://github.com/RobertsLab/current-findings"
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.
+:::
+
+## Abstract
+
+This example report demonstrates the standard structure for Current Findings.
+
+## Background
+
+Current Findings provides a public home for small scientific outputs, technical notes, exploratory analyses, field reports, and working manuscripts.
+
+## Methods
+
+Reports are written in Quarto Markdown and rendered as a static website using GitHub Pages.
+
+## Results
+
+Each report appears as a standalone page and is automatically listed on the Reports page.
+
+## Discussion
+
+This format supports open science, transparency, student training, and early sharing of useful scientific work.
+
+## Data and code availability
+
+Source files are available in the RobertsLab `current-findings` GitHub repository.
+
+## Suggested citation
+
+Roberts, S. B. 2026. *Example Current Findings Report*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/example-report/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-06-17 | Initial draft |

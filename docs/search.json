@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "reports/example-report/index.html",
+    "href": "reports/example-report/index.html",
+    "title": "Example Current Findings Report",
+    "section": "",
+    "text": "WarningStatus\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+  },
+  {
+    "objectID": "reports/example-report/index.html#abstract",
+    "href": "reports/example-report/index.html#abstract",
+    "title": "Example Current Findings Report",
+    "section": "1 Abstract",
+    "text": "1 Abstract\nThis example report demonstrates the standard structure for Current Findings."
+  },
+  {
+    "objectID": "reports/example-report/index.html#background",
+    "href": "reports/example-report/index.html#background",
+    "title": "Example Current Findings Report",
+    "section": "2 Background",
+    "text": "2 Background\nCurrent Findings provides a public home for small scientific outputs, technical notes, exploratory analyses, field reports, and working manuscripts."
+  },
+  {
+    "objectID": "reports/example-report/index.html#methods",
+    "href": "reports/example-report/index.html#methods",
+    "title": "Example Current Findings Report",
+    "section": "3 Methods",
+    "text": "3 Methods\nReports are written in Quarto Markdown and rendered as a static website using GitHub Pages."
+  },
+  {
+    "objectID": "reports/example-report/index.html#results",
+    "href": "reports/example-report/index.html#results",
+    "title": "Example Current Findings Report",
+    "section": "4 Results",
+    "text": "4 Results\nEach report appears as a standalone page and is automatically listed on the Reports page."
+  },
+  {
+    "objectID": "reports/example-report/index.html#discussion",
+    "href": "reports/example-report/index.html#discussion",
+    "title": "Example Current Findings Report",
+    "section": "5 Discussion",
+    "text": "5 Discussion\nThis format supports open science, transparency, student training, and early sharing of useful scientific work."
+  },
+  {
+    "objectID": "reports/example-report/index.html#data-and-code-availability",
+    "href": "reports/example-report/index.html#data-and-code-availability",
+    "title": "Example Current Findings Report",
+    "section": "6 Data and code availability",
+    "text": "6 Data and code availability\nSource files are available in the RobertsLab current-findings GitHub repository."
+  },
+  {
+    "objectID": "reports/example-report/index.html#suggested-citation",
+    "href": "reports/example-report/index.html#suggested-citation",
+    "title": "Example Current Findings Report",
+    "section": "7 Suggested citation",
+    "text": "7 Suggested citation\nRoberts, S. B. 2026. Example Current Findings Report. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/example-report/"
+  },
+  {
+    "objectID": "reports/example-report/index.html#version-history",
+    "href": "reports/example-report/index.html#version-history",
+    "title": "Example Current Findings Report",
+    "section": "8 Version history",
+    "text": "8 Version history\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nInitial draft"
+  },
+  {
+    "objectID": "reports.html",
+    "href": "reports.html",
+    "title": "Reports",
+    "section": "",
+    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nGenomic and epigenetic resources for Chilean mussel\n\n\nPlaceholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Current Findings are short, open scientific documents from Roberts Lab and collaborators. They may include preliminary analyses, technical notes, field reports, exploratory datasets, teaching-adjacent analyses, negative results, and small manuscripts that are useful to share but not necessarily suited for formal peer-reviewed publication.\nReports are not peer reviewed unless explicitly stated. They should be interpreted as working scientific communications. We welcome corrections, comments, reuse, and collaboration.\n\n\nReports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis\n\n\n\n\nThese reports are intended to support open science, transparency, early sharing, student training, and reuse of small scientific efforts that might otherwise remain hidden.\n\n\n\nBy default, reports on this site are not peer reviewed. Authors may revise reports over time. Readers should check the report date, version history, and data/code availability sections before reusing or citing a report.\n\n\n\nCorrections, comments, and suggestions are welcome through GitHub issues or direct correspondence with the report authors."
+  },
+  {
+    "objectID": "about.html#report-types",
+    "href": "about.html#report-types",
+    "title": "About",
+    "section": "",
+    "text": "Reports may be labeled as:\n\nWorking manuscript\nTechnical note\nDataset note\nField report\nMethods note\nNegative result\nStudent research note\nExploratory analysis"
+  },
+  {
+    "objectID": "about.html#suggested-use",
+    "href": "about.html#suggested-use",
+    "title": "About",
+    "section": "",
+    "text": "These reports are intended to support open science, transparency, early sharing, student training, and reuse of small scientific efforts that might otherwise remain hidden."
+  },
+  {
+    "objectID": "about.html#review-status",
+    "href": "about.html#review-status",
+    "title": "About",
+    "section": "",
+    "text": "By default, reports on this site are not peer reviewed. Authors may revise reports over time. Readers should check the report date, version history, and data/code availability sections before reusing or citing a report."
+  },
+  {
+    "objectID": "about.html#corrections-and-comments",
+    "href": "about.html#corrections-and-comments",
+    "title": "About",
+    "section": "",
+    "text": "Corrections, comments, and suggestions are welcome through GitHub issues or direct correspondence with the report authors."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Current Findings",
+    "section": "",
+    "text": "Current Findings is a collection of open scientific reports, technical notes, exploratory analyses, field reports, dataset notes, and working manuscripts from the Roberts Lab at the University of Washington.\nThese documents are shared to make small but useful scientific efforts visible, reusable, and citable. Reports may include preliminary analyses, student-led work, methods notes, negative results, dataset notes, and short manuscripts that are useful to the research community but may not be intended for formal peer-reviewed publication."
+  },
+  {
+    "objectID": "index.html#browse-reports",
+    "href": "index.html#browse-reports",
+    "title": "Current Findings",
+    "section": "1 Browse reports",
+    "text": "1 Browse reports\nView the full collection on the Reports page."
+  },
+  {
+    "objectID": "index.html#why-this-exists",
+    "href": "index.html#why-this-exists",
+    "title": "Current Findings",
+    "section": "2 Why this exists",
+    "text": "2 Why this exists\nMuch scientific work is useful even when it is too small, preliminary, technical, local, or exploratory to become a full peer-reviewed article. This site provides a public home for those efforts while preserving clear expectations about review status, reuse, and citation."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html",
+    "href": "reports/chilean-mussel/index.html",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "",
+    "text": "WarningStatus\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#abstract",
+    "href": "reports/chilean-mussel/index.html#abstract",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "1 Abstract",
+    "text": "1 Abstract\nThis placeholder demonstrates how an existing standalone manuscript site could be migrated into the Current Findings system.\nExisting example site:\nhttps://sr320.github.io/paper-chilean-mussel/"
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#background",
+    "href": "reports/chilean-mussel/index.html#background",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "2 Background",
+    "text": "2 Background\nThe Current Findings framework is intended to support migration of standalone manuscript-style websites into a shared, searchable, and maintainable RobertsLab archive."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#methods",
+    "href": "reports/chilean-mussel/index.html#methods",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "3 Methods",
+    "text": "3 Methods\nContent from the existing Chilean mussel manuscript site can be migrated into this Quarto report structure."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#results",
+    "href": "reports/chilean-mussel/index.html#results",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "4 Results",
+    "text": "4 Results\nFuture migrated content should include figures, tables, references, data/code availability, and suggested citation information."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#discussion",
+    "href": "reports/chilean-mussel/index.html#discussion",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "5 Discussion",
+    "text": "5 Discussion\nThis report serves as a model for integrating project-specific scientific outputs into a shared RobertsLab publication system."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#data-and-code-availability",
+    "href": "reports/chilean-mussel/index.html#data-and-code-availability",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "6 Data and code availability",
+    "text": "6 Data and code availability\nAdd links to relevant repositories, notebooks, data archives, and analysis workflows."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#suggested-citation",
+    "href": "reports/chilean-mussel/index.html#suggested-citation",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "7 Suggested citation",
+    "text": "7 Suggested citation\nRoberts, S. B. 2026. Genomic and epigenetic resources for Chilean mussel. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/"
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#version-history",
+    "href": "reports/chilean-mussel/index.html#version-history",
+    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "section": "8 Version history",
+    "text": "8 Version history\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nPlaceholder created"
+  }
+]

@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SLUG="${1:-}"
+
+if [ -z "$SLUG" ]; then
+  echo "Usage: ./new-report.sh report-slug"
+  exit 1
+fi
+
+REPORT_DIR="reports/$SLUG"
+
+if [ -d "$REPORT_DIR" ]; then
+  echo "Report already exists: $REPORT_DIR"
+  exit 1
+fi
+
+mkdir -p "$REPORT_DIR/figures"
+
+TODAY="$(date +%Y-%m-%d)"
+YEAR="$(date +%Y)"
+
+cat > "$REPORT_DIR/index.qmd" <<EOF
+---
+title: "New Current Findings Report"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "$TODAY"
+date-modified: "$TODAY"
+description: "Short description of this report."
+categories: []
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: ""
+species: []
+topic: []
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.
+:::
+
+## Abstract
+
+Write a concise summary of the report.
+
+## Background
+
+Describe the scientific context and motivation.
+
+## Methods
+
+Describe samples, data, analysis, software, and assumptions.
+
+## Results
+
+Present the main observations, figures, and tables.
+
+## Discussion
+
+Interpret the findings. Clearly distinguish observations from speculation.
+
+## Data and code availability
+
+Provide links to GitHub repositories, data archives, notebooks, or other resources when available.
+
+## Suggested citation
+
+Roberts, S. B. $YEAR. *New Current Findings Report*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/$SLUG/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | $TODAY | Initial draft |
+EOF
+
+cat > "$REPORT_DIR/references.bib" <<EOF
+EOF
+
+echo "Created $REPORT_DIR"

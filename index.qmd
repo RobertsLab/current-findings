@@ -1,0 +1,21 @@
+---
+title: "Current Findings"
+---
+
+Current Findings is a collection of open scientific reports, technical notes, exploratory analyses, field reports, dataset notes, and working manuscripts from the Roberts Lab at the University of Washington.
+
+These documents are shared to make small but useful scientific efforts visible, reusable, and citable. Reports may include preliminary analyses, student-led work, methods notes, negative results, dataset notes, and short manuscripts that are useful to the research community but may not be intended for formal peer-reviewed publication.
+
+::: callout-warning
+## Not peer reviewed
+
+Unless explicitly stated, reports on this site have not been peer reviewed. They should be interpreted as working scientific communications.
+:::
+
+## Browse reports
+
+View the full collection on the [Reports](reports.qmd) page.
+
+## Why this exists
+
+Much scientific work is useful even when it is too small, preliminary, technical, local, or exploratory to become a full peer-reviewed article. This site provides a public home for those efforts while preserving clear expectations about review status, reuse, and citation.

@@ -1,0 +1,13 @@
+---
+title: "Reports"
+listing:
+  contents: reports
+  sort: "date desc"
+  type: default
+  categories: true
+  fields: [title, author, date, description]
+---
+
+Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.
+
+Unless explicitly stated, reports are not peer reviewed.

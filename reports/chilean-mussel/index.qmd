@@ -1,0 +1,74 @@
+---
+title: "Genomic and epigenetic resources for Chilean mussel"
+subtitle: "Placeholder for migration into Current Findings"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2026-06-17"
+date-modified: "2026-06-17"
+description: "Placeholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings."
+categories: [mussels, genomics, epigenetics, aquaculture]
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: "Chilean mussel"
+species:
+  - Mytilus chilensis
+topic:
+  - genomics
+  - epigenetics
+  - aquaculture
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.
+:::
+
+## Abstract
+
+This placeholder demonstrates how an existing standalone manuscript site could be migrated into the Current Findings system.
+
+Existing example site:
+
+https://sr320.github.io/paper-chilean-mussel/
+
+## Background
+
+The Current Findings framework is intended to support migration of standalone manuscript-style websites into a shared, searchable, and maintainable RobertsLab archive.
+
+## Methods
+
+Content from the existing Chilean mussel manuscript site can be migrated into this Quarto report structure.
+
+## Results
+
+Future migrated content should include figures, tables, references, data/code availability, and suggested citation information.
+
+## Discussion
+
+This report serves as a model for integrating project-specific scientific outputs into a shared RobertsLab publication system.
+
+## Data and code availability
+
+Add links to relevant repositories, notebooks, data archives, and analysis workflows.
+
+## Suggested citation
+
+Roberts, S. B. 2026. *Genomic and epigenetic resources for Chilean mussel*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-06-17 | Placeholder created |

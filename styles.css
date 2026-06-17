@@ -1,0 +1,19 @@
+.callout-warning {
+  border-left-width: 6px;
+}
+
+.report-status {
+  font-weight: bold;
+}
+
+.quarto-title-meta {
+  margin-bottom: 1.5rem;
+}
+
+table {
+  font-size: 0.95rem;
+}
+
+.navbar-title {
+  font-weight: 600;
+}

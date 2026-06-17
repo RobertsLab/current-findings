@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "reports/**/*.qmd"
+    - "!templates/"
+
+website:
+  title: "Current Findings"
+  site-url: "https://robertslab.github.io/current-findings/"
+  description: "Open, non-peer-reviewed scientific reports, technical notes, and working manuscripts from Roberts Lab."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: reports.qmd
+        text: Reports
+      - href: about.qmd
+        text: About
+    right:
+      - icon: github
+        href: https://github.com/RobertsLab/current-findings
+  page-footer:
+    left: "© Roberts Lab"
+    right: "Not peer reviewed unless explicitly stated."
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    number-sections: true
+    citations-hover: true
+    footnotes-hover: true

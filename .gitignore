@@ -1,0 +1,10 @@
+/.quarto/
+/.quarto-home/
+/_site/
+.DS_Store
+.Rproj.user
+.Rhistory
+.RData
+.positai
+
+**/*.quarto_ipynb
