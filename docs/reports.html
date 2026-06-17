@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Reports – Current Findings</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f3a7e4420bdcbdb5f5332fa4f27636c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -114,7 +117,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -140,7 +143,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
+    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo light-content">
+    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Current Findings</span>
@@ -215,7 +219,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZXhhbXBsZSUyQ21ldGhvZHMlMkNvcGVuLXNjaWVuY2U=" data-listing-date-sort="1781679600000" data-listing-file-modified-sort="1781711539116" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<div class="quarto-post image-right" data-index="0" data-categories="ZXhhbXBsZSUyQ21ldGhvZHMlMkNvcGVuLXNjaWVuY2U=" data-listing-date-sort="1781654400000" data-listing-file-modified-sort="1781719545850" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/example-report/index.html" class="no-external">Example Current Findings Report</a>
@@ -235,7 +239,7 @@ Steven Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Z2Vub21pY3MlMkNpbW11bml0eSUyQ2Rpc2Vhc2UlMkNlY2hpbm9kZXJtcyUyQ2Z1bmN0aW9uYWwtYW5ub3RhdGlvbiUyQ3NlYS1zdGFyLXdhc3RpbmctZGlzZWFzZQ==" data-listing-date-sort="1781679600000" data-listing-file-modified-sort="1781714476335" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2805">
+<div class="quarto-post image-right" data-index="1" data-categories="Z2Vub21pY3MlMkNpbW11bml0eSUyQ2Rpc2Vhc2UlMkNlY2hpbm9kZXJtcyUyQ2Z1bmN0aW9uYWwtYW5ub3RhdGlvbiUyQ3NlYS1zdGFyLXdhc3RpbmctZGlzZWFzZQ==" data-listing-date-sort="1781654400000" data-listing-file-modified-sort="1781719545860" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2805">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/sswd-immune-gene-abundance/index.html" class="no-external">Immune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease</a>
@@ -255,7 +259,7 @@ Hannah Nowers
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="bXVzc2VscyUyQ2dlbm9taWNzJTJDZXBpZ2VuZXRpY3MlMkNhcXVhY3VsdHVyZSUyQ0ROQSUyMG1ldGh5bGF0aW9u" data-listing-date-sort="1754982000000" data-listing-file-modified-sort="1781712857709" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3378">
+<div class="quarto-post image-right" data-index="2" data-categories="bXVzc2VscyUyQ2dlbm9taWNzJTJDZXBpZ2VuZXRpY3MlMkNhcXVhY3VsdHVyZSUyQ0ROQSUyMG1ldGh5bGF0aW9u" data-listing-date-sort="1754956800000" data-listing-file-modified-sort="1781719545850" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3378">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/chilean-mussel/index.html" class="no-external">DNA methylation in Mytilus chilensis</a>
@@ -275,7 +279,7 @@ Cristian Gallardo, Valentina Venezuala, Steven Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Z2Vub21pY3MlMkN0cmFuc2NyaXB0b21pY3MlMkNjb21wYXJhdGl2ZS1nZW5vbWljcyUyQ3JlcHJvZHVjdGlvbiUyQ2dlb2R1Y2slMkNhcXVhY3VsdHVyZQ==" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781713874415" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="25" data-listing-word-count-sort="4941">
+<div class="quarto-post image-right" data-index="3" data-categories="Z2Vub21pY3MlMkN0cmFuc2NyaXB0b21pY3MlMkNjb21wYXJhdGl2ZS1nZW5vbWljcyUyQ3JlcHJvZHVjdGlvbiUyQ2dlb2R1Y2slMkNhcXVhY3VsdHVyZQ==" data-listing-date-sort="1672531200000" data-listing-file-modified-sort="1781719545851" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="25" data-listing-word-count-sort="4941">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/geoduck-comparative-genomics/index.html" class="no-external">Comparative Genomic Analysis of Geoduck Clam (Panopea generosa)</a>
@@ -287,7 +291,7 @@ Cristian Gallardo, Valentina Venezuala, Steven Roberts
 <div class="metadata">
 <a href="./reports/geoduck-comparative-genomics/index.html" class="no-external">
 <div class="listing-date">
-Dec 31, 2022
+Jan 1, 2023
 </div>
 <div class="listing-author">
 Olivia Cattau, Steven B. Roberts
@@ -295,7 +299,7 @@ Olivia Cattau, Steven B. Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="cmVwcm9kdWN0aW9uJTJDaGlzdG9sb2d5JTJDYXF1YWN1bHR1cmUlMkNnZW9kdWNrJTJDc2hlbGxmaXNo" data-listing-date-sort="1456819200000" data-listing-file-modified-sort="1781715030018" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2960">
+<div class="quarto-post image-right" data-index="4" data-categories="cmVwcm9kdWN0aW9uJTJDaGlzdG9sb2d5JTJDYXF1YWN1bHR1cmUlMkNnZW9kdWNrJTJDc2hlbGxmaXNo" data-listing-date-sort="1456790400000" data-listing-file-modified-sort="1781719545853" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2960">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/geoduck-reproductive-maturation/index.html" class="no-external">Characterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)</a>
@@ -315,7 +319,7 @@ Grace Crandall, Steven Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RoZXJtYWwtc3RyZXNzJTJDZ2VuZS1leHByZXNzaW9uJTJDcXBjciUyQ2JpdmFsdmVzJTJDbWFuaWxhLWNsYW0=" data-listing-date-sort="1325404800000" data-listing-file-modified-sort="1781715362923" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3755">
+<div class="quarto-post image-right" data-index="5" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RoZXJtYWwtc3RyZXNzJTJDZ2VuZS1leHByZXNzaW9uJTJDcXBjciUyQ2JpdmFsdmVzJTJDbWFuaWxhLWNsYW0=" data-listing-date-sort="1325376000000" data-listing-file-modified-sort="1781719545855" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3755">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/manila-clam-juvenile-pco2-thermal-stress/index.html" class="no-external">Effect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress</a>
@@ -335,7 +339,7 @@ David C. Metzger, Steven Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RyYW5zY3JpcHRvbWljcyUyQ3JuYS1zZXElMkNiaXZhbHZlcyUyQ2xhcnZhZSUyQ21hbmlsYS1jbGFt" data-listing-date-sort="1325404800000" data-listing-file-modified-sort="1781715161008" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2852">
+<div class="quarto-post image-right" data-index="6" data-categories="b2NlYW4tYWNpZGlmaWNhdGlvbiUyQ3RyYW5zY3JpcHRvbWljcyUyQ3JuYS1zZXElMkNiaXZhbHZlcyUyQ2xhcnZhZSUyQ21hbmlsYS1jbGFt" data-listing-date-sort="1325376000000" data-listing-file-modified-sort="1781719545858" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="15" data-listing-word-count-sort="2852">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/manila-clam-larvae-pco2-rnaseq/index.html" class="no-external">Impact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis</a>
@@ -409,13 +413,14 @@ David C. Metzger, Steven Roberts
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
