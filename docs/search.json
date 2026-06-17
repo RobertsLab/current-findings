@@ -4,7 +4,7 @@
     "href": "reports/example-report/index.html",
     "title": "Example Current Findings Report",
     "section": "",
-    "text": "Status\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+    "text": "WarningStatus\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
   },
   {
     "objectID": "reports/example-report/index.html#abstract",
@@ -130,7 +130,7 @@
     "href": "reports/chilean-mussel/index.html",
     "title": "Genomic and epigenetic resources for Chilean mussel",
     "section": "",
-    "text": "Status\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+    "text": "WarningStatus\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
   },
   {
     "objectID": "reports/chilean-mussel/index.html#abstract",
