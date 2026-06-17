@@ -53,10 +53,14 @@ $code-bg:        rgba($seafoam, 0.14);
   color: #ffffff !important;
 }
 
-// Navbar logo sizing
-.navbar-logo {
+// Navbar logo sizing — lock height and let width scale with aspect ratio
+.navbar-brand .navbar-logo {
+  height: 34px;
+  width: 34px;
   max-height: 34px;
+  max-width: none;
   margin-right: 0.5rem;
+  object-fit: contain;
 }
 
 // Links

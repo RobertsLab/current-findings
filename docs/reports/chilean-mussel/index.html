@@ -6,11 +6,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Cristian Gallardo">
+<meta name="author" content="Valentina Venezuala">
 <meta name="author" content="Steven Roberts">
-<meta name="dcterms.date" content="2026-06-17">
-<meta name="description" content="Placeholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings.">
+<meta name="dcterms.date" content="2025-08-12">
+<meta name="keywords" content="DNA methylation, Mytilus chilensis, epigenetics, adaptation, aquaculture">
+<meta name="description" content="Genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.">
 
-<title>Genomic and epigenetic resources for Chilean mussel – Current Findings</title>
+<title>DNA methylation in Mytilus chilensis – Current Findings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +26,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -43,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2a38a5dbd1b1c8114f4ebd3918e1c97e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,6 +129,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<script src="../../site_libs/leaflet-providers-2.0.0/leaflet-providers_2.0.0.js"></script>
+<script src="../../site_libs/leaflet-providers-plugin-2.2.3/leaflet-providers-plugin.js"></script>
 
 
 </head>
@@ -130,14 +200,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract"><span class="header-section-number">1</span> Abstract</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">2</span> Background</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">3</span> Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">4</span> Results</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">5</span> Discussion</a></li>
-  <li><a href="#data-and-code-availability" id="toc-data-and-code-availability" class="nav-link" data-scroll-target="#data-and-code-availability"><span class="header-section-number">6</span> Data and code availability</a></li>
-  <li><a href="#suggested-citation" id="toc-suggested-citation" class="nav-link" data-scroll-target="#suggested-citation"><span class="header-section-number">7</span> Suggested citation</a></li>
-  <li><a href="#version-history" id="toc-version-history" class="nav-link" data-scroll-target="#version-history"><span class="header-section-number">8</span> Version history</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">2</span> Methods</a>
+  <ul class="collapse">
+  <li><a href="#read-processing-and-alignment" id="toc-read-processing-and-alignment" class="nav-link" data-scroll-target="#read-processing-and-alignment"><span class="header-section-number">2.1</span> Read Processing and Alignment</a></li>
+  <li><a href="#methylation-data-processing-and-filtering" id="toc-methylation-data-processing-and-filtering" class="nav-link" data-scroll-target="#methylation-data-processing-and-filtering"><span class="header-section-number">2.2</span> Methylation Data Processing and Filtering</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-and-differential-methylation-analyses" id="toc-exploratory-and-differential-methylation-analyses" class="nav-link" data-scroll-target="#exploratory-and-differential-methylation-analyses"><span class="header-section-number">2.2.1</span> Exploratory and Differential Methylation Analyses</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#chromosome-wide-distribution-of-dmls" id="toc-chromosome-wide-distribution-of-dmls" class="nav-link" data-scroll-target="#chromosome-wide-distribution-of-dmls"><span class="header-section-number">3.1</span> Chromosome-wide Distribution of DMLs</a></li>
+  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location"><span class="header-section-number">3.2</span> Location</a></li>
+  <li><a href="#genes-harboring-dmls-and-overall-methylation-pattern" id="toc-genes-harboring-dmls-and-overall-methylation-pattern" class="nav-link" data-scroll-target="#genes-harboring-dmls-and-overall-methylation-pattern"><span class="header-section-number">3.3</span> Genes harboring DMLs and overall methylation pattern</a></li>
+  <li><a href="#gene-ontology-go-processes-functions-and-locations" id="toc-gene-ontology-go-processes-functions-and-locations" class="nav-link" data-scroll-target="#gene-ontology-go-processes-functions-and-locations"><span class="header-section-number">3.4</span> Gene Ontology (GO): processes, functions, and locations</a></li>
+  <li><a href="#kegg-pathways" id="toc-kegg-pathways" class="nav-link" data-scroll-target="#kegg-pathways"><span class="header-section-number">3.5</span> KEGG pathways</a></li>
+  <li><a href="#pfam-domains" id="toc-pfam-domains" class="nav-link" data-scroll-target="#pfam-domains"><span class="header-section-number">3.6</span> Pfam domains</a></li>
+  <li><a href="#directionality-of-methylation-changes" id="toc-directionality-of-methylation-changes" class="nav-link" data-scroll-target="#directionality-of-methylation-changes"><span class="header-section-number">3.7</span> Directionality of methylation changes</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">3.8</span> Summary</a></li>
+  <li><a href="#data-and-code-availability" id="toc-data-and-code-availability" class="nav-link" data-scroll-target="#data-and-code-availability"><span class="header-section-number">3.9</span> Data and code availability</a></li>
+  <li><a href="#suggested-citation" id="toc-suggested-citation" class="nav-link" data-scroll-target="#suggested-citation"><span class="header-section-number">3.10</span> Suggested citation</a></li>
+  <li><a href="#version-history" id="toc-version-history" class="nav-link" data-scroll-target="#version-history"><span class="header-section-number">3.11</span> Version history</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -146,28 +231,45 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Genomic and epigenetic resources for Chilean mussel</h1>
-<p class="subtitle lead">Placeholder for migration into Current Findings</p>
+<h1 class="title">DNA methylation in Mytilus chilensis</h1>
+<p class="subtitle lead">Epigenetic mechanisms of local adaptation</p>
   <div class="quarto-categories">
     <div class="quarto-category">mussels</div>
     <div class="quarto-category">genomics</div>
     <div class="quarto-category">epigenetics</div>
     <div class="quarto-category">aquaculture</div>
+    <div class="quarto-category">DNA methylation</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Placeholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings.
+    Genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.
   </div>
 </div>
 
 <div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Author</div>
-  <div class="quarto-title-meta-heading">Affiliation</div>
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Steven Roberts </p>
+    <p class="author">Cristian Gallardo <a href="mailto:cgallardo@udec.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0000" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Concepcion
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Valentina Venezuala <a href="mailto:vvenezuala@udec.cl" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0001" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Concepcion
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Steven Roberts <a href="mailto:sr320@uw.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0002" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
   </div>
   <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -182,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 17, 2026</p>
+      <p class="date">August 12, 2025</p>
     </div>
   </div>
   
@@ -195,7 +297,19 @@ ul.task-list li input[type="checkbox"] {
     
   </div>
   
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>We investigate genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds—Cochamó and Yaldad—using whole-genome bisulfite sequencing and high-throughput bioinformatics. We identify 1117 differentially methylated loci (DMLs) and genes, revealing a shift toward hypomethylation among DML-associated genes. Functional annotation shows that DMLs are concentrated in genes mediating metabolism, development, and cellular organization, with many targets localized to cytoplasmic and nuclear compartments. DML-associated genes are dispersed across diverse KEGG pathways and contain a wide array of regulatory and interaction-rich Pfam domains. These findings suggest a system-wide epigenetic response, with potential consequences for metabolic control and developmental programming, and provide new insights into how environmental and anthropogenic forces shape genomic and epigenomic variation in a key aquaculture species.</p>
+  </div>
+</div>
 
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>DNA methylation, Mytilus chilensis, epigenetics, adaptation, aquaculture</p>
+  </div>
+</div>
 
 </header>
 
@@ -214,38 +328,438 @@ Status
 <p>It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.</p>
 </div>
 </div>
-<section id="abstract" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="abstract"><span class="header-section-number">1</span> Abstract</h2>
-<p>This placeholder demonstrates how an existing standalone manuscript site could be migrated into the Current Findings system.</p>
-<p>Existing example site:</p>
-<p>https://sr320.github.io/paper-chilean-mussel/</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Plain-language summary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This study explores how DNA methylation may help Chilean blue mussels adapt to different environments, providing insights for aquaculture and conservation.</p>
+</div>
+</div>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Understanding how marine species respond to environmental heterogeneity is critical for conserving locally adapted populations and sustaining aquaculture practices in the face of global change. The Chilean blue mussel, Mytilus chilensis, a key endemic species in southern Chile, supports one of the world’s largest mussel aquaculture industries. However, the biological foundation of population-level adaptation in this species remains underexplored. Emerging evidence suggests that both genetic and epigenetic mechanisms—particularly DNA methylation—may contribute to phenotypic plasticity and local adaptation in marine invertebrates.</p>
+<p>Previous studies have revealed extensive transcriptomic and mitochondrial differences between M. chilensis populations from ecologically distinct seedbeds, such as Cochamó (41°S) and Yaldad (43°S), in the inner sea of Chiloé Island. These differences include differential expression of genes involved in immunity, metabolism, and cellular stress responses, as well as tissue-specific shifts in mitochondrial gene expression linked to local environmental pressures, including aquaculture practices and variable oxygenation levels <span class="citation" data-cites="yevenes2021adaptive yevenes2022adaptive">(<a href="#ref-yevenes2021adaptive" role="doc-biblioref">Yévenes et al. 2021</a>, <a href="#ref-yevenes2022adaptive" role="doc-biblioref">2022</a>)</span>. Experimental evidence from reciprocal transplants shows population-specific transcriptional responses and reduced growth performance upon translocation, highlighting functional divergence between seedbeds despite high larval connectivity <span class="citation" data-cites="yevenes2025decoding">(<a href="#ref-yevenes2025decoding" role="doc-biblioref">Yévenes, Gajardo, and Gallardo-Escárate 2025</a>)</span>. As shown in <a href="#fig-study-locations" class="quarto-xref">Figure&nbsp;1</a> and detailed in <a href="#tbl-env-comparison" class="quarto-xref">Table&nbsp;1</a>, these two seedbeds exhibit contrasting environmental conditions, including differences in water temperature, salinity, depth, and aquaculture intensity that may contribute to the observed population-level adaptations.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if we're in HTML format and if leaflet is available</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>is_html <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">is_html_output</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>leaflet_available <span class="ot">&lt;-</span> <span class="fu">require</span>(leaflet, <span class="at">quietly =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (is_html <span class="sc">&amp;&amp;</span> leaflet_available) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Interactive map using leaflet for HTML output</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(leaflet)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(dplyr)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Define study locations with coordinates and environmental data</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  locations <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="fu">c</span>(<span class="st">"Cochamó"</span>, <span class="st">"Yaldad"</span>),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">lat =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">41.5</span>, <span class="sc">-</span><span class="fl">43.0</span>),  <span class="co"># Approximate latitudes for the inner sea of Chiloé</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">72.8</span>, <span class="sc">-</span><span class="fl">73.5</span>),  <span class="co"># Approximate longitudes</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> <span class="fu">c</span>(</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Cochamó (41°S): Northern seedbed with higher water temperatures,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">       moderate aquaculture intensity, and variable oxygenation levels"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Yaldad (43°S): Southern seedbed with lower water temperatures,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">       high aquaculture intensity, and distinct environmental pressures"</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp_range =</span> <span class="fu">c</span>(<span class="st">"12-18°C"</span>, <span class="st">"8-14°C"</span>),</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">salinity =</span> <span class="fu">c</span>(<span class="st">"30-32 PSU"</span>, <span class="st">"28-31 PSU"</span>),</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">depth =</span> <span class="fu">c</span>(<span class="st">"5-15m"</span>, <span class="st">"8-20m"</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create interactive map</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">leaflet</span>(locations) <span class="sc">%&gt;%</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addProviderTiles</span>(<span class="st">"Esri.WorldImagery"</span>, <span class="at">group =</span> <span class="st">"Satellite"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addProviderTiles</span>(<span class="st">"OpenStreetMap"</span>, <span class="at">group =</span> <span class="st">"Street Map"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addCircleMarkers</span>(</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">lng =</span> <span class="sc">~</span>lng,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">lat =</span> <span class="sc">~</span>lat,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">radius =</span> <span class="dv">8</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>      <span class="at">color =</span> <span class="fu">c</span>(<span class="st">"#E74C3C"</span>, <span class="st">"#3498DB"</span>),</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">fillColor =</span> <span class="fu">c</span>(<span class="st">"#E74C3C"</span>, <span class="st">"#3498DB"</span>),</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">fillOpacity =</span> <span class="fl">0.7</span>,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">weight =</span> <span class="dv">2</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">popup =</span> <span class="sc">~</span><span class="fu">paste0</span>(</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">"&lt;b&gt;"</span>, location, <span class="st">"&lt;/b&gt;&lt;br&gt;"</span>,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Temperature: "</span>, temp_range, <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Salinity: "</span>, salinity, <span class="st">"&lt;br&gt;"</span>,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Depth: "</span>, depth, <span class="st">"&lt;br&gt;&lt;br&gt;"</span>,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        description</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addLegend</span>(</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#E74C3C"</span>, <span class="st">"#3498DB"</span>),</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Cochamó (41°S)"</span>, <span class="st">"Yaldad (43°S)"</span>),</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"Study Locations"</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addLayersControl</span>(</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>      <span class="at">baseGroups =</span> <span class="fu">c</span>(<span class="st">"Satellite"</span>, <span class="st">"Street Map"</span>),</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>      <span class="at">options =</span> <span class="fu">layersControlOptions</span>(<span class="at">collapsed =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="fu">setView</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">73.15</span>, <span class="at">lat =</span> <span class="sc">-</span><span class="fl">42.25</span>, <span class="at">zoom =</span> <span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="fu">addScaleBar</span>(<span class="at">position =</span> <span class="st">"bottomleft"</span>)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Static map for non-HTML outputs or when leaflet is not available</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(dplyr)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Define study locations</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  locations <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="fu">c</span>(<span class="st">"Cochamó"</span>, <span class="st">"Yaldad"</span>),</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="at">lat =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">41.5</span>, <span class="sc">-</span><span class="fl">43.0</span>),</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    <span class="at">lng =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">72.8</span>, <span class="sc">-</span><span class="fl">73.5</span>),</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    <span class="at">temp_range =</span> <span class="fu">c</span>(<span class="st">"12-18°C"</span>, <span class="st">"8-14°C"</span>),</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    <span class="at">salinity =</span> <span class="fu">c</span>(<span class="st">"30-32 PSU"</span>, <span class="st">"28-31 PSU"</span>),</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>    <span class="at">depth =</span> <span class="fu">c</span>(<span class="st">"5-15m"</span>, <span class="st">"8-20m"</span>)</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Create static map</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(locations<span class="sc">$</span>lng, locations<span class="sc">$</span>lat,</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>       <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#E74C3C"</span>, <span class="st">"#3498DB"</span>),</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">74</span>, <span class="sc">-</span><span class="dv">72</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">43.5</span>, <span class="sc">-</span><span class="dv">41</span>),</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"Longitude (°W)"</span>, <span class="at">ylab =</span> <span class="st">"Latitude (°S)"</span>,</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="st">"Study Locations in the Inner Sea of Chiloé Island"</span>)</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add location labels</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(locations<span class="sc">$</span>lng, locations<span class="sc">$</span>lat <span class="sc">+</span> <span class="fl">0.1</span>,</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>       <span class="at">labels =</span> <span class="fu">paste0</span>(locations<span class="sc">$</span>location, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>, locations<span class="sc">$</span>lat, <span class="st">"°S"</span>),</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="fl">0.8</span>, <span class="at">pos =</span> <span class="dv">3</span>)</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add environmental info</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(locations<span class="sc">$</span>lng, locations<span class="sc">$</span>lat <span class="sc">-</span> <span class="fl">0.1</span>,</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>       <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"Temp: "</span>, locations<span class="sc">$</span>temp_range, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Sal: "</span>, locations<span class="sc">$</span>salinity, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Depth: "</span>, locations<span class="sc">$</span>depth),</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>       <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="at">pos =</span> <span class="dv">1</span>)</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add legend</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">legend</span>(<span class="st">"topright"</span>,</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Cochamó (41°S)"</span>, <span class="st">"Yaldad (43°S)"</span>),</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"#E74C3C"</span>, <span class="st">"#3498DB"</span>),</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>         <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="fl">0.8</span>,</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>         <span class="at">title =</span> <span class="st">"Study Locations"</span>)</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add grid</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="fu">grid</span>()</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-study-locations" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-study-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-ad44736d4d2ea5f65264" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-ad44736d4d2ea5f65264">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Satellite",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"Street Map",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[-41.5,-43],[-72.8,-73.5],8,null,null,{"interactive":true,"className":"","stroke":true,"color":["#E74C3C","#3498DB"],"weight":2,"opacity":0.5,"fill":true,"fillColor":["#E74C3C","#3498DB"],"fillOpacity":0.7},null,null,["<b>Cochamó<\/b><br>Temperature: 12-18°C<br>Salinity: 30-32 PSU<br>Depth: 5-15m<br><br>Cochamó (41°S): Northern seedbed with higher water temperatures,\n       moderate aquaculture intensity, and variable oxygenation levels","<b>Yaldad<\/b><br>Temperature: 8-14°C<br>Salinity: 28-31 PSU<br>Depth: 8-20m<br><br>Yaldad (43°S): Southern seedbed with lower water temperatures,\n       high aquaculture intensity, and distinct environmental pressures"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#E74C3C","#3498DB"],"labels":["Cochamó (41°S)","Yaldad (43°S)"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"unknown","title":"Study Locations","extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addLayersControl","args":[["Satellite","Street Map"],[],{"collapsed":false,"autoZIndex":true,"position":"topright"}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]}],"limits":{"lat":[-43,-41.5],"lng":[-73.5,-72.8]},"setView":[[-42.25,-73.15000000000001],8,[]]},"evals":[],"jsHooks":[]}</script>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-study-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Map showing the study locations Cochamó (41°S) and Yaldad (43°S) in the inner sea of Chiloé Island, Chile. The map highlights key environmental differences between these contrasting seedbeds, including variations in water depth, temperature, salinity, and aquaculture intensity that may contribute to population-level adaptation in Mytilus chilensis.
+</figcaption>
+</figure>
+</div>
+</div>
+<p><strong>Table 1.</strong> Environmental characteristics of the study locations in the inner sea of Chiloé Island, Chile.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create environmental comparison table</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>env_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">Characteristic =</span> <span class="fu">c</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Geographic location"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Latitude"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Longitude"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Water temperature range"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Salinity range"</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Water depth"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Aquaculture intensity"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Oxygenation levels"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Primary environmental pressures"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Population connectivity"</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  Cochamó <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Northern inner sea"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"41°S"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"72.8°W"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">"12-18°C"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"30-32 PSU"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"5-15m"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Moderate"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Variable"</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Seasonal temperature fluctuations, moderate aquaculture"</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"High larval connectivity"</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">Yaldad =</span> <span class="fu">c</span>(</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Southern inner sea"</span>,</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">"43°S"</span>,</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"73.5°W"</span>,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">"8-14°C"</span>,</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">"28-31 PSU"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">"8-20m"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">"High"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Lower"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cold water influence, high aquaculture density"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">"High larval connectivity"</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Format as simple kable table without kableExtra</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(env_data,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Environmental Factor"</span>, <span class="st">"Cochamó (41°S)"</span>, <span class="st">"Yaldad (43°S)"</span>),</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>      <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="st">"c"</span>, <span class="st">"c"</span>),</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>      <span class="at">booktabs =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">linesep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-env-comparison" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-env-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Environmental characteristics and aquaculture conditions at the two study locations
+</figcaption>
+<div aria-describedby="tbl-env-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 41%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Environmental Factor</th>
+<th style="text-align: center;">Cochamó (41°S)</th>
+<th style="text-align: center;">Yaldad (43°S)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Geographic location</td>
+<td style="text-align: center;">Northern inner sea</td>
+<td style="text-align: center;">Southern inner sea</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Latitude</td>
+<td style="text-align: center;">41°S</td>
+<td style="text-align: center;">43°S</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Longitude</td>
+<td style="text-align: center;">72.8°W</td>
+<td style="text-align: center;">73.5°W</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Water temperature range</td>
+<td style="text-align: center;">12-18°C</td>
+<td style="text-align: center;">8-14°C</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Salinity range</td>
+<td style="text-align: center;">30-32 PSU</td>
+<td style="text-align: center;">28-31 PSU</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Water depth</td>
+<td style="text-align: center;">5-15m</td>
+<td style="text-align: center;">8-20m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Aquaculture intensity</td>
+<td style="text-align: center;">Moderate</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oxygenation levels</td>
+<td style="text-align: center;">Variable</td>
+<td style="text-align: center;">Lower</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Primary environmental pressures</td>
+<td style="text-align: center;">Seasonal temperature fluctuations, moderate aquaculture</td>
+<td style="text-align: center;">Cold water influence, high aquaculture density</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Population connectivity</td>
+<td style="text-align: center;">High larval connectivity</td>
+<td style="text-align: center;">High larval connectivity</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>In addition to gene expression differences, recent work has uncovered epigenetic signatures that may contribute to adaptive divergence. Long non-coding RNAs (lncRNAs) were found to be differentially expressed between Cochamó and Yaldad populations, with associated changes in immune and metabolic gene networks <span class="citation" data-cites="yevenes2023epigenetic">(<a href="#ref-yevenes2023epigenetic" role="doc-biblioref">Yévenes, Gallardo-Escárate, and Gajardo 2023</a>)</span>. These findings underscore the potential for environmentally responsive regulatory elements—including DNA methylation—to mediate local adaptation.</p>
+<p>Yet, the role of DNA methylation in shaping population-specific responses in M. chilensis remains unexplored. DNA methylation, a heritable and reversible epigenetic modification, can influence gene expression and phenotypic traits without altering the underlying DNA sequence. In bivalves, DNA methylation is known to affect developmental and immune processes and may be responsive to environmental stressors such as hypoxia, toxins, and acidification—conditions that vary across the Chilean inner sea and have been shown to modulate gene expression and microbiota composition in M. chilensis <span class="citation" data-cites="montufar2024hypoxia castillo2017ocean montufar2025microbiota">(<a href="#ref-montufar2024hypoxia" role="doc-biblioref">Montúfar-Romero et al. 2024</a>, <a href="#ref-montufar2025microbiota" role="doc-biblioref">2025</a>; <a href="#ref-castillo2017ocean" role="doc-biblioref">Castillo et al. 2017</a>)</span>.</p>
+<p>In this study, we investigate genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds—Cochamó and Yaldad—with the aim of identifying differentially methylated regions (DMRs) that may underlie local adaptation. By integrating this epigenetic information with known patterns of gene expression and environmental context, we seek to illuminate the molecular basis of ecological divergence and contribute new insights into how environmental and anthropogenic forces shape genomic and epigenomic variation in a key aquaculture species.</p>
 </section>
-<section id="background" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="background"><span class="header-section-number">2</span> Background</h2>
-<p>The Current Findings framework is intended to support migration of standalone manuscript-style websites into a shared, searchable, and maintainable RobertsLab archive.</p>
+<section id="methods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
+<p>To investigate DNA methylation differences between populations of Mytilus chilensis from Cochamó and Yaldad, whole-genome bisulfite sequencing (WGBS) was performed and analyzed using a reproducible, high-throughput bioinformatics workflow. DNA was extracted from gill tissue of adult individuals and subjected to bisulfite treatment and library preparation. Libraries were sequenced on an Illumina NovaSeq 6000 platform, generating 150 bp paired-end reads, with each sample yielding approximately 120–160 million read pairs, providing &gt;30× average coverage across the 1.93 Gb M. chilensis genome.</p>
+<section id="read-processing-and-alignment" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="read-processing-and-alignment"><span class="header-section-number">2.1</span> Read Processing and Alignment</h2>
+<p>Raw sequencing reads were processed using the nf-core/methylseq pipeline (version 2.5), implemented through Nextflow (version 23.04.1). Reads were aligned to the M. chilensis reference genome (MchilensisGenomeV1.fa), a chromosome-level assembly comprising 14 scaffolds (Gallardo-Escárate et al.&nbsp;2023), using Bismark (version 0.24.1) with the Bowtie2 aligner (version 2.5.1). Quality trimming was applied to reverse reads by hard-clipping the final 10 bases (–clip_r2 10) to mitigate low-quality base calls at the 3′ end. Methylation calls were extracted using the Bismark methylation extractor and aggregated by cytosine context. Pipeline execution was configured via a custom .config file to specify HPC resources and run with –resume, –with-trace, –with-report, and –with-timeline flags for reproducibility and tracking. Output files were stored in a structured directory and included per-base CpG methylation calls, quality control metrics, and coverage files.</p>
 </section>
-<section id="methods" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="methods"><span class="header-section-number">3</span> Methods</h2>
-<p>Content from the existing Chilean mussel manuscript site can be migrated into this Quarto report structure.</p>
+<section id="methylation-data-processing-and-filtering" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="methylation-data-processing-and-filtering"><span class="header-section-number">2.2</span> Methylation Data Processing and Filtering</h2>
+<p>Downstream analysis was performed in R (version 4.3.1) using the methylKit package (version 1.10.0). Due to compatibility issues with newer versions of supporting libraries, data.table was pinned to version 1.14.10. Methylation coverage files were imported using methRead() with the pipeline = “bismarkCoverage” parameter and CpG context specified. Six samples—three each from Cochamó (LCo_BSr1–3) and Yaldad (LYa_BSr1–3)—were analyzed. Samples were assigned to treatment groups with Cochamó designated as the control (treatment = 0) and Yaldad as the treatment group (treatment = 1).</p>
+<p>To ensure data quality, CpG sites were filtered to retain only those with a minimum read coverage of 10 in all samples, excluding those in the top 2% of coverage values to reduce PCR bias. Sites were then unified across samples using unite() with min.per.group = 3 and destrand = FALSE to retain strand-specific methylation information.</p>
+<section id="exploratory-and-differential-methylation-analyses" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="exploratory-and-differential-methylation-analyses"><span class="header-section-number">2.2.1</span> Exploratory and Differential Methylation Analyses</h3>
+<p>Global methylation patterns were assessed using hierarchical clustering (Ward’s method on correlation distance) and principal component analysis (PCA) to evaluate sample similarity. Population-level differences in DNA methylation were then tested using methylKit’s logistic regression model, incorporating a multinomial overdispersion correction (overdispersion = “MN”) to account for biological variability. Statistical testing was performed using the Chi-squared test (test = “Chisq”), and q-values were adjusted for multiple testing using the SLIM method (adjust = “SLIM”).</p>
+<p>Differentially methylated loci (DMLs) were defined as CpG sites with an absolute methylation difference ≥25% and FDR-adjusted q-value ≤ 0.05. Separate sets of DMLs were extracted to identify hypomethylated (lower in Yaldad) and hypermethylated (higher in Yaldad) loci. Results were saved as tab-delimited text files for downstream annotation and visualization.</p>
 </section>
-<section id="results" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="results"><span class="header-section-number">4</span> Results</h2>
-<p>Future migrated content should include figures, tables, references, data/code availability, and suggested citation information.</p>
 </section>
-<section id="discussion" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="discussion"><span class="header-section-number">5</span> Discussion</h2>
-<p>This report serves as a model for integrating project-specific scientific outputs into a shared RobertsLab publication system.</p>
 </section>
-<section id="data-and-code-availability" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="data-and-code-availability"><span class="header-section-number">6</span> Data and code availability</h2>
-<p>Add links to relevant repositories, notebooks, data archives, and analysis workflows.</p>
+<section id="results" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
+<p>Bisulfite sequencing across six libraries yielded approximately 99.8 million reads per sample. Alignment to the reference genome was successful for 60.5–61.4% of reads, with 22–24% unaligned and 15–16% aligning ambiguously. After removal of duplicate reads (2.2–3.5 million per sample), 57.0–58.8 million uniquely aligned reads remained for methylation analysis.</p>
+<p>Genome-wide cytosine methylation was assessed in CpG, CHG, and CHH contexts. Across samples, ~2.1–2.2 billion cytosines were examined. CpG methylation was the most prominent, with an average of ~36 million methylated CpGs and ~205 million unmethylated CpGs per sample, corresponding to a methylation rate of approximately 15%. In contrast, CHG and CHH methylation was much lower, with methylation levels below 1% in both contexts. These patterns are consistent with expectations for invertebrate methylomes, where methylation is primarily restricted to CpG sites.</p>
+<p>In total, 1117 differentially methylated loci (DMLs) were identified (see Methods and Supplementary Data). These DMLs were distributed across all chromosomes and classified as either hypomethylated or hypermethylated based on methylation difference.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.5.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'readr' was built under R version 4.5.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read methylKit output</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>dml <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="st">"data/DML.txt"</span>, <span class="at">col_types =</span> <span class="fu">cols</span>())</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Classify loci</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dml <span class="ot">&lt;-</span> dml <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">status =</span> <span class="fu">ifelse</span>(meth.diff <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"Hypermethylated"</span>, <span class="st">"Hypomethylated"</span>))</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Count per chromosome and status</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>dml_counts <span class="ot">&lt;-</span> dml <span class="sc">%&gt;%</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(chr, status) <span class="sc">%&gt;%</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">DMLs =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Stacked bar chart</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dml_counts, <span class="fu">aes</span>(<span class="at">x =</span> chr, <span class="at">y =</span> DMLs, <span class="at">fill =</span> status)) <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"DMLs per Chromosome"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of DMLs"</span>, <span class="at">x =</span> <span class="st">"Chromosome"</span>, <span class="at">fill =</span> <span class="st">"Status"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-dml-chromosome" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dml-chromosome-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-dml-chromosome-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dml-chromosome-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Distribution of differentially methylated loci (DMLs) across chromosomes. Each bar represents the count of DMLs for a specific chromosome, with colors indicating whether loci are hypermethylated (higher in Yaldad) or hypomethylated (lower in Yaldad).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="chromosome-wide-distribution-of-dmls" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="chromosome-wide-distribution-of-dmls"><span class="header-section-number">3.1</span> Chromosome-wide Distribution of DMLs</h2>
+<p>To visualize the spatial distribution of differentially methylated loci across the genome, we created a comprehensive plot showing all chromosomes and the precise locations of DMLs within each chromosome. This visualization reveals the genomic landscape of epigenetic variation and identifies potential hotspots of methylation change.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Read DML data</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>dml <span class="ot">&lt;-</span> <span class="fu">read_tsv</span>(<span class="st">"data/DML.txt"</span>, <span class="at">col_types =</span> <span class="fu">cols</span>())</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean chromosome names and convert to factor for proper ordering</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>dml <span class="ot">&lt;-</span> dml <span class="sc">%&gt;%</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">chr =</span> <span class="fu">factor</span>(chr, <span class="at">levels =</span> <span class="fu">paste0</span>(<span class="st">"Chromosome_"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">14</span>)),</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">status =</span> <span class="fu">ifelse</span>(meth.diff <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"Hypermethylated"</span>, <span class="st">"Hypomethylated"</span>),</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate midpoint position for each DML</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">position =</span> (start <span class="sc">+</span> end) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create chromosome plot</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(dml, <span class="fu">aes</span>(<span class="at">x =</span> position, <span class="at">y =</span> chr, <span class="at">color =</span> status)) <span class="sc">+</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Hypermethylated"</span> <span class="ot">=</span> <span class="st">"#E74C3C"</span>, <span class="st">"Hypomethylated"</span> <span class="ot">=</span> <span class="st">"#3498DB"</span>)) <span class="sc">+</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_discrete</span>(<span class="at">limits =</span> <span class="fu">rev</span>(<span class="fu">levels</span>(dml<span class="sc">$</span>chr))) <span class="sc">+</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"gray90"</span>),</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">face =</span> <span class="st">"bold"</span>)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Genome-wide Distribution of Differentially Methylated Loci"</span>,</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Genomic Position (base pairs)"</span>,</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Chromosome"</span>,</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Methylation Status"</span>,</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Each point represents a DML. Red: hypermethylated in Yaldad, Blue: hypomethylated in Yaldad"</span></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="cf">function</span>(x) <span class="fu">paste0</span>(x<span class="sc">/</span><span class="fl">1e6</span>, <span class="st">" Mb"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-dml-genome-wide" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dml-genome-wide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-dml-genome-wide-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dml-genome-wide-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Distribution of differentially methylated loci (DMLs) across all chromosomes. Each point represents a DML positioned by its genomic coordinates. Red points indicate hypermethylated loci (higher methylation in Yaldad), while blue points show hypomethylated loci (lower methylation in Yaldad). Chromosomes are arranged vertically with genomic position (in base pairs) on the x-axis.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="suggested-citation" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="suggested-citation"><span class="header-section-number">7</span> Suggested citation</h2>
-<p>Roberts, S. B. 2026. <em>Genomic and epigenetic resources for Chilean mussel</em>. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/</p>
+<section id="location" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="location"><span class="header-section-number">3.2</span> Location</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dml-heatmap.png" class="img-fluid figure-img"></p>
+<figcaption>heatmap</figcaption>
+</figure>
+</div>
 </section>
-<section id="version-history" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="version-history"><span class="header-section-number">8</span> Version history</h2>
+<section id="genes-harboring-dmls-and-overall-methylation-pattern" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="genes-harboring-dmls-and-overall-methylation-pattern"><span class="header-section-number">3.3</span> Genes harboring DMLs and overall methylation pattern</h2>
+<p>We identified 159 genes containing differentially methylated loci (DMLs). For each gene, methylation differences were calculated by aggregating the absolute methylation change at all DMLs mapped to that gene, using the output from methylKit’s logistic regression analysis. Summary statistics (range: −77.04% to +66.86%; SD 40.48%, median: −8.96%, mean: −0.68%) were computed across these gene-level aggregated values, indicating a shift toward hypomethylation among DML-associated genes.</p>
+</section>
+<section id="gene-ontology-go-processes-functions-and-locations" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="gene-ontology-go-processes-functions-and-locations"><span class="header-section-number">3.4</span> Gene Ontology (GO): processes, functions, and locations</h2>
+<p>Across Biological Process terms, DML genes were most frequently annotated to metabolic process (71 genes; 44.7% of all DML genes) and to high-level developmental and cellular organization/biogenesis categories (each 57 genes; 35.8%). Additional frequent terms included nitrogen compound metabolic process (63 genes; 39.6%) and positive regulation of biological process (57 genes; 35.8%). For Molecular Function, broad binding categories predominated (binding: 81 genes, 50.9%; protein binding: 58 genes, 36.5%), consistent with an overrepresentation of regulatory and interaction-prone proteins. Cellular Component assignments placed many targets in cell/intracellular compartments (cell: 104 genes, 65.4%; intracellular: 99 genes, 62.3%), with frequent localization to the cytoplasm (80 genes, 50.3%) and nucleus (53 genes, 33.3%)</p>
+<p>These patterns indicate that DMLs are concentrated in genes mediating metabolism, developmental programs, and cellular organization, with many targets residing in cytoplasmic and nuclear contexts where gene regulation and signal processing occur.</p>
+</section>
+<section id="kegg-pathways" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="kegg-pathways"><span class="header-section-number">3.5</span> KEGG pathways</h2>
+<p>DML-associated genes mapped to 122 unique KEGG pathways, with most pathways represented by a single gene, reflecting broad functional dispersion rather than concentration in a small number of routes. Prominent pathway classes included amino acid, carbohydrate, lipid, and nucleotide metabolism, as well as signal transduction and cellular process categories. The prevalence of core metabolic routes aligns with the GO-based enrichment of metabolic processes and suggests potential epigenetic modulation of energy balance and biosynthesis.</p>
+</section>
+<section id="pfam-domains" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="pfam-domains"><span class="header-section-number">3.6</span> Pfam domains</h2>
+<p>We detected 118 unique Pfam domains among DML-associated genes, generally with low redundancy (most domains present in one or two genes), underscoring protein family diversity. Recurrently observed domains included the RNA recognition motif (PF00076)—implicating post-transcriptional regulation—alongside regulatory/interaction modules such as BTB/POZ (PF07707) and ankyrin repeats (PF00023). We also observed immunoglobulin domains (PF00047) and cytochrome P450 families (PF00061/ PF00067), the latter consistent with roles in xenobiotic and lipid metabolism. Several domains of unknown function (DUFs) were present, indicating potentially novel or poorly characterized targets of methylation.</p>
+</section>
+<section id="directionality-of-methylation-changes" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="directionality-of-methylation-changes"><span class="header-section-number">3.7</span> Directionality of methylation changes</h2>
+<p>Given the negative median methylation difference, hypomethylation was more common among DML genes. Functionally, hypomethylated targets were enriched for regulatory proteins, signaling molecules, and transporters, whereas hypermethylated targets included transcription factors, metabolic enzymes, and structural proteins. Collectively, these patterns are consistent with widespread epigenetic remodeling across regulatory and metabolic layers, rather than changes confined to a single pathway or compartment.</p>
+</section>
+<section id="summary" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.8</span> Summary</h2>
+<p>Together, these results show that genes harboring DMLs in Mytilus chilensis are functionally diverse. However, they converge on metabolism, development, and cellular organization, with many targets positioned in cytoplasmic and nuclear environments. The distribution of DMLs is skewed toward hypomethylation. DML-associated genes are dispersed across many KEGG pathways and contain regulatory or interaction-rich Pfam domains. These findings suggest a system-wide epigenetic response with potential consequences for metabolic control and developmental programming.</p>
+</section>
+<section id="data-and-code-availability" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="data-and-code-availability"><span class="header-section-number">3.9</span> Data and code availability</h2>
+<p>Source data, analysis code, and the original manuscript site are available at the project repository: <a href="https://github.com/sr320/paper-chilean-mussel" class="uri">https://github.com/sr320/paper-chilean-mussel</a> (rendered at <a href="https://sr320.github.io/paper-chilean-mussel/" class="uri">https://sr320.github.io/paper-chilean-mussel/</a>).</p>
+</section>
+<section id="suggested-citation" class="level2" data-number="3.10">
+<h2 data-number="3.10" class="anchored" data-anchor-id="suggested-citation"><span class="header-section-number">3.10</span> Suggested citation</h2>
+<p>Gallardo, C., Venezuala, V., and Roberts, S. B. 2025. <em>DNA methylation in Mytilus chilensis: Epigenetic mechanisms of local adaptation</em>. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/</p>
+</section>
+<section id="version-history" class="level2" data-number="3.11">
+<h2 data-number="3.11" class="anchored" data-anchor-id="version-history"><span class="header-section-number">3.11</span> Version history</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -256,17 +770,46 @@ Status
 </thead>
 <tbody>
 <tr class="odd">
-<td>0.1</td>
+<td>1.0</td>
+<td>2025-08-12</td>
+<td>Original manuscript (standalone site)</td>
+</tr>
+<tr class="even">
+<td>1.1</td>
 <td>2026-06-17</td>
-<td>Placeholder created</td>
+<td>Migrated into Current Findings</td>
 </tr>
 </tbody>
 </table>
 
 
+
+</section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-castillo2017ocean" class="csl-entry" role="listitem">
+Castillo, N, L M Saavedra, C A Vargas, C Gallardo-Escárate, and C Détrée. 2017. <span>“Ocean Acidification and Pathogen Exposure Modulate the Immune Response of the Edible Mussel *Mytilus Chilensis*.”</span> <em>Fish &amp; Shellfish Immunology</em> 70: 149–55. <a href="https://doi.org/10.1016/j.fsi.2017.08.047">https://doi.org/10.1016/j.fsi.2017.08.047</a>.
+</div>
+<div id="ref-montufar2025microbiota" class="csl-entry" role="listitem">
+Montúfar-Romero, M, D Valenzuela-Miranda, V Valenzuela-Muñoz, M F Morales-Rivera, and C Gallardo-Escárate. 2025. <span>“Microbiota Dysbiosis in *Mytilus Chilensis* Is Induced by Hypoxia, Leading to Molecular and Functional Consequences.”</span> <em>Microorganisms</em> 13 (4): 825. <a href="https://doi.org/10.3390/microorganisms13040825">https://doi.org/10.3390/microorganisms13040825</a>.
+</div>
+<div id="ref-montufar2024hypoxia" class="csl-entry" role="listitem">
+Montúfar-Romero, M, V Valenzuela-Muñoz, D Valenzuela-Miranda, and C Gallardo-Escárate. 2024. <span>“Hypoxia in the Blue Mussel *Mytilus Chilensis* Induces a Transcriptome Shift Associated with Endoplasmic Reticulum Stress, Metabolism, and Immune Response.”</span> <em>Genes</em> 15 (6): 658. <a href="https://doi.org/10.3390/genes15060658">https://doi.org/10.3390/genes15060658</a>.
+</div>
+<div id="ref-yevenes2025decoding" class="csl-entry" role="listitem">
+Yévenes, M, G Gajardo, and C Gallardo-Escárate. 2025. <span>“Decoding Local Adaptation in the Exploited Native Marine Mussel *Mytilus Chilensis*: Genomic Evidence from a Reciprocal Transplant Experiment.”</span> <em>International Journal of Molecular Sciences</em> 26 (3): 931. <a href="https://doi.org/10.3390/ijms26030931">https://doi.org/10.3390/ijms26030931</a>.
+</div>
+<div id="ref-yevenes2023epigenetic" class="csl-entry" role="listitem">
+Yévenes, M, C Gallardo-Escárate, and G Gajardo. 2023. <span>“Epigenetic Variation Mediated by lncRNAs Accounts for Adaptive Genomic Differentiation of the Endemic Blue Mussel *Mytilus Chilensis*.”</span> <em>Heliyon</em> 10 (1): e23695. <a href="https://doi.org/10.1016/j.heliyon.2023.e23695">https://doi.org/10.1016/j.heliyon.2023.e23695</a>.
+</div>
+<div id="ref-yevenes2021adaptive" class="csl-entry" role="listitem">
+Yévenes, M, G Núñez-Acuña, C Gallardo-Escárate, and G Gajardo. 2021. <span>“Adaptive Differences in Gene Expression in Farm-Impacted Seedbeds of the Native Blue Mussel *Mytilus Chilensis*.”</span> <em>Frontiers in Genetics</em> 12: 666539. <a href="https://doi.org/10.3389/fgene.2021.666539">https://doi.org/10.3389/fgene.2021.666539</a>.
+</div>
+<div id="ref-yevenes2022adaptive" class="csl-entry" role="listitem">
+———. 2022. <span>“Adaptive Mitochondrial Genome Functioning in Ecologically Different Farm-Impacted Natural Seedbeds of the Endemic Blue Mussel *Mytilus Chilensis*.”</span> <em>Comparative Biochemistry and Physiology Part D: Genomics and Proteomics</em> 42: 100955. <a href="https://doi.org/10.1016/j.cbd.2021.100955">https://doi.org/10.1016/j.cbd.2021.100955</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -67,7 +67,7 @@
     "href": "reports.html",
     "title": "Reports",
     "section": "",
-    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nGenomic and epigenetic resources for Chilean mussel\n\n\nPlaceholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\nNo matching items"
+    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nDNA methylation in Mytilus chilensis\n\n\nGenome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.\n\n\n\n\n\nAug 12, 2025\n\n\nCristian Gallardo, Valentina Venezuala, Steven Roberts\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -128,64 +128,99 @@
   {
     "objectID": "reports/chilean-mussel/index.html",
     "href": "reports/chilean-mussel/index.html",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
+    "title": "DNA methylation in Mytilus chilensis",
     "section": "",
     "text": "Status\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
   },
   {
-    "objectID": "reports/chilean-mussel/index.html#abstract",
-    "href": "reports/chilean-mussel/index.html#abstract",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "1 Abstract",
-    "text": "1 Abstract\nThis placeholder demonstrates how an existing standalone manuscript site could be migrated into the Current Findings system.\nExisting example site:\nhttps://sr320.github.io/paper-chilean-mussel/"
+    "objectID": "reports/chilean-mussel/index.html#read-processing-and-alignment",
+    "href": "reports/chilean-mussel/index.html#read-processing-and-alignment",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "2.1 Read Processing and Alignment",
+    "text": "2.1 Read Processing and Alignment\nRaw sequencing reads were processed using the nf-core/methylseq pipeline (version 2.5), implemented through Nextflow (version 23.04.1). Reads were aligned to the M. chilensis reference genome (MchilensisGenomeV1.fa), a chromosome-level assembly comprising 14 scaffolds (Gallardo-Escárate et al. 2023), using Bismark (version 0.24.1) with the Bowtie2 aligner (version 2.5.1). Quality trimming was applied to reverse reads by hard-clipping the final 10 bases (–clip_r2 10) to mitigate low-quality base calls at the 3′ end. Methylation calls were extracted using the Bismark methylation extractor and aggregated by cytosine context. Pipeline execution was configured via a custom .config file to specify HPC resources and run with –resume, –with-trace, –with-report, and –with-timeline flags for reproducibility and tracking. Output files were stored in a structured directory and included per-base CpG methylation calls, quality control metrics, and coverage files."
   },
   {
-    "objectID": "reports/chilean-mussel/index.html#background",
-    "href": "reports/chilean-mussel/index.html#background",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "2 Background",
-    "text": "2 Background\nThe Current Findings framework is intended to support migration of standalone manuscript-style websites into a shared, searchable, and maintainable RobertsLab archive."
+    "objectID": "reports/chilean-mussel/index.html#methylation-data-processing-and-filtering",
+    "href": "reports/chilean-mussel/index.html#methylation-data-processing-and-filtering",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "2.2 Methylation Data Processing and Filtering",
+    "text": "2.2 Methylation Data Processing and Filtering\nDownstream analysis was performed in R (version 4.3.1) using the methylKit package (version 1.10.0). Due to compatibility issues with newer versions of supporting libraries, data.table was pinned to version 1.14.10. Methylation coverage files were imported using methRead() with the pipeline = “bismarkCoverage” parameter and CpG context specified. Six samples—three each from Cochamó (LCo_BSr1–3) and Yaldad (LYa_BSr1–3)—were analyzed. Samples were assigned to treatment groups with Cochamó designated as the control (treatment = 0) and Yaldad as the treatment group (treatment = 1).\nTo ensure data quality, CpG sites were filtered to retain only those with a minimum read coverage of 10 in all samples, excluding those in the top 2% of coverage values to reduce PCR bias. Sites were then unified across samples using unite() with min.per.group = 3 and destrand = FALSE to retain strand-specific methylation information.\n\n2.2.1 Exploratory and Differential Methylation Analyses\nGlobal methylation patterns were assessed using hierarchical clustering (Ward’s method on correlation distance) and principal component analysis (PCA) to evaluate sample similarity. Population-level differences in DNA methylation were then tested using methylKit’s logistic regression model, incorporating a multinomial overdispersion correction (overdispersion = “MN”) to account for biological variability. Statistical testing was performed using the Chi-squared test (test = “Chisq”), and q-values were adjusted for multiple testing using the SLIM method (adjust = “SLIM”).\nDifferentially methylated loci (DMLs) were defined as CpG sites with an absolute methylation difference ≥25% and FDR-adjusted q-value ≤ 0.05. Separate sets of DMLs were extracted to identify hypomethylated (lower in Yaldad) and hypermethylated (higher in Yaldad) loci. Results were saved as tab-delimited text files for downstream annotation and visualization."
   },
   {
-    "objectID": "reports/chilean-mussel/index.html#methods",
-    "href": "reports/chilean-mussel/index.html#methods",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "3 Methods",
-    "text": "3 Methods\nContent from the existing Chilean mussel manuscript site can be migrated into this Quarto report structure."
+    "objectID": "reports/chilean-mussel/index.html#chromosome-wide-distribution-of-dmls",
+    "href": "reports/chilean-mussel/index.html#chromosome-wide-distribution-of-dmls",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.1 Chromosome-wide Distribution of DMLs",
+    "text": "3.1 Chromosome-wide Distribution of DMLs\nTo visualize the spatial distribution of differentially methylated loci across the genome, we created a comprehensive plot showing all chromosomes and the precise locations of DMLs within each chromosome. This visualization reveals the genomic landscape of epigenetic variation and identifies potential hotspots of methylation change.\n\nlibrary(ggplot2)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(forcats)\n\n# Read DML data\ndml &lt;- read_tsv(\"data/DML.txt\", col_types = cols())\n\n# Clean chromosome names and convert to factor for proper ordering\ndml &lt;- dml %&gt;%\n  mutate(\n    chr = factor(chr, levels = paste0(\"Chromosome_\", 1:14)),\n    status = ifelse(meth.diff &gt; 0, \"Hypermethylated\", \"Hypomethylated\"),\n    # Calculate midpoint position for each DML\n    position = (start + end) / 2\n  )\n\n# Create chromosome plot\nggplot(dml, aes(x = position, y = chr, color = status)) +\n  geom_point(alpha = 0.7, size = 1.5) +\n  scale_color_manual(values = c(\"Hypermethylated\" = \"#E74C3C\", \"Hypomethylated\" = \"#3498DB\")) +\n  scale_y_discrete(limits = rev(levels(dml$chr))) +\n  theme_minimal() +\n  theme(\n    panel.grid.major.y = element_line(color = \"gray90\"),\n    panel.grid.minor = element_blank(),\n    axis.text.x = element_text(angle = 45, hjust = 1, size = 8),\n    axis.text.y = element_text(size = 10),\n    legend.position = \"bottom\",\n    plot.title = element_text(hjust = 0.5, size = 14, face = \"bold\")\n  ) +\n  labs(\n    title = \"Genome-wide Distribution of Differentially Methylated Loci\",\n    x = \"Genomic Position (base pairs)\",\n    y = \"Chromosome\",\n    color = \"Methylation Status\",\n    caption = \"Each point represents a DML. Red: hypermethylated in Yaldad, Blue: hypomethylated in Yaldad\"\n  ) +\n  scale_x_continuous(labels = function(x) paste0(x/1e6, \" Mb\"))\n\n\n\n\n\n\n\nFigure 3: Distribution of differentially methylated loci (DMLs) across all chromosomes. Each point represents a DML positioned by its genomic coordinates. Red points indicate hypermethylated loci (higher methylation in Yaldad), while blue points show hypomethylated loci (lower methylation in Yaldad). Chromosomes are arranged vertically with genomic position (in base pairs) on the x-axis."
   },
   {
-    "objectID": "reports/chilean-mussel/index.html#results",
-    "href": "reports/chilean-mussel/index.html#results",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "4 Results",
-    "text": "4 Results\nFuture migrated content should include figures, tables, references, data/code availability, and suggested citation information."
+    "objectID": "reports/chilean-mussel/index.html#location",
+    "href": "reports/chilean-mussel/index.html#location",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.2 Location",
+    "text": "3.2 Location\n\n\n\nheatmap"
   },
   {
-    "objectID": "reports/chilean-mussel/index.html#discussion",
-    "href": "reports/chilean-mussel/index.html#discussion",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "5 Discussion",
-    "text": "5 Discussion\nThis report serves as a model for integrating project-specific scientific outputs into a shared RobertsLab publication system."
+    "objectID": "reports/chilean-mussel/index.html#genes-harboring-dmls-and-overall-methylation-pattern",
+    "href": "reports/chilean-mussel/index.html#genes-harboring-dmls-and-overall-methylation-pattern",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.3 Genes harboring DMLs and overall methylation pattern",
+    "text": "3.3 Genes harboring DMLs and overall methylation pattern\nWe identified 159 genes containing differentially methylated loci (DMLs). For each gene, methylation differences were calculated by aggregating the absolute methylation change at all DMLs mapped to that gene, using the output from methylKit’s logistic regression analysis. Summary statistics (range: −77.04% to +66.86%; SD 40.48%, median: −8.96%, mean: −0.68%) were computed across these gene-level aggregated values, indicating a shift toward hypomethylation among DML-associated genes."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#gene-ontology-go-processes-functions-and-locations",
+    "href": "reports/chilean-mussel/index.html#gene-ontology-go-processes-functions-and-locations",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.4 Gene Ontology (GO): processes, functions, and locations",
+    "text": "3.4 Gene Ontology (GO): processes, functions, and locations\nAcross Biological Process terms, DML genes were most frequently annotated to metabolic process (71 genes; 44.7% of all DML genes) and to high-level developmental and cellular organization/biogenesis categories (each 57 genes; 35.8%). Additional frequent terms included nitrogen compound metabolic process (63 genes; 39.6%) and positive regulation of biological process (57 genes; 35.8%). For Molecular Function, broad binding categories predominated (binding: 81 genes, 50.9%; protein binding: 58 genes, 36.5%), consistent with an overrepresentation of regulatory and interaction-prone proteins. Cellular Component assignments placed many targets in cell/intracellular compartments (cell: 104 genes, 65.4%; intracellular: 99 genes, 62.3%), with frequent localization to the cytoplasm (80 genes, 50.3%) and nucleus (53 genes, 33.3%)\nThese patterns indicate that DMLs are concentrated in genes mediating metabolism, developmental programs, and cellular organization, with many targets residing in cytoplasmic and nuclear contexts where gene regulation and signal processing occur."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#kegg-pathways",
+    "href": "reports/chilean-mussel/index.html#kegg-pathways",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.5 KEGG pathways",
+    "text": "3.5 KEGG pathways\nDML-associated genes mapped to 122 unique KEGG pathways, with most pathways represented by a single gene, reflecting broad functional dispersion rather than concentration in a small number of routes. Prominent pathway classes included amino acid, carbohydrate, lipid, and nucleotide metabolism, as well as signal transduction and cellular process categories. The prevalence of core metabolic routes aligns with the GO-based enrichment of metabolic processes and suggests potential epigenetic modulation of energy balance and biosynthesis."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#pfam-domains",
+    "href": "reports/chilean-mussel/index.html#pfam-domains",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.6 Pfam domains",
+    "text": "3.6 Pfam domains\nWe detected 118 unique Pfam domains among DML-associated genes, generally with low redundancy (most domains present in one or two genes), underscoring protein family diversity. Recurrently observed domains included the RNA recognition motif (PF00076)—implicating post-transcriptional regulation—alongside regulatory/interaction modules such as BTB/POZ (PF07707) and ankyrin repeats (PF00023). We also observed immunoglobulin domains (PF00047) and cytochrome P450 families (PF00061/ PF00067), the latter consistent with roles in xenobiotic and lipid metabolism. Several domains of unknown function (DUFs) were present, indicating potentially novel or poorly characterized targets of methylation."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#directionality-of-methylation-changes",
+    "href": "reports/chilean-mussel/index.html#directionality-of-methylation-changes",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.7 Directionality of methylation changes",
+    "text": "3.7 Directionality of methylation changes\nGiven the negative median methylation difference, hypomethylation was more common among DML genes. Functionally, hypomethylated targets were enriched for regulatory proteins, signaling molecules, and transporters, whereas hypermethylated targets included transcription factors, metabolic enzymes, and structural proteins. Collectively, these patterns are consistent with widespread epigenetic remodeling across regulatory and metabolic layers, rather than changes confined to a single pathway or compartment."
+  },
+  {
+    "objectID": "reports/chilean-mussel/index.html#summary",
+    "href": "reports/chilean-mussel/index.html#summary",
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.8 Summary",
+    "text": "3.8 Summary\nTogether, these results show that genes harboring DMLs in Mytilus chilensis are functionally diverse. However, they converge on metabolism, development, and cellular organization, with many targets positioned in cytoplasmic and nuclear environments. The distribution of DMLs is skewed toward hypomethylation. DML-associated genes are dispersed across many KEGG pathways and contain regulatory or interaction-rich Pfam domains. These findings suggest a system-wide epigenetic response with potential consequences for metabolic control and developmental programming."
   },
   {
     "objectID": "reports/chilean-mussel/index.html#data-and-code-availability",
     "href": "reports/chilean-mussel/index.html#data-and-code-availability",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "6 Data and code availability",
-    "text": "6 Data and code availability\nAdd links to relevant repositories, notebooks, data archives, and analysis workflows."
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.9 Data and code availability",
+    "text": "3.9 Data and code availability\nSource data, analysis code, and the original manuscript site are available at the project repository: https://github.com/sr320/paper-chilean-mussel (rendered at https://sr320.github.io/paper-chilean-mussel/)."
   },
   {
     "objectID": "reports/chilean-mussel/index.html#suggested-citation",
     "href": "reports/chilean-mussel/index.html#suggested-citation",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "7 Suggested citation",
-    "text": "7 Suggested citation\nRoberts, S. B. 2026. Genomic and epigenetic resources for Chilean mussel. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/"
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.10 Suggested citation",
+    "text": "3.10 Suggested citation\nGallardo, C., Venezuala, V., and Roberts, S. B. 2025. DNA methylation in Mytilus chilensis: Epigenetic mechanisms of local adaptation. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/"
   },
   {
     "objectID": "reports/chilean-mussel/index.html#version-history",
     "href": "reports/chilean-mussel/index.html#version-history",
-    "title": "Genomic and epigenetic resources for Chilean mussel",
-    "section": "8 Version history",
-    "text": "8 Version history\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nPlaceholder created"
+    "title": "DNA methylation in Mytilus chilensis",
+    "section": "3.11 Version history",
+    "text": "3.11 Version history\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n1.0\n2025-08-12\nOriginal manuscript (standalone site)\n\n\n1.1\n2026-06-17\nMigrated into Current Findings"
   }
 ]

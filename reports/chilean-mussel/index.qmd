@@ -1,13 +1,23 @@
 ---
-title: "Genomic and epigenetic resources for Chilean mussel"
-subtitle: "Placeholder for migration into Current Findings"
+title: "DNA methylation in Mytilus chilensis"
+subtitle: "Epigenetic mechanisms of local adaptation"
 author:
+  - name: Cristian Gallardo
+    affiliation: University of Concepcion
+    orcid: 0000-0000-0000-0000
+    email: cgallardo@udec.cl
+  - name: Valentina Venezuala
+    affiliation: University of Concepcion
+    orcid: 0000-0000-0000-0001
+    email: vvenezuala@udec.cl
   - name: Steven Roberts
     affiliation: University of Washington
-date: "2026-06-17"
+    orcid: 0000-0000-0000-0002
+    email: sr320@uw.edu
+date: "2025-08-12"
 date-modified: "2026-06-17"
-description: "Placeholder report showing how an existing standalone Chilean mussel manuscript site could be migrated into Current Findings."
-categories: [mussels, genomics, epigenetics, aquaculture]
+description: "Genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation."
+categories: [mussels, genomics, epigenetics, aquaculture, DNA methylation]
 status: "Not peer reviewed"
 report_type: "Working manuscript"
 lab: "Roberts Lab"
@@ -18,13 +28,16 @@ topic:
   - genomics
   - epigenetics
   - aquaculture
-github_repo: ""
+github_repo: "https://github.com/sr320/paper-chilean-mussel"
 data_url: ""
+keywords: [DNA methylation, Mytilus chilensis, epigenetics, adaptation, aquaculture]
+bibliography: references.bib
+abstract: |
+  We investigate genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds—Cochamó and Yaldad—using whole-genome bisulfite sequencing and high-throughput bioinformatics. We identify `r nrow(readr::read_tsv("data/DML.txt", col_types = readr::cols())) - 1` differentially methylated loci (DMLs) and genes, revealing a shift toward hypomethylation among DML-associated genes. Functional annotation shows that DMLs are concentrated in genes mediating metabolism, development, and cellular organization, with many targets localized to cytoplasmic and nuclear compartments. DML-associated genes are dispersed across diverse KEGG pathways and contain a wide array of regulatory and interaction-rich Pfam domains. These findings suggest a system-wide epigenetic response, with potential consequences for metabolic control and developmental programming, and provide new insights into how environmental and anthropogenic forces shape genomic and epigenomic variation in a key aquaculture species.
 format:
   html:
     toc: true
     number-sections: true
-bibliography: references.bib
 ---
 
 ::: {.callout-warning}
@@ -35,40 +48,380 @@ This report is a Roberts Lab working manuscript. It has not been peer reviewed.
 It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.
 :::
 
-## Abstract
+::: {.callout-note}
+## Plain-language summary
 
-This placeholder demonstrates how an existing standalone manuscript site could be migrated into the Current Findings system.
+This study explores how DNA methylation may help Chilean blue mussels adapt to different environments, providing insights for aquaculture and conservation.
+:::
 
-Existing example site:
+# Introduction
 
-https://sr320.github.io/paper-chilean-mussel/
+```{r setup}
+#| include: false
+#| message: false
+#| warning: false
 
-## Background
+# Set CRAN mirror to avoid installation errors
+options(repos = c(CRAN = "https://cloud.r-project.org"))
 
-The Current Findings framework is intended to support migration of standalone manuscript-style websites into a shared, searchable, and maintainable RobertsLab archive.
+# Install required packages if not already installed
+if (!require(leaflet, quietly = TRUE)) {
+  tryCatch({
+    install.packages("leaflet", dependencies = TRUE)
+  }, error = function(e) {
+    message("Could not install leaflet package. Interactive map may not render properly.")
+  })
+}
+if (!require(dplyr, quietly = TRUE)) {
+  tryCatch({
+    install.packages("dplyr", dependencies = TRUE)
+  }, error = function(e) {
+    message("Could not install dplyr package. Table formatting may not work properly.")
+  })
+}
 
-## Methods
+# Load required packages with error handling
+suppressWarnings({
+  library(dplyr, quietly = TRUE)
 
-Content from the existing Chilean mussel manuscript site can be migrated into this Quarto report structure.
+  # Try to load leaflet, but don't fail if it's not available
+  leaflet_available <- tryCatch({
+    library(leaflet, quietly = TRUE)
+    TRUE
+  }, error = function(e) {
+    FALSE
+  })
 
-## Results
+  if (!leaflet_available) {
+    message("leaflet package not available. Interactive map will be replaced with a static map.")
+  }
+})
+```
 
-Future migrated content should include figures, tables, references, data/code availability, and suggested citation information.
+Understanding how marine species respond to environmental heterogeneity is critical for conserving locally adapted populations and sustaining aquaculture practices in the face of global change. The Chilean blue mussel, Mytilus chilensis, a key endemic species in southern Chile, supports one of the world’s largest mussel aquaculture industries. However, the biological foundation of population-level adaptation in this species remains underexplored. Emerging evidence suggests that both genetic and epigenetic mechanisms—particularly DNA methylation—may contribute to phenotypic plasticity and local adaptation in marine invertebrates.
 
-## Discussion
+Previous studies have revealed extensive transcriptomic and mitochondrial differences between M. chilensis populations from ecologically distinct seedbeds, such as Cochamó (41°S) and Yaldad (43°S), in the inner sea of Chiloé Island. These differences include differential expression of genes involved in immunity, metabolism, and cellular stress responses, as well as tissue-specific shifts in mitochondrial gene expression linked to local environmental pressures, including aquaculture practices and variable oxygenation levels [@yevenes2021adaptive; @yevenes2022adaptive]. Experimental evidence from reciprocal transplants shows population-specific transcriptional responses and reduced growth performance upon translocation, highlighting functional divergence between seedbeds despite high larval connectivity [@yevenes2025decoding]. As shown in @fig-study-locations and detailed in @tbl-env-comparison, these two seedbeds exhibit contrasting environmental conditions, including differences in water temperature, salinity, depth, and aquaculture intensity that may contribute to the observed population-level adaptations.
 
-This report serves as a model for integrating project-specific scientific outputs into a shared RobertsLab publication system.
+```{r}
+#| label: fig-study-locations
+#| fig-cap: "Map showing the study locations Cochamó (41°S) and Yaldad (43°S) in the inner sea of Chiloé Island, Chile. The map highlights key environmental differences between these contrasting seedbeds, including variations in water depth, temperature, salinity, and aquaculture intensity that may contribute to population-level adaptation in Mytilus chilensis."
+
+# Check if we're in HTML format and if leaflet is available
+is_html <- knitr::is_html_output()
+leaflet_available <- require(leaflet, quietly = TRUE)
+
+if (is_html && leaflet_available) {
+  # Interactive map using leaflet for HTML output
+  library(leaflet)
+  library(dplyr)
+
+  # Define study locations with coordinates and environmental data
+  locations <- data.frame(
+    location = c("Cochamó", "Yaldad"),
+    lat = c(-41.5, -43.0),  # Approximate latitudes for the inner sea of Chiloé
+    lng = c(-72.8, -73.5),  # Approximate longitudes
+    description = c(
+      "Cochamó (41°S): Northern seedbed with higher water temperatures,
+       moderate aquaculture intensity, and variable oxygenation levels",
+      "Yaldad (43°S): Southern seedbed with lower water temperatures,
+       high aquaculture intensity, and distinct environmental pressures"
+    ),
+    temp_range = c("12-18°C", "8-14°C"),
+    salinity = c("30-32 PSU", "28-31 PSU"),
+    depth = c("5-15m", "8-20m")
+  )
+
+  # Create interactive map
+  leaflet(locations) %>%
+    addTiles() %>%
+    addProviderTiles("Esri.WorldImagery", group = "Satellite") %>%
+    addProviderTiles("OpenStreetMap", group = "Street Map") %>%
+    addCircleMarkers(
+      lng = ~lng,
+      lat = ~lat,
+      radius = 8,
+      color = c("#E74C3C", "#3498DB"),
+      fillColor = c("#E74C3C", "#3498DB"),
+      fillOpacity = 0.7,
+      weight = 2,
+      popup = ~paste0(
+        "<b>", location, "</b><br>",
+        "Temperature: ", temp_range, "<br>",
+        "Salinity: ", salinity, "<br>",
+        "Depth: ", depth, "<br><br>",
+        description
+      )
+    ) %>%
+    addLegend(
+      position = "bottomright",
+      colors = c("#E74C3C", "#3498DB"),
+      labels = c("Cochamó (41°S)", "Yaldad (43°S)"),
+      title = "Study Locations"
+    ) %>%
+    addLayersControl(
+      baseGroups = c("Satellite", "Street Map"),
+      options = layersControlOptions(collapsed = FALSE)
+    ) %>%
+    setView(lng = -73.15, lat = -42.25, zoom = 8) %>%
+    addScaleBar(position = "bottomleft")
+
+} else {
+  # Static map for non-HTML outputs or when leaflet is not available
+  library(dplyr)
+
+  # Define study locations
+  locations <- data.frame(
+    location = c("Cochamó", "Yaldad"),
+    lat = c(-41.5, -43.0),
+    lng = c(-72.8, -73.5),
+    temp_range = c("12-18°C", "8-14°C"),
+    salinity = c("30-32 PSU", "28-31 PSU"),
+    depth = c("5-15m", "8-20m")
+  )
+
+  # Create static map
+  plot(locations$lng, locations$lat,
+       pch = 19, cex = 2, col = c("#E74C3C", "#3498DB"),
+       xlim = c(-74, -72), ylim = c(-43.5, -41),
+       xlab = "Longitude (°W)", ylab = "Latitude (°S)",
+       main = "Study Locations in the Inner Sea of Chiloé Island")
+
+  # Add location labels
+  text(locations$lng, locations$lat + 0.1,
+       labels = paste0(locations$location, "\n", locations$lat, "°S"),
+       cex = 0.8, pos = 3)
+
+  # Add environmental info
+  text(locations$lng, locations$lat - 0.1,
+       labels = paste0("Temp: ", locations$temp_range, "\n",
+                      "Sal: ", locations$salinity, "\n",
+                      "Depth: ", locations$depth),
+       cex = 0.7, pos = 1)
+
+  # Add legend
+  legend("topright",
+         legend = c("Cochamó (41°S)", "Yaldad (43°S)"),
+         col = c("#E74C3C", "#3498DB"),
+         pch = 19, cex = 0.8,
+         title = "Study Locations")
+
+  # Add grid
+  grid()
+}
+```
+
+**Table 1.** Environmental characteristics of the study locations in the inner sea of Chiloé Island, Chile.
+
+```{r}
+#| label: tbl-env-comparison
+#| tbl-cap: "Environmental characteristics and aquaculture conditions at the two study locations"
+
+library(knitr)
+library(dplyr)
+
+# Create environmental comparison table
+env_data <- data.frame(
+  Characteristic = c(
+    "Geographic location",
+    "Latitude",
+    "Longitude",
+    "Water temperature range",
+    "Salinity range",
+    "Water depth",
+    "Aquaculture intensity",
+    "Oxygenation levels",
+    "Primary environmental pressures",
+    "Population connectivity"
+  ),
+  Cochamó = c(
+    "Northern inner sea",
+    "41°S",
+    "72.8°W",
+    "12-18°C",
+    "30-32 PSU",
+    "5-15m",
+    "Moderate",
+    "Variable",
+    "Seasonal temperature fluctuations, moderate aquaculture",
+    "High larval connectivity"
+  ),
+  Yaldad = c(
+    "Southern inner sea",
+    "43°S",
+    "73.5°W",
+    "8-14°C",
+    "28-31 PSU",
+    "8-20m",
+    "High",
+    "Lower",
+    "Cold water influence, high aquaculture density",
+    "High larval connectivity"
+  )
+)
+
+# Format as simple kable table without kableExtra
+kable(env_data,
+      col.names = c("Environmental Factor", "Cochamó (41°S)", "Yaldad (43°S)"),
+      align = c("l", "c", "c"),
+      booktabs = TRUE,
+      linesep = "")
+```
+
+In addition to gene expression differences, recent work has uncovered epigenetic signatures that may contribute to adaptive divergence. Long non-coding RNAs (lncRNAs) were found to be differentially expressed between Cochamó and Yaldad populations, with associated changes in immune and metabolic gene networks [@yevenes2023epigenetic]. These findings underscore the potential for environmentally responsive regulatory elements—including DNA methylation—to mediate local adaptation.
+
+Yet, the role of DNA methylation in shaping population-specific responses in M. chilensis remains unexplored. DNA methylation, a heritable and reversible epigenetic modification, can influence gene expression and phenotypic traits without altering the underlying DNA sequence. In bivalves, DNA methylation is known to affect developmental and immune processes and may be responsive to environmental stressors such as hypoxia, toxins, and acidification—conditions that vary across the Chilean inner sea and have been shown to modulate gene expression and microbiota composition in M. chilensis [@montufar2024hypoxia; @castillo2017ocean; @montufar2025microbiota].
+
+In this study, we investigate genome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds—Cochamó and Yaldad—with the aim of identifying differentially methylated regions (DMRs) that may underlie local adaptation. By integrating this epigenetic information with known patterns of gene expression and environmental context, we seek to illuminate the molecular basis of ecological divergence and contribute new insights into how environmental and anthropogenic forces shape genomic and epigenomic variation in a key aquaculture species.
+
+# Methods
+
+To investigate DNA methylation differences between populations of Mytilus chilensis from Cochamó and Yaldad, whole-genome bisulfite sequencing (WGBS) was performed and analyzed using a reproducible, high-throughput bioinformatics workflow. DNA was extracted from gill tissue of adult individuals and subjected to bisulfite treatment and library preparation. Libraries were sequenced on an Illumina NovaSeq 6000 platform, generating 150 bp paired-end reads, with each sample yielding approximately 120–160 million read pairs, providing >30× average coverage across the 1.93 Gb M. chilensis genome.
+
+## Read Processing and Alignment
+
+Raw sequencing reads were processed using the nf-core/methylseq pipeline (version 2.5), implemented through Nextflow (version 23.04.1). Reads were aligned to the M. chilensis reference genome (MchilensisGenomeV1.fa), a chromosome-level assembly comprising 14 scaffolds (Gallardo-Escárate et al. 2023), using Bismark (version 0.24.1) with the Bowtie2 aligner (version 2.5.1). Quality trimming was applied to reverse reads by hard-clipping the final 10 bases (--clip_r2 10) to mitigate low-quality base calls at the 3′ end. Methylation calls were extracted using the Bismark methylation extractor and aggregated by cytosine context. Pipeline execution was configured via a custom .config file to specify HPC resources and run with --resume, --with-trace, --with-report, and --with-timeline flags for reproducibility and tracking. Output files were stored in a structured directory and included per-base CpG methylation calls, quality control metrics, and coverage files.
+
+## Methylation Data Processing and Filtering
+
+Downstream analysis was performed in R (version 4.3.1) using the methylKit package (version 1.10.0). Due to compatibility issues with newer versions of supporting libraries, data.table was pinned to version 1.14.10. Methylation coverage files were imported using methRead() with the pipeline = "bismarkCoverage" parameter and CpG context specified. Six samples—three each from Cochamó (LCo_BSr1–3) and Yaldad (LYa_BSr1–3)—were analyzed. Samples were assigned to treatment groups with Cochamó designated as the control (treatment = 0) and Yaldad as the treatment group (treatment = 1).
+
+To ensure data quality, CpG sites were filtered to retain only those with a minimum read coverage of 10 in all samples, excluding those in the top 2% of coverage values to reduce PCR bias. Sites were then unified across samples using unite() with min.per.group = 3 and destrand = FALSE to retain strand-specific methylation information.
+
+### Exploratory and Differential Methylation Analyses
+Global methylation patterns were assessed using hierarchical clustering (Ward’s method on correlation distance) and principal component analysis (PCA) to evaluate sample similarity. Population-level differences in DNA methylation were then tested using methylKit’s logistic regression model, incorporating a multinomial overdispersion correction (overdispersion = "MN") to account for biological variability. Statistical testing was performed using the Chi-squared test (test = "Chisq"), and q-values were adjusted for multiple testing using the SLIM method (adjust = "SLIM").
+
+Differentially methylated loci (DMLs) were defined as CpG sites with an absolute methylation difference ≥25% and FDR-adjusted q-value ≤ 0.05. Separate sets of DMLs were extracted to identify hypomethylated (lower in Yaldad) and hypermethylated (higher in Yaldad) loci. Results were saved as tab-delimited text files for downstream annotation and visualization.
+
+
+# Results
+
+
+Bisulfite sequencing across six libraries yielded approximately 99.8 million reads per sample. Alignment to the reference genome was successful for 60.5–61.4% of reads, with 22–24% unaligned and 15–16% aligning ambiguously. After removal of duplicate reads (2.2–3.5 million per sample), 57.0–58.8 million uniquely aligned reads remained for methylation analysis.
+
+Genome-wide cytosine methylation was assessed in CpG, CHG, and CHH contexts. Across samples, ~2.1–2.2 billion cytosines were examined. CpG methylation was the most prominent, with an average of ~36 million methylated CpGs and ~205 million unmethylated CpGs per sample, corresponding to a methylation rate of approximately 15%. In contrast, CHG and CHH methylation was much lower, with methylation levels below 1% in both contexts. These patterns are consistent with expectations for invertebrate methylomes, where methylation is primarily restricted to CpG sites.
+
+In total, `r nrow(readr::read_tsv("data/DML.txt", col_types = readr::cols())) - 1` differentially methylated loci (DMLs) were identified (see Methods and Supplementary Data). These DMLs were distributed across all chromosomes and classified as either hypomethylated or hypermethylated based on methylation difference.
+
+```{r}
+#| label: fig-dml-chromosome
+#| fig-cap: "Distribution of differentially methylated loci (DMLs) across chromosomes. Each bar represents the count of DMLs for a specific chromosome, with colors indicating whether loci are hypermethylated (higher in Yaldad) or hypomethylated (lower in Yaldad)."
+
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Read methylKit output
+dml <- read_tsv("data/DML.txt", col_types = cols())
+
+# Classify loci
+dml <- dml %>%
+  mutate(status = ifelse(meth.diff > 0, "Hypermethylated", "Hypomethylated"))
+
+# Count per chromosome and status
+dml_counts <- dml %>%
+  group_by(chr, status) %>%
+  summarise(DMLs = n(), .groups = "drop")
+
+# Stacked bar chart
+ggplot(dml_counts, aes(x = chr, y = DMLs, fill = status)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(title = "DMLs per Chromosome",
+       y = "Number of DMLs", x = "Chromosome", fill = "Status")
+```
+
+## Chromosome-wide Distribution of DMLs
+
+To visualize the spatial distribution of differentially methylated loci across the genome, we created a comprehensive plot showing all chromosomes and the precise locations of DMLs within each chromosome. This visualization reveals the genomic landscape of epigenetic variation and identifies potential hotspots of methylation change.
+
+```{r}
+#| label: fig-dml-genome-wide
+#| fig-cap: "Distribution of differentially methylated loci (DMLs) across all chromosomes. Each point represents a DML positioned by its genomic coordinates. Red points indicate hypermethylated loci (higher methylation in Yaldad), while blue points show hypomethylated loci (lower methylation in Yaldad). Chromosomes are arranged vertically with genomic position (in base pairs) on the x-axis."
+
+library(ggplot2)
+library(readr)
+library(dplyr)
+library(forcats)
+
+# Read DML data
+dml <- read_tsv("data/DML.txt", col_types = cols())
+
+# Clean chromosome names and convert to factor for proper ordering
+dml <- dml %>%
+  mutate(
+    chr = factor(chr, levels = paste0("Chromosome_", 1:14)),
+    status = ifelse(meth.diff > 0, "Hypermethylated", "Hypomethylated"),
+    # Calculate midpoint position for each DML
+    position = (start + end) / 2
+  )
+
+# Create chromosome plot
+ggplot(dml, aes(x = position, y = chr, color = status)) +
+  geom_point(alpha = 0.7, size = 1.5) +
+  scale_color_manual(values = c("Hypermethylated" = "#E74C3C", "Hypomethylated" = "#3498DB")) +
+  scale_y_discrete(limits = rev(levels(dml$chr))) +
+  theme_minimal() +
+  theme(
+    panel.grid.major.y = element_line(color = "gray90"),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 8),
+    axis.text.y = element_text(size = 10),
+    legend.position = "bottom",
+    plot.title = element_text(hjust = 0.5, size = 14, face = "bold")
+  ) +
+  labs(
+    title = "Genome-wide Distribution of Differentially Methylated Loci",
+    x = "Genomic Position (base pairs)",
+    y = "Chromosome",
+    color = "Methylation Status",
+    caption = "Each point represents a DML. Red: hypermethylated in Yaldad, Blue: hypomethylated in Yaldad"
+  ) +
+  scale_x_continuous(labels = function(x) paste0(x/1e6, " Mb"))
+```
+
+## Location
+
+![heatmap](images/dml-heatmap.png)
+
+
+## Genes harboring DMLs and overall methylation pattern
+
+We identified 159 genes containing differentially methylated loci (DMLs). For each gene, methylation differences were calculated by aggregating the absolute methylation change at all DMLs mapped to that gene, using the output from methylKit's logistic regression analysis. Summary statistics (range: −77.04% to +66.86%; SD 40.48%, median: −8.96%, mean: −0.68%) were computed across these gene-level aggregated values, indicating a shift toward hypomethylation among DML-associated genes.
+
+## Gene Ontology (GO): processes, functions, and locations
+
+Across Biological Process terms, DML genes were most frequently annotated to metabolic process (71 genes; 44.7% of all DML genes) and to high-level developmental and cellular organization/biogenesis categories (each 57 genes; 35.8%). Additional frequent terms included nitrogen compound metabolic process (63 genes; 39.6%) and positive regulation of biological process (57 genes; 35.8%). For Molecular Function, broad binding categories predominated (binding: 81 genes, 50.9%; protein binding: 58 genes, 36.5%), consistent with an overrepresentation of regulatory and interaction-prone proteins. Cellular Component assignments placed many targets in cell/intracellular compartments (cell: 104 genes, 65.4%; intracellular: 99 genes, 62.3%), with frequent localization to the cytoplasm (80 genes, 50.3%) and nucleus (53 genes, 33.3%)
+
+These patterns indicate that DMLs are concentrated in genes mediating metabolism, developmental programs, and cellular organization, with many targets residing in cytoplasmic and nuclear contexts where gene regulation and signal processing occur.
+
+## KEGG pathways
+
+DML-associated genes mapped to 122 unique KEGG pathways, with most pathways represented by a single gene, reflecting broad functional dispersion rather than concentration in a small number of routes. Prominent pathway classes included amino acid, carbohydrate, lipid, and nucleotide metabolism, as well as signal transduction and cellular process categories. The prevalence of core metabolic routes aligns with the GO-based enrichment of metabolic processes and suggests potential epigenetic modulation of energy balance and biosynthesis.
+
+## Pfam domains
+
+We detected 118 unique Pfam domains among DML-associated genes, generally with low redundancy (most domains present in one or two genes), underscoring protein family diversity. Recurrently observed domains included the RNA recognition motif (PF00076)—implicating post-transcriptional regulation—alongside regulatory/interaction modules such as BTB/POZ (PF07707) and ankyrin repeats (PF00023). We also observed immunoglobulin domains (PF00047) and cytochrome P450 families (PF00061/ PF00067), the latter consistent with roles in xenobiotic and lipid metabolism. Several domains of unknown function (DUFs) were present, indicating potentially novel or poorly characterized targets of methylation.
+
+## Directionality of methylation changes
+
+Given the negative median methylation difference, hypomethylation was more common among DML genes. Functionally, hypomethylated targets were enriched for regulatory proteins, signaling molecules, and transporters, whereas hypermethylated targets included transcription factors, metabolic enzymes, and structural proteins. Collectively, these patterns are consistent with widespread epigenetic remodeling across regulatory and metabolic layers, rather than changes confined to a single pathway or compartment.
+
+## Summary
+
+Together, these results show that genes harboring DMLs in Mytilus chilensis are functionally diverse. However, they converge on metabolism, development, and cellular organization, with many targets positioned in cytoplasmic and nuclear environments. The distribution of DMLs is skewed toward hypomethylation. DML-associated genes are dispersed across many KEGG pathways and contain regulatory or interaction-rich Pfam domains. These findings suggest a system-wide epigenetic response with potential consequences for metabolic control and developmental programming.
 
 ## Data and code availability
 
-Add links to relevant repositories, notebooks, data archives, and analysis workflows.
+Source data, analysis code, and the original manuscript site are available at the project repository: <https://github.com/sr320/paper-chilean-mussel> (rendered at <https://sr320.github.io/paper-chilean-mussel/>).
 
 ## Suggested citation
 
-Roberts, S. B. 2026. *Genomic and epigenetic resources for Chilean mussel*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/
+Gallardo, C., Venezuala, V., and Roberts, S. B. 2025. *DNA methylation in Mytilus chilensis: Epigenetic mechanisms of local adaptation*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/chilean-mussel/
 
 ## Version history
 
 | Version | Date | Notes |
 |---|---|---|
-| 0.1 | 2026-06-17 | Placeholder created |
+| 1.0 | 2025-08-12 | Original manuscript (standalone site) |
+| 1.1 | 2026-06-17 | Migrated into Current Findings |

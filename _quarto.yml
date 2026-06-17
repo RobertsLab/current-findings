@@ -6,6 +6,9 @@ project:
     - "reports/**/*.qmd"
     - "!templates/"
 
+execute:
+  freeze: auto
+
 website:
   title: "Current Findings"
   site-url: "https://robertslab.github.io/current-findings/"
