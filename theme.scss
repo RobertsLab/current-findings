@@ -1,0 +1,123 @@
+/*-- scss:defaults --*/
+// Current Findings — muted marine theme
+// A restrained, oceanic palette: deep teal-navy, marine teal, muted seafoam,
+// and warm sand neutrals. Designed to read calmly for long scientific text.
+
+// Marine palette ------------------------------------------------------------
+$marine-deep:    #1f3b44;   // deep ocean / headings
+$marine:         #2f6f7c;   // primary marine teal
+$marine-light:   #4f97a3;   // lighter teal for hover / accents
+$seafoam:        #7fa99b;   // muted green accent
+$sand:           #f4f1e9;   // warm pale sand (page background)
+$sand-dark:      #e7e1d3;   // borders / subtle fills
+$ink:            #2b363a;   // body text
+$ink-muted:      #5b6a6f;   // secondary text
+
+// Bootstrap / Quarto variables ----------------------------------------------
+$primary:        $marine;
+$secondary:      $seafoam;
+$body-bg:        $sand;
+$body-color:     $ink;
+$link-color:     $marine;
+$link-hover-color: $marine-deep;
+
+$navbar-bg:      $marine-deep;
+$navbar-fg:      #e8efef;
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$headings-color: $marine-deep;
+$headings-font-weight: 600;
+
+$border-color:   $sand-dark;
+
+// Code styling
+$code-color:     $marine-deep;
+$code-bg:        rgba($seafoam, 0.14);
+
+/*-- scss:rules --*/
+
+// Navbar — deep ocean bar with seafoam hover
+.navbar {
+  border-bottom: 3px solid $marine;
+}
+.navbar .navbar-brand,
+.navbar .navbar-title {
+  font-weight: 600;
+  color: #ffffff;
+}
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffffff !important;
+}
+
+// Navbar logo sizing
+.navbar-logo {
+  max-height: 34px;
+  margin-right: 0.5rem;
+}
+
+// Links
+a {
+  text-decoration-color: rgba($marine, 0.4);
+  text-underline-offset: 2px;
+}
+
+// Callouts — tie the warning callout to the marine palette
+.callout-warning {
+  border-left-width: 6px;
+}
+.callout.callout-style-default > .callout-header {
+  background-color: rgba($seafoam, 0.18);
+}
+
+// Report status emphasis
+.report-status {
+  font-weight: bold;
+  color: $marine-deep;
+}
+
+// Title block spacing
+.quarto-title-meta {
+  margin-bottom: 1.5rem;
+}
+
+// Tables — muted marine header, soft striping
+table {
+  font-size: 0.95rem;
+}
+.table > thead {
+  background-color: rgba($marine, 0.10);
+  color: $marine-deep;
+  border-bottom: 2px solid rgba($marine, 0.35);
+}
+.table > tbody tr:nth-of-type(odd) {
+  background-color: rgba($sand-dark, 0.35);
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid $seafoam;
+  color: $ink-muted;
+}
+
+// Footer
+.nav-footer {
+  background-color: $sand-dark;
+  color: $ink-muted;
+  border-top: 1px solid darken($sand-dark, 6%);
+}
+
+// Section number tint
+.header-section-number {
+  color: $marine-light;
+}
+
+// TOC active state
+.sidebar nav[role="doc-toc"] ul > li > a.active,
+.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left-color: $marine;
+  color: $marine-deep;
+}

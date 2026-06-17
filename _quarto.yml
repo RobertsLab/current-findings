@@ -10,7 +10,10 @@ website:
   title: "Current Findings"
   site-url: "https://robertslab.github.io/current-findings/"
   description: "Open, non-peer-reviewed scientific reports, technical notes, and working manuscripts from Roberts Lab."
+  favicon: assets/logo.svg
   navbar:
+    logo: assets/logo.svg
+    logo-alt: "Current Findings logo"
     left:
       - href: index.qmd
         text: Home
@@ -27,8 +30,9 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+      - cosmo
+      - theme.scss
     toc: true
     number-sections: true
     citations-hover: true
