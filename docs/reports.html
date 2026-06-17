@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Reports – Current Findings</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c248ecf6e5b300499dd02358a40ea374.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f3a7e4420bdcbdb5f5332fa4f27636c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -101,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -114,7 +117,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -140,7 +143,8 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
+    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo light-content">
+    <img src="./assets/logo.svg" alt="Current Findings logo" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Current Findings</span>
@@ -215,7 +219,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZXhhbXBsZSUyQ21ldGhvZHMlMkNvcGVuLXNjaWVuY2U=" data-listing-date-sort="1781679600000" data-listing-file-modified-sort="1781711539116" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
+<div class="quarto-post image-right" data-index="0" data-categories="ZXhhbXBsZSUyQ21ldGhvZHMlMkNvcGVuLXNjaWVuY2U=" data-listing-date-sort="1781654400000" data-listing-file-modified-sort="1781713603403" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/example-report/index.html" class="no-external">Example Current Findings Report</a>
@@ -235,7 +239,7 @@ Steven Roberts
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bXVzc2VscyUyQ2dlbm9taWNzJTJDZXBpZ2VuZXRpY3MlMkNhcXVhY3VsdHVyZSUyQ0ROQSUyMG1ldGh5bGF0aW9u" data-listing-date-sort="1754982000000" data-listing-file-modified-sort="1781712857709" data-listing-date-modified-sort="1781679600000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3378">
+<div class="quarto-post image-right" data-index="1" data-categories="bXVzc2VscyUyQ2dlbm9taWNzJTJDZXBpZ2VuZXRpY3MlMkNhcXVhY3VsdHVyZSUyQ0ROQSUyMG1ldGh5bGF0aW9u" data-listing-date-sort="1754956800000" data-listing-file-modified-sort="1781713603402" data-listing-date-modified-sort="1781654400000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3378">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./reports/chilean-mussel/index.html" class="no-external">DNA methylation in Mytilus chilensis</a>
@@ -309,13 +313,14 @@ Cristian Gallardo, Valentina Venezuala, Steven Roberts
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
