@@ -1,0 +1,450 @@
+---
+title: "Effect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: David C. Metzger
+    affiliation: University of Washington
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2012-01-01"
+date-modified: "2026-06-17"
+description: "Juvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged."
+categories: [ocean-acidification, thermal-stress, gene-expression, qpcr, bivalves, manila-clam]
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: "Manila clam ocean acidification"
+species:
+  - Ruditapes philippinarum
+topic:
+  - ocean acidification
+  - thermal tolerance
+  - multiple stressors
+  - candidate gene expression
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical
+observations, and exploratory work openly available.
+:::
+
+This report is derived from Chapter II of David C. Metzger's University of
+Washington Master of Science thesis (2012), *Characterizing the effects of ocean
+acidification in larval and juvenile Manila clam, Ruditapes philippinarum, using
+a transcriptomic approach*.
+
+## Background
+
+Atmospheric carbon dioxide (CO~2~) levels have increased from 280 parts per million
+(ppm) prior to the industrial revolution to present-day levels of 400 ppm, higher
+than they have been in the past 800,000 years [@luthi2008high]. While historic
+levels of atmospheric CO~2~ concentrations are known to fluctuate [@tyrrell2008calcium],
+the current rate at which CO~2~ levels are increasing is unprecedented
+[@caldeira2003anthropogenic] at 0.5% per year [@orr2005anthropogenic]. Increasing
+atmospheric levels of CO~2~ are expected to increase global temperatures by 2 to
+5 °C [@houghton2001climate] and impact the carbonate chemistry of seawater
+[@feely2004impact; @feely2008evidence].
+
+Oceans have absorbed roughly one third of the anthropogenic CO~2~ emissions
+[@sabine2004ocean]. When carbon dioxide from the atmosphere mixes in the oceans,
+it reacts with carbonate ions and water to form hydrogen and bicarbonate ions
+[@feely2004impact; @orr2005anthropogenic]. By converting carbonate to bicarbonate,
+CO~2~ dissolution decreases the saturation state of calcium carbonate minerals such
+as aragonite and calcite, and increases the concentration of free hydrogen ions,
+causing the water to become more acidic [@zeebe2001co2]. By decreasing the
+saturation state of calcium carbonate, fewer calcium carbonate molecules are
+available for calcifying organisms to form shells. If the current rate of fossil
+fuel emissions persists, atmospheric levels of CO~2~ will reach 750–1000 ppm by
+2100, corresponding to a pH decrease of 0.3–0.5 units in the oceans, a process
+known as ocean acidification [@ipcc2007climate; @zeebe2001co2; @caldeira2005ocean].
+
+Elevated pCO~2~ conditions can be found along coastal waters due to processes such
+as upwelling. Upwelling causes a shoaling of CO~2~-enriched and carbonate-deficient
+waters closer to coastal surface waters. While the source of CO~2~ in these
+corrosive waters is largely due to natural processes such as respiration and
+decomposition of organic matter, surface waters enriched with anthropogenic CO~2~
+from the atmosphere exacerbate shoaling of carbonate-deficient waters. Consequently,
+recent observations in upwelling zones, such as those along the California coast,
+have recorded pCO~2~ levels in surface waters exceeding levels not predicted to
+occur until 2050 [@feely2008evidence]. It takes approximately 50 years for water to
+cycle from the surface through deeper ocean currents and back to the surface again,
+suggesting that future upwelling events will contain higher levels of
+anthropogenically enriched CO~2~ [@feely2008evidence]. Upwelling events are caused
+by strong northerly winds along the eastern Pacific and Atlantic oceans that
+facilitate Ekman transport of surface waters away from the coasts, allowing
+carbonate-deficient ocean waters to rise to the surface. These winds are predicted
+to increase as a result of global warming, further increasing the intensity of
+upwelling events [@bakun1990global; @lachkar2012response]. Populations that inhabit
+these coastal waters are thought to be at risk from ocean acidification,
+particularly those dependent on calcium carbonate structures for stability, defense,
+and survival [@fabry2008impacts; @cooley2009anticipating]. For example, recent
+studies at shellfish hatcheries have correlated upwelling with increased larval
+oyster mortalities [@elston2008reemergence; @barton2012pacific].
+
+Temperature fluctuations associated with increased CO~2~ emissions are also
+predicted to have a greater impact on coastal communities, as these shallower
+waters equilibrate more readily to changes in atmospheric temperature
+[@levitus2000warming; @nixon2004one]. Concurrent changes in temperature and
+carbonate chemistry can have additive, synergistic, or antagonistic effects on
+physiological processes [@folt1999synergism; @darling2008quantifying; @hofmann2010living].
+Depending on the species and developmental period, the mechanism of combined
+stressors can vary [@portner2008ecosystem]. For example, antagonistic effects of
+combined thermal and elevated pCO~2~ conditions were observed in the tropical sea
+urchin *Tripneustes gratilla*, where elevated pCO~2~ conditions reduced
+calcification and nullified the positive growth impact of warmer temperatures
+[@brennand2010impact]. Combined high pCO~2~ and thermal treatments increased
+mortality of larval red abalone, *Haliotis rufescens*, compared to either treatment
+alone [@zippay2010effect]. A multispecies study among bivalves showed a variable
+effect of elevated pCO~2~ and warmer temperatures on growth and survival of larval
+and juvenile eastern oysters, *Crassostrea virginica*, hard clams *Mercenaria
+mercenaria*, and bay scallops *Argopecten irradians* [@talmage2011effects].
+Variability among species may be due, in part, to differences in life history
+[@talmage2011effects]. Intertidal and shallow subtidal species may already be
+functioning close to their physiological limits and thus may be more susceptible to
+changing environmental conditions as a result of climate change
+[@tomanek2008importance; @somero2010physiology; @peck2009lack; @peck2010poor; @christensen2011thermotolerance].
+Alternatively, organisms inhabiting these ecosystems may be more adapted to harsh
+conditions. Detecting a shift in physiological limitations, particularly in thermal
+tolerance, induced by elevated pCO~2~ levels, will provide insight into an
+organism's ability to cope with changing conditions and potential changes to the
+ecological landscape of coastal communities.
+
+The Manila clam, *Ruditapes philippinarum*, is an economically and ecologically
+important species [@dumbauld2009ecological]. Manila clams are indigenous to the
+Philippines, South China and East China Seas, and up to the Sea of Okhotsk and the
+southern Kuril Islands [@scarlato1981bivalves]. Since being accidentally introduced
+to the west coast of the United States in the 1930s [@magoon1981introduction], they
+have become an economically important aquaculture species [@dumbauld2009ecological].
+Manila clams are tolerant of a wide range of temperatures and salinities
+[@numaguchi1998preliminary], however, little is known concerning their tolerance to
+ocean acidification [@lopez2010influence; @metzger2012larval].
+
+The objective of this study was to examine the impact of elevated pCO~2~ on juvenile
+Manila clam physiology. Transcription of candidate genes involved in calcification,
+translation, stress response, and oxidative stress are measured during the
+acclimation period of juvenile clams to elevated pCO~2~ conditions. In addition, the
+lethal temperature (LT) for juvenile Manila clams was determined and the effect of
+elevated pCO~2~ conditions on juvenile Manila clam thermal limits was assessed. If
+ocean acidification alters physiological processes necessary for Manila clams to
+cope with thermal fluctuations, an increase in mortalities would be expected at
+lower temperatures compared to ambient pCO~2~ conditions. However, if clams were
+able to cope with ocean acidification using mechanisms not associated with thermal
+stress response, increased susceptibility to lower temperatures would not be
+observed.
+
+## Methods
+
+### Experimental design
+
+Juvenile Manila clams (mean ± SD; length = 13.9 mm ± 2.1; width = 18.3 mm ± 2.7;
+wet weight = 1.45 g ± 0.6) were obtained from the Taylor Shellfish hatchery in
+Quilcene, WA, and transported to the ocean acidification facility at the University
+of Washington Friday Harbor Laboratories. Clams were exposed to seawater
+equilibrated to ambient (400 µatm; pH 8.03) or elevated (1000 µatm; pH 7.67) pCO~2~
+levels. Gas equilibration was achieved by stripping seawater of CO~2~ using a
+membrane contactor under vacuum pressure. Pure CO~2~ gas was then mixed with
+CO~2~-free air using gas proportionators. The prepared gas mixtures were then
+equilibrated with seawater using solenoid valves attached to Venturi injectors.
+Dissolved CO~2~ was monitored by measuring pH using a Honeywell controller connected
+to a Durafet pH probe adjusted to maintain the desired pH. Total alkalinity
+measurements were performed prior to the addition of animals to the system and once
+per week following the addition of animals. Additionally, spectrophotometric pH
+samples were taken daily. Carbonate chemistry measurements, including partial
+pressure CO~2~ as well as aragonite and calcite saturation, were calculated from
+alkalinity, spectrophotometric pH, and salinity using the CO~2~ calculator
+"CO2Calc" [@robbins2010co2calc] with the following parameters: physical data
+parameters °C = 25, adjusted conditions °C = 13, CO~2~ constants: @lueker2000ocean,
+KHSO4: @dickson1990thermodynamics, pH scale: total scale (mol/kgSW), air-sea flux:
+@wanninkhof1992relationship.
+
+Each experimental treatment contained 8 replicate 3 L chambers maintained at a
+constant temperature of 13 °C and a flow rate of 1.9 L/hr. Each chamber contained 10
+clams for a total starting number of 80 juvenile clams for each treatment. At the
+end of each week, one clam from each chamber was sacrificed and gill tissue
+dissected and flash frozen. A total of eight clams were sampled from each pCO~2~
+treatment each week, leaving a total of 56 clams at the end of the three-week
+sampling period. After the three weeks the remaining clams were exposed to a
+temperature stress.
+
+Clams were transferred to a temperature-equilibrated treatment water bath and
+exposed for one hour at one of the following temperatures: 38, 39, or 40 °C. During
+thermal treatments, clams were completely submerged in their designated pCO~2~
+treatment seawater. Clams were then returned to 13 °C at their respective pCO~2~
+treatment conditions and mortality was monitored for one week. A total of 14 clams
+(two replicate groups of seven animals) were used for each pCO~2~ and temperature
+combination. Mortality was assessed based on gaping behavior; clams that failed to
+close their shells in response to mechanical stimulation were considered moribund.
+
+### RNA extraction and cDNA synthesis
+
+RNA was extracted from gill tissue using TriReagent (Molecular Research Center,
+Cincinnati, OH, USA) following the manufacturer's recommended protocol. Total RNA
+was DNase treated (DNA Free kit; Ambion, Austin, TX, USA) following the
+manufacturer's rigorous protocol to remove potential DNA carryover from RNA
+extractions. Purified RNA was quantified using a Nanodrop ND-1000 UV-Vis
+spectrophotometer (NanoDrop Technologies Inc., Rockland, DE). Reverse transcription
+reactions were conducted using M-MLV reverse transcriptase (Promega, Madison,
+Wisconsin) and 0.5 µg of total RNA to generate complementary DNA (cDNA).
+
+### Quantitative PCR analysis
+
+Primers for quantitative PCR (qPCR) analysis were generated using Primer3 software
+[@rozen2000primer3] from sequences provided in the Manila clam transcriptome
+database (RuphiBase, http://compgen.bio.unipd.it/ruphibase). Primer sequences are
+provided in @tbl-primers. All primers were ordered from IDT (Coralville, IA, USA).
+Quantitative PCR reactions were carried out in 20 µL reaction volumes consisting of
+1× Ssofast EvaGreen Supermix (Bio-Rad, Hercules, CA), 0.2 µM of each primer, and
+2 µL of diluted (1:5) cDNA. Amplification reactions were carried out using a CFX96
+Real-Time PCR Detection System (Bio-Rad, Hercules, CA) with the following cycling
+parameters: 98 °C 2 min, followed by 40 cycles of 98 °C for 2 sec, 60 °C for 5 sec.
+Melt curve analysis was performed after cycle 40 by increasing the annealing
+temperature from 65 °C to 95 °C in 0.2 °C increments and measuring fluorescence at
+each increment. All samples were run in duplicate. Efficiencies of qPCR reactions
+were calculated using PCR Miner software [@zhao2005comparative]. Expression values
+were calculated using the following equation: 1/(1+Efficiency)^Ct^. Calculated
+expression values were then normalized to elongation factor-1 alpha (ef-1α). Ef-1α
+is a commonly used normalizing gene and has previously been used as a reference gene
+in CO~2~ manipulation [@odonnell2009predicted]. The stability of ef-1α was confirmed
+by a two-way ANOVA analysis, which showed no significant difference in ef-1α between
+ambient and elevated CO~2~ treatments.
+
+### Statistical analysis
+
+Prior to statistical analysis, normalized expression values (NEV) were transformed
+by taking the natural log of one plus the normalized expression value [ln(NEV+1)].
+Two outliers were identified in the expression data from week 1 and week 2 in the
+elevated CO~2~ treatment for all qPCR assays and were omitted from further analysis,
+resulting in an n = 7 for the indicated sampling groups. A two-way ANOVA was
+conducted on the transformed expression data to test for significant effects of
+treatment and time. A Kaplan-Meier survivorship analysis was applied to survival
+data from the thermal stress trial and significance was determined using a log-rank
+test. Significance was determined based on p < 0.05. All statistical analysis was
+conducted using SPSS statistical software (IBM, Somers, NY).
+
+## Results/Discussion
+
+### Elevated pCO2 treatment
+
+Partial pressure CO~2~ conditions were maintained at two different levels for the
+duration of the experiment (@fig-chem). Conditions representing present-day
+(ambient) pCO~2~ concentrations were maintained at 424 ± 45 µatm corresponding to a
+pH of 8.01 ± 0.04. Elevated levels of pCO~2~ were maintained at 1146 ± 312 µatm
+corresponding to a pH of 7.63 ± 0.10 (@fig-chem), which are within the projected
+changes expected to occur by 2100 [@caldeira2003anthropogenic]. The greatest amount
+of variability was observed in samples taken during week 2, in which a spike in
+pCO~2~ was observed in the elevated treatment (@fig-chem). No mortalities occurred as
+a result of the different CO~2~ treatment conditions. A summary of results from the
+carbonate chemistry sampling is provided in @tbl-chem-summary.
+
+![Summary of pH and concentration of dissolved CO~2~ (µatm) of the ambient (solid line) and elevated CO~2~ (dashed line) treated seawater. Concentrations of dissolved CO~2~ were calculated using total alkalinity, salinity, and pH measurements. Final pH measurements were adjusted to correspond to the 13 °C treatment water. Values represent means ± standard deviation.](figures/fig5-seawater-chemistry.png){#fig-chem}
+
+### Thermal tolerance
+
+Juvenile Manila clams held in ambient or elevated pCO~2~ seawater for three weeks
+were heat shocked at the pre-determined lethal temperature (40 °C) and at one and
+two degrees lower than the lethal temperature (39 °C and 38 °C) to assess any
+influence of elevated pCO~2~ conditions on thermal tolerance (@fig-survival). A
+greater number of clams survived the 40 °C heat shock from the ambient pCO~2~
+relative to the elevated pCO~2~ treatment (p < 0.05). The onset of mortality (OM)
+occurred on day 2 in both the ambient and elevated CO~2~ treatments. The mean day of
+death (MDD) for animals heat shocked at 40 °C shifted from 3.4 days at ambient
+pCO~2~ to 2.8 days post treatment (DPT) at elevated pCO~2~ conditions.
+
+No differences in survival, OM, or MDD were observed at 39 °C or 38 °C heat shock
+(p > 0.05). The OM in animals heat shocked at 39 °C occurred on day 3 in both the
+ambient and elevated pCO~2~ treatments, with a mean day of death for animals exposed
+to 39 °C of 4.1 DPT for animals treated with ambient pCO~2~ seawater while the
+elevated pCO~2~ treatment was slightly lower at 3.8 DPT. The OM at 38 °C occurred on
+day 4 in both the ambient and elevated pCO~2~ treatments. The MDD for animals heat
+shocked at 38 °C was 6.6 and 6.7 for ambient and elevated pCO~2~ treated animals
+respectively, with 64.3% surviving until day 7 in the ambient pCO~2~ group and 71.4%
+surviving in the elevated pCO~2~ treatment.
+
+![Percent survival of juvenile Manila clams following a one-hour exposure to a thermal stress at 40 °C (A), 39 °C (B), or 38 °C (C). Clams were acclimated for 3 weeks at either ambient (solid line) or elevated CO~2~ (dashed line) conditions prior to thermal stress. After thermal stress, animals were returned to the corresponding treatment water and mortality was monitored daily for one week. A significant effect on survival was detected in the elevated CO~2~-conditioned animals at a 40 °C thermal stress.](figures/fig6-thermal-survival.png){#fig-survival}
+
+An organism's survival and fitness capacity depend on their physiological plasticity
+to cope with changing environments [@hofmann2010living]. Plasticity is associated
+with the allocation of energetic resources to physiological processes required for
+maintaining vital cellular functions [@findlay2009calcification]. Understanding how
+a particular stressor impacts this energetic balance provides valuable insight into
+the potential mechanisms of coping with changing environmental conditions. Events
+associated with global climate change, such as ocean acidification and increasing
+sea surface temperatures, will occur in concert with other naturally occurring
+environmental stressors. The objective of the thermal stress study was to determine
+whether elevated pCO~2~ has an effect on juvenile Manila clam thermal tolerance.
+Similar studies in other organisms have observed synergistic effects on stress
+response mechanisms [@liu2012seawater; @zippay2010effect; @chapman2011transcriptomic; @metzger2007influence],
+and in some, increased mortality [@zippay2010effect]. Elevated pCO~2~ alone did not
+increase mortality of juvenile Manila clams compared to ambient pCO~2~ conditions;
+however, the combination of elevated pCO~2~ and thermal stress resulted in a shift in
+the juvenile Manila clam thermal tolerance window, as seen in the 40 °C trial. The
+effect of elevated pCO~2~ was not severe enough to shift LT a degree below 40 °C.
+This suggests that the thermal tolerance of juvenile Manila clams is not
+significantly affected by near-future levels of atmospheric CO~2~. However, increased
+sensitivity to a 40 °C thermal stress suggests that the physiological mechanisms
+necessary to cope with thermal stress are impacted by elevated pCO~2~ conditions.
+
+### Gene expression analysis
+
+Transcriptomic processes can moderate an organism's physiological plasticity in
+response to changing environmental conditions [@hofmann2010living]. Previous studies
+that have examined molecular and cellular impacts of elevated pCO~2~ have identified
+several vital physiological processes that are susceptible to changing pCO~2~
+conditions, including protein synthesis and metabolism, calcification, oxidative
+stress, and ion homeostasis [@metzger2012larval; @moya2012whole; @todgham2009transcriptomic; @odonnell2010ocean].
+Candidate genes for the current study were selected from a previous study of Manila
+clam larvae in which RNA-Seq was employed to characterize the entire transcriptome
+of larvae exposed to elevated pCO~2~ conditions [@metzger2012larval].
+
+One of the most commonly studied processes in organisms facing elevated pCO~2~
+conditions is calcification. Most reports to date have documented a negative effect
+of IPCC-projected CO~2~ conditions on calcifying organisms
+[@kroeker2010meta; @gazeau2007impact; @orr2005anthropogenic]. The gene encoding
+Perlucin 6 was recently identified in larval Manila clams [@metzger2012larval].
+Perlucin is a C-type lectin [@mann2000amino] that has been shown to nucleate calcium
+carbonate ions [@weiss2000purification; @blank2003nacre]. In vitro studies have shown
+that Perlucin is incorporated into the calcium carbonate structure [@blank2003nacre].
+Perlucin may therefore be an important component of calcification in Manila clams.
+
+Perlucin-6 gene expression levels were not significantly different in juvenile clams
+exposed to elevated pCO~2~ (@fig-genes A). This result may not be surprising, as
+mantle tissue is primarily responsible for laying down new shell. This study was
+designed to measure transcriptional changes in gill tissue, as this represents the
+primary interface for gas and ion exchange with the environment.
+
+Calmodulin is a Ca^2+^-dependent messenger protein that moderates the activity of
+enzymes involved in several vital cellular processes including ATPase-driven ion
+pumps [@klee1980calmodulin] necessary for maintaining ion homeostasis, particularly
+in gill tissue. Transcriptomic analysis in corals noted decreases in calmodulin
+transcripts in elevated CO~2~ conditions [@kaniewska2012major]. We expected to see
+changes in calmodulin transcript levels if clams were regulating the activity of
+ATPase-driven ion channels and Ca^2+^ transport. However, an effect of elevated
+pCO~2~ on calmodulin transcripts was not detected (@fig-genes B).
+
+Protein synthesis and degradation can be indicative of an organism's general
+physiological and metabolic status. The cathepsin family of proteins is involved in
+mediating protein synthesis and degradation. Increased activity of cathepsin L has
+been associated with proteolysis as an alternative source of energy during periods
+of increased metabolic demand [@hawkins1996metabolic]. Elevated pCO~2~ conditions did
+not influence cathepsin L transcription (@fig-genes C), suggesting that juvenile
+Manila clams are not experiencing metabolic stress under elevated pCO~2~ conditions.
+In addition, there was no significant effect of elevated pCO~2~ on elongation factor
+2 (EF2) transcript levels between ambient and elevated pCO~2~ conditions
+(@fig-genes D). EF2 is involved in peptide elongation during protein synthesis.
+Previous studies have identified changes in protein concentration of larval barnacles
+[@wong2011response] and transcripts in larval Manila clams [@metzger2012larval],
+suggesting that ef2 can play a role in moderating the physiological plasticity of
+organisms exposed to elevated pCO~2~.
+
+Also involved in protein metabolism, as well as thermal stress, immune response, and
+apoptosis [@feder1999heat; @roberts2010heat], are the heat shock protein (hsp)
+family. Named for their molecular mass (e.g. hsp60, hsp70, hsp90), heat shock
+proteins are molecular chaperones that bind and stabilize proteins, aiding in protein
+synthesis or the repair of damaged proteins from processes such as oxidative stress.
+Analysis of hsp90 expression in gill tissue of juvenile clams exposed to elevated
+pCO~2~ conditions was not significantly different from those compared to ambient
+pCO~2~ conditions (@fig-genes E). It is possible that hsp90 is not required to cope
+with this particular stress response, or that regulation of hsp90 does not occur at
+the transcriptional level. Hsp90 is a ubiquitously expressed protein that undergoes
+an ATPase-dependent conformational change upon activation [@pearl2006structure].
+Conditioning of the hsp stress response has been shown for several environmental
+conditions [@bierkens2000applications], which may be the case here. Interestingly,
+expression of hsp90 has also been shown to decrease with age in the hard clam
+*Mercenaria mercenaria* [@farcy2007identification]. Age-dependent regulation of hsp90
+might suggest that it is more highly expressed during early larval periods, while
+juveniles and adults do not actively express hsp90 to the same degree.
+
+Elevated pCO~2~ conditions can also invoke an oxidative stress response, possibly as
+the result of intracellular acidosis and the generation of reactive oxygen species
+(ROS) [@tomanek2011environmental]. A study in the eastern oyster *Crassostrea
+virginica* revealed antioxidant defense as a primary response of oysters exposed to
+elevated pCO~2~ conditions [@tomanek2011environmental]. Glutathione peroxidase 3
+(GPx3) is selenium dependent and is highly expressed in gill tissue
+[@wong2011response]. Increased levels of GPx3 are typically associated with response
+to increases in ROS and oxidative stress [@wong2011response]. In this study, elevated
+pCO~2~ conditions did not significantly affect the expression of GPx3 transcripts
+(@fig-genes F), indicating that juvenile Manila clams may not be experiencing
+increased levels of oxidative stress as a result of elevated pCO~2~ conditions.
+Glutathione peroxidases can also play a role in the immune response by protecting
+tissues from the ROS that are secreted as a defense mechanism. This experiment was
+not designed to assess the immunocompetency of juvenile clams under elevated pCO~2~
+conditions; however, these results suggest that the ability of juvenile Manila clams
+to cope with ROS secretion by their immune system may be unaffected by elevated
+pCO~2~ conditions. Directed studies involving immune challenge with a pathogen under
+elevated pCO~2~ are required to assess immunological effects of elevated pCO~2~ before
+any conclusions can be made.
+
+![Quantification of transcript abundance in gill tissue of juvenile Manila clams exposed to ambient CO~2~ (grey bars) and elevated CO~2~ (white bars). Gill tissue samples were taken after 1, 2, and 3 weeks of exposure to CO~2~-treated water and analyzed for expression of perlucin (A), calmodulin (B), cathepsin L (C), ef2 (D), hsp90 (E), and GPx3 (F). All values are normalized to Ef1-α and standardized to the average value of the corresponding ambient expression value from week one.](figures/fig7-gene-expression.png){#fig-genes}
+
+## Conclusion
+
+Preliminary results to assess the minimum lethal temperature for juvenile Manila
+clams determined that 40 °C was the minimum lethal temperature that resulted in 100%
+mortality one week post-exposure (data not shown). Mortality of juvenile Manila clams
+exposed to 40 °C was significantly affected by elevated pCO~2~ conditions
+(@fig-survival A). This increased sensitivity, however, did not translate to an
+increased sensitivity at lower temperatures (@fig-survival B, C). While not
+significantly different, the OM and MDD of clams exposed to elevated pCO~2~ was later
+than that of ambient clams (@fig-survival). In addition, the expression of several
+genes associated with processes such as calcium ion binding, metabolism, translation,
+and stress response were not significantly different in juvenile clams exposed to
+elevated pCO~2~. Together, these data suggest juvenile clams are capable of
+effectively coping with elevated pCO~2~ conditions, possibly as a result of local
+adaptation to low-alkalinity coastal waters [@hofmann2010living]. Future experiments
+examining prolonged exposures of elevated pCO~2~ on different populations of Manila
+clams are needed to determine whether projected environmental conditions as a result
+of climate change are within the physiological limits of the Manila clam. In addition,
+it would be of interest to examine the impact of larval exposure to elevated pCO~2~ on
+physiological processes and gene expression in juvenile and adult animals.
+
+## Tables
+
+| Gene target | Oligo | RuphiBase ID | Primer DNA sequence (5'→3') |
+|---|---|---|---|
+| Ef-1α | Fwd | ruditapes2_c4569 | ACGCTCCACTTGGACGTTTTGCT |
+| Ef-1α | Rev | | TGTAGCCTTTTGGGCAGCTTTGGT |
+| Hsp90 | Fwd | ruditapes_c1528 | TCTCCCTTGAAGAGCCAACAACCCA |
+| Hsp90 | Rev | | TCATCATCACCTTCCAATGGGGGCA |
+| Cathepsin | Fwd | ruditapes_lrc32628 | AGCCAAAGAACGGCCGATGTGA |
+| Cathepsin | Rev | | TCCTACTGTTGCTACAGCGGCTTG |
+| Calmodulin | Fwd | ruditapes_c670 | ACGACCAAGTGGACGAGATGTTGC |
+| Calmodulin | Rev | | AGTACAGGCACTGGATGGTGCGTA |
+| GPx3 | Fwd | ruditapes2_c3709 | ATTCTCGAGCGCTGGGGTAAAAGTG |
+| GPx3 | Rev | | TAGTTGTCGGCCGGCTCTTGCATT |
+| Perlucin | Fwd | ruditapes_lrc29501 | GCAGACGTCGACAGGATGTCCAAT |
+| Perlucin | Rev | | ACAGTATGCCATAGCCTCCCACCA |
+| EF2 | Fwd | ruditapes2_c46 | GACAGTGTTGTTGCTGGCTTCCAGT |
+| EF2 | Rev | | TGTCCACCACCTCTGTGGATAGCA |
+
+: Manila clam qPCR primer list, developed from the designated contig sequence in RuphiBase using Primer3 software. {#tbl-primers}
+
+| Treatment | TA (µmol/kg) | Salinity | pH | pCO~2~ (µatm) | Ω~Ca~ | Ω~Ar~ |
+|---|---|---|---|---|---|---|
+| Ambient | 2078.49 ± 13.71 | 29.79 ± 0.25 | 8.01 ± 0.04 | 424.11 ± 44.90 | 2.71 ± 0.24 | 1.71 ± 0.16 |
+| Elevated | 2085.14 ± 13.37 | 29.92 ± 0.21 | 7.63 ± 0.10 | 1146.11 ± 312.42 | 1.24 ± 0.26 | 0.78 ± 0.17 |
+
+: Summary of water chemistry measurements from ambient and elevated CO~2~ treatments (± SD) over the 28 days of the juvenile clam experiment. Total alkalinity (TA), salinity, and pH were measured directly; other parameters were calculated using CO2calc with TA, salinity, and pH as inputs. {#tbl-chem-summary}
+
+## Suggested citation
+
+Metzger, D. C., and S. B. Roberts. 2012. *Effect of elevated pCO2 conditions on the
+susceptibility of juvenile Manila clams to thermal stress*. Current Findings.
+Available at:
+https://robertslab.github.io/current-findings/reports/manila-clam-juvenile-pco2-thermal-stress/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-06-17 | Migrated from Metzger_washington_0250O_10509.pdf (Chapter II) |
