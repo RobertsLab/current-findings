@@ -4,6 +4,8 @@ subtitle: "A short non-peer-reviewed scientific report"
 author:
   - name: Steven Roberts
     affiliation: University of Washington
+  - name: Mackenzie Gavery
+    affiliation: NOAA
 date: "2026-06-17"
 date-modified: "2026-06-17"
 description: "First single-cell RNA-seq reference for geoduck: four gastrula replicates integrate into a continuous landscape with nascent ciliary, neural, muscle, and ECM lineage programs."
