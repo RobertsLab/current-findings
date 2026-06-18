@@ -263,7 +263,7 @@
     "href": "reports.html",
     "title": "Reports",
     "section": "",
-    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nImmune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease\n\n\nComparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease.\n\n\n\n\n\nJun 17, 2026\n\n\nHannah Nowers\n\n\n\n\n\n\n\nDNA methylation in Mytilus chilensis\n\n\nGenome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.\n\n\n\n\n\nAug 12, 2025\n\n\nCristian Gallardo, Valentina Venezuala, Steven Roberts\n\n\n\n\n\n\n\nPolyIC Immune Priming Protocols for Oysters\n\n\nSummary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.\n\n\n\n\n\nJun 27, 2024\n\n\nAriana S. Huffmyer\n\n\n\n\n\n\n\nComparative Genomic Analysis of Geoduck Clam (Panopea generosa)\n\n\nAnnotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.\n\n\n\n\n\nJan 1, 2023\n\n\nOlivia Cattau, Steven B. Roberts\n\n\n\n\n\n\n\nCharacterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)\n\n\nFine-scale histological staging of 70 geoduck gonad samples from November 2014 to January 2015 documents reproductive maturation and its variation over time.\n\n\n\n\n\nMar 1, 2016\n\n\nGrace Crandall, Steven Roberts\n\n\n\n\n\n\n\nEffect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress\n\n\nJuvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\n\n\nImpact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis\n\n\nRNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\nNo matching items"
+    "text": "Reports are organized by date and topic. Each report includes a status statement, suggested citation, and links to data or code when available.\nUnless explicitly stated, reports are not peer reviewed.\n\n\n\n\n\n\n\n\n\nExample Current Findings Report\n\n\nExample report showing the standard structure for Current Findings.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nFundamental Differences Among Olympia Oyster Populations\n\n\nSynthesis of 11 studies showing Ostrea lurida populations differ heritably across genetics, phenotype, physiology, and methylation—with implications for restoration.\n\n\n\n\n\nJun 17, 2026\n\n\nSteven Roberts\n\n\n\n\n\n\n\nImmune Gene Abundance Does Not Explain Susceptibility to Sea Star Wasting Disease\n\n\nComparative GO-Slim annotation of three sea star genomes shows immune-related gene abundance does not track susceptibility to sea star wasting disease.\n\n\n\n\n\nJun 17, 2026\n\n\nHannah Nowers\n\n\n\n\n\n\n\nDNA methylation in Mytilus chilensis\n\n\nGenome-wide DNA methylation patterns in Mytilus chilensis from two contrasting seedbeds reveal a system-wide epigenetic response associated with local adaptation.\n\n\n\n\n\nAug 12, 2025\n\n\nCristian Gallardo, Valentina Venezuala, Steven Roberts\n\n\n\n\n\n\n\nPolyIC Immune Priming Protocols for Oysters\n\n\nSummary of Poly(I:C) immune priming protocols for Pacific oysters using emersion/bath methods, with a suggested protocol for Point Whitney exposures.\n\n\n\n\n\nJun 27, 2024\n\n\nAriana S. Huffmyer\n\n\n\n\n\n\n\nComparative Genomic Analysis of Geoduck Clam (Panopea generosa)\n\n\nAnnotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.\n\n\n\n\n\nDec 31, 2022\n\n\nOlivia Cattau, Steven B. Roberts\n\n\n\n\n\n\n\nCharacterization of Reproductive Maturation in Geoduck Clams (Panopea generosa)\n\n\nFine-scale histological staging of 70 geoduck gonad samples from November 2014 to January 2015 documents reproductive maturation and its variation over time.\n\n\n\n\n\nMar 1, 2016\n\n\nGrace Crandall, Steven Roberts\n\n\n\n\n\n\n\nEffect of Elevated pCO2 Conditions on the Susceptibility of Juvenile Manila Clams to Thermal Stress\n\n\nJuvenile Manila clams acclimated to elevated pCO2 show increased mortality only at the lethal 40C heat shock, with candidate stress genes largely unchanged.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\n\n\nImpact of Elevated pCO2 Conditions on Larval Manila Clam Physiology Revealed by RNA Sequence Analysis\n\n\nRNA-Seq of Manila clam larvae shows survival and growth are unaffected by elevated pCO2, but translation and ion-transport genes are broadly upregulated.\n\n\n\n\n\nJan 1, 2012\n\n\nDavid C. Metzger, Steven Roberts\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -593,5 +593,166 @@
     "title": "PolyIC Immune Priming Protocols for Oysters",
     "section": "6 Version history",
     "text": "6 Version history\n\n\n\n\n\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nMigrated from “PolyIC Immune Priming Protocols – Ariana S Huffmyer – Research Scientist, University of Washington.pdf”"
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html",
+    "href": "reports/olympia-oyster-population-synthesis/index.html",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "",
+    "text": "WarningStatus\n\n\n\nThis report is a Roberts Lab working manuscript. It has not been peer reviewed.\nIt is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#rangewide-structure-and-biogeographic-barriers",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#rangewide-structure-and-biogeographic-barriers",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "3.1 Rangewide structure and biogeographic barriers",
+    "text": "3.1 Rangewide structure and biogeographic barriers\nSilliman (2019) provided the first modern, genome-wide test of rangewide structure, genotyping oysters from southern California to Vancouver Island at 13,424 SNPs and analyzing putatively neutral and outlier loci separately. The data reject the null model of panmixia. Instead, allele frequencies follow a strong isolation-by-distance gradient—latitude explained roughly 83–86% of variation along the first principal component—overlaid on six distinct phylogeographic regions: Northwest British Columbia, Puget Sound + southern BC, Willapa Bay, Oregon, Northern California, and Southern California.\nRegional boundaries coincide with recognized marine biogeographic barriers—Cape Mendocino, Monterey Bay, and the currents around Cape Flattery—where reduced gene flow (resolved as discrete barriers in EEMS analyses) interrupts the otherwise smooth latitudinal cline. Genetic diversity is highest in the Southern California region, consistent with northward post-glacial recolonization and bottlenecks in the north. Neutral markers resolved finer structure than outlier loci, but both recovered the same regional architecture. The outlier loci under putative selection were annotated to genes for developmental regulation, sensory processing, energy metabolism, immune response, and muscle contraction—candidate targets of local adaptation and useful markers for future genetic monitoring.\nThis rangewide picture confirms and extends earlier mitochondrial phylogeography (a break north of Willapa Bay; the O. lurida / O. conchaphila species boundary to the south) and an unpublished microsatellite dissertation, but with far greater resolution. The central message is that O. lurida is regionally structured, not panmictic, despite a planktonic larval phase—exactly the pattern expected when brooding limits effective dispersal and selective gradients are steep."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#fine-scale-structure-within-puget-sound",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#fine-scale-structure-within-puget-sound",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "3.2 Fine-scale structure within Puget Sound",
+    "text": "3.2 Fine-scale structure within Puget Sound\nHeare et al. (2017) supplied the first peer-reviewed evidence of structure at the within–Puget Sound scale, and White et al. (2017) released the underlying genotype-by-sequencing resource: a 10,363-locus SNP panel for three geographically and environmentally distinct bays—Fidalgo Bay (northern, cold, Strait of Juan de Fuca influence), Dabob Bay (a stratified, long-retention fjord arm of Hood Canal), and Oyster Bay (south Sound, warm, productive, historically abundant). The brooding life history, the authors argued, plausibly generates reproductive isolation even over these short distances—and the genetic data, combined with the phenotypic results below, bear that out.\nWhite et al. (2017) framed the practical stakes precisely: hatchery production typically uses few broodstock to generate large numbers of outplants, which reduces effective population size and genetic diversity in the very populations being restored. Without stock-structure information, well-intentioned transfers of animals among bays can homogenize or erase the genetic differences that distinguish them—leaving restored populations genetically depauperate and less resilient even as census numbers rise."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#reciprocal-transplant-heare-2017",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#reciprocal-transplant-heare-2017",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "4.1 Reciprocal transplant (Heare 2017)",
+    "text": "4.1 Reciprocal transplant (Heare 2017)\nFirst-generation (F1) oysters from each source population were outplanted to four sites spanning the Sound. Performance differed by population in a way that was largely consistent across environments—evidence of intrinsic, population-level differences rather than purely plastic responses to site:\n\nDabob Bay — highest survival at all sites, but the lowest growth and lowest reproductive activity.\nFidalgo Bay — fastest growth, but reduced or delayed reproduction; lowest survival in the warm Hood Canal environment.\nOyster Bay — greatest proportion of brooding females at most sites (highest reproductive effort), with moderate growth and survival.\n\nThese patterns describe a classic life-history trade-off: populations cannot simultaneously maximize growth, survival, and reproduction, and each bay’s oysters allocate energy differently—Dabob toward survival, Fidalgo toward growth, Oyster Bay toward reproduction."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#multigenerational-common-garden-silliman-2018",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#multigenerational-common-garden-silliman-2018",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "4.2 Multigenerational common garden (Silliman 2018)",
+    "text": "4.2 Multigenerational common garden (Silliman 2018)\nA crucial alternative explanation for the transplant results is transgenerational plasticity (TGP)—parental environment shaping offspring phenotype non-genetically. Silliman et al. (2018) addressed this directly by rearing F1 and F2 oysters from the same three populations under common conditions for up to two generations and measuring reproduction, larval growth, and juvenile growth. The population signatures persisted: Fidalgo oysters again grew fastest (their larvae were 6–8% larger by day 7) yet released the fewest larvae (1.1 million vs. 2.7 million for Oyster Bay and 2.4 million for Dabob) and began reproducing latest and most variably. Because these differences held across two laboratory-reared generations, they have a strongly heritable component that cannot be attributed to plasticity alone. The fast-growth / delayed-reproduction coupling in Fidalgo is interpreted as a genuine adaptive trade-off.\n\n\n\nTable 2: Convergent population physiotypes across independent studies. The consistency of these rankings across a field transplant, a two-generation common garden, and a multi-year physiological experiment is the strongest possible evidence that the differences are real, heritable, and adaptively meaningful.\n\n\n\n\n\n\n\n\n\n\n\n\nPopulation\nGrowth\nSurvival\nReproduction / fecundity\nAcidification response (Spencer et al. 2023)\n\n\n\n\nDabob Bay\nSlowest\nHighest\nLow–moderate; delayed\nLargest transcriptomic response; no effect on growth/reproduction (primed)\n\n\nFidalgo Bay\nFastest\nModerate (low in warm sites)\nFewest larvae; delayed, variable onset\nModerate response; minor effects\n\n\nOyster Bay\nModerate\nLowest\nHighest fecundity; earliest spawning (~10 d)\nNo transcriptomic response; only population with growth/reproduction harmed; larger larvae"
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#gene-expression-under-acute-stress-heare-2018",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#gene-expression-under-acute-stress-heare-2018",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "5.1 Gene expression under acute stress (Heare 2018)",
+    "text": "5.1 Gene expression under acute stress (Heare 2018)\nHaving established phenotypic differences, Heare et al. (2018) asked whether they have molecular underpinnings. Oysters from the three bays were exposed to heat and mechanical stress and assayed for expression of growth, immune, and gene-regulatory genes. Heat stress altered molecular-regulatory genes; mechanical stress altered immune genes; and—mirroring the phenotypic data—Oyster Bay oysters mounted the most dramatic transcriptional response. These results gave the first mechanistic clue that the population physiotypes are wired in at the level of gene regulation."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#population-specific-response-to-ocean-acidification-spencer-2023",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#population-specific-response-to-ocean-acidification-spencer-2023",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "5.2 Population-specific response to ocean acidification (Spencer 2023)",
+    "text": "5.2 Population-specific response to ocean acidification (Spencer 2023)\nThe most complete physiological test comes from Spencer et al. (2023), which leveraged oysters from the same three populations bred and reared in common conditions for four years before exposing them to elevated pCO2. The populations responded as fundamentally different physiotypes, and—remarkably—the response pattern tracked the growth/survival/fecundity trade-off identified years earlier:\n\nDabob Bay (slow growth, high survival) mounted the largest transcriptional response—132 differentially expressed genes—yet showed no detectable cost to growth or reproduction. It constitutively expressed a distinct suite of antibacterial, antiviral, metabolic, growth, and reproductive genes, suggesting it is physiologically primed and stress-tolerant.\nFidalgo Bay (fast growth) showed a moderate response (76 DEGs) with only minor effects on sex ratio and none on growth.\nOyster Bay (high fecundity, low survival) did not respond at the transcript level at all, and was the only population whose growth and reproductive development were negatively affected by acidification—though its larvae were larger, which could partly buffer offspring in the wild.\n\nThis is a textbook illustration of why populations are not interchangeable under climate stress: the same stressor produces opposite outcomes depending on source population, and the most stress-tolerant population (Dabob) is also the slowest-growing—exactly the animals a yield-focused program might be tempted to discard."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#reproductive-phenology-and-intergenerational-carryover-spencer-2020-2021",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#reproductive-phenology-and-intergenerational-carryover-spencer-2020-2021",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "5.3 Reproductive phenology and intergenerational carryover (Spencer 2020, 2021)",
+    "text": "5.3 Reproductive phenology and intergenerational carryover (Spencer 2020, 2021)\nTwo further studies examined how the environment—particularly warming winters—interacts with reproduction. Spencer et al. (2020) sequentially exposed adults to elevated winter temperature and then elevated pCO2. Winter warming accelerated spermatogenesis, causing earlier and more abundant larval release, while high pCO2 negated that acceleration—so the two stressors can mask one another. Critically, offspring of parents exposed to elevated pCO2 had higher survival in two of four outplant bays: an intergenerational carryover effect demonstrating that parental conditioning, not just genotype, shapes offspring performance, and that pre-conditioning in stressful conditions can make O. lurida more resilient in certain environments.\nSpencer et al. (2021) refined the picture by adding food availability. Elevated winter temperature (10 °C vs. 7 °C) produced larger, more developed gametes and larger larvae—especially with abundant food—implying low-level gametogenesis continues through winter, below the long-assumed ~12.5 °C threshold. But winter temperature did not affect larval survival or the timing/magnitude of larval production. The conclusion: O. lurida reproduction is largely resilient to winter warming, and in the hatchery, larval output is not contingent on winter conditions. Together these studies show reproductive phenology is environmentally tunable yet buffered—important context for predicting how wild recruitment will shift under climate change."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#early-life-history-and-recruitment-supply-becker-2020",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#early-life-history-and-recruitment-supply-becker-2020",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "5.4 Early life history and recruitment supply (Becker 2020)",
+    "text": "5.4 Early life history and recruitment supply (Becker 2020)\nPopulation persistence ultimately depends on local recruitment. Becker et al. (2020) mapped brooders, planktonic larvae, and settlers weekly through a spawning season at the Fidalgo Bay restoration site. Brooding peaked in early July (never exceeding ~13% of adults), larvae peaked in mid-July, and settlement was strongly patchy—higher near conspecific adults and near a trestle bridge that altered hydrodynamics, and concentrated at an intermediate intertidal band (~ −0.3 m MLLW) where flow was favorable. Temperature was the dominant driver. The practical lesson is that pre-recruitment processes—larval supply, transport, and settlement microhabitat—govern where oysters establish, so restoration succeeds best when appropriate substrate is added near existing conspecifics and just below mean lower low water."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#treat-populations-as-locally-adapted-management-units",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#treat-populations-as-locally-adapted-management-units",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.1 Treat populations as locally adapted management units",
+    "text": "8.1 Treat populations as locally adapted management units\nBecause differences persist across generations and common environments, populations should be managed as distinct units rather than as a single interchangeable stock. Rangewide, the six phylogeographic regions provide a natural framework for management boundaries; within regions, even bays tens of kilometers apart (Dabob, Oyster, Fidalgo) are demonstrably different. Outplanting decisions should respect these boundaries unless there is an explicit, evidence-based reason to do otherwise."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#source-broodstock-locally-and-avoid-homogenizing-transfers",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#source-broodstock-locally-and-avoid-homogenizing-transfers",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.2 Source broodstock locally and avoid homogenizing transfers",
+    "text": "8.2 Source broodstock locally and avoid homogenizing transfers\nInadvertent transfer of stocks among regions or bays can swamp local adaptation with maladapted alleles and erase the structure that confers resilience. Restoration programs should prioritize local broodstock for local outplanting, document provenance, and avoid moving animals across biogeographic barriers (Cape Mendocino, Monterey Bay, Cape Flattery) or between distinct Puget Sound basins without justification."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#protect-genetic-diversity-in-the-hatchery",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#protect-genetic-diversity-in-the-hatchery",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.3 Protect genetic diversity in the hatchery",
+    "text": "8.3 Protect genetic diversity in the hatchery\nHatchery practice that uses few broodstock to produce many outplants reduces effective population size and genetic diversity precisely where restoration aims to build resilience. Programs should use large, representative broodstock panels, spawn many family groups, equalize family contributions where possible, and monitor effective population size and diversity (the existing GBS/SNP panels and outlier loci are well suited to this). The goal is to add genetic resilience, not just census numbers."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#match-source-population-to-restoration-goal-and-future-climate",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#match-source-population-to-restoration-goal-and-future-climate",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.4 Match source population to restoration goal and future climate",
+    "text": "8.4 Match source population to restoration goal and future climate\nThe trade-offs mean there is no universally optimal stock—source choice should follow the objective and the projected environment:\n\nFor survival and persistence under stress / acidification: Dabob-type populations (slow growth, high survival, strong primed molecular stress response) are advantageous, especially in corrosive or variable habitats.\nFor rapid biomass and reef-building: Fidalgo-type populations (fast growth) may establish structure faster, but with weaker survival in warm sites and lower reproductive output.\nFor reproductive output and self-recruitment: Oyster Bay–type populations (high fecundity, early spawning) maximize larval supply, but are the most vulnerable to acidification and have lower adult survival.\n\nCritically, a yield- or growth-focused selection program would tend to favor fast-growing stock and discard the slow-growing Dabob-type animals that are in fact the most stress-tolerant—an outcome that would reduce climate resilience. Selection criteria should therefore weight survival and stress tolerance, not growth alone."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#leverage-parental-conditioning-carryover-effects",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#leverage-parental-conditioning-carryover-effects",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.5 Leverage parental conditioning (carryover effects)",
+    "text": "8.5 Leverage parental conditioning (carryover effects)\nBecause parental exposure to stressors can improve offspring survival in some environments, hatcheries may be able to use deliberate broodstock conditioning to pre-adapt outplants to target sites. This is a promising but still preliminary lever; effects are environment-dependent and should be validated per site before operational use."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#optimize-outplant-siting-and-timing",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#optimize-outplant-siting-and-timing",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "8.6 Optimize outplant siting and timing",
+    "text": "8.6 Optimize outplant siting and timing\nField recruitment data indicate restoration is improved by adding suitable substrate near existing conspecifics and at intermediate intertidal elevations (~ −0.3 m MLLW) where flow favors settlement. Because reproductive phenology shifts with temperature (earlier, larger gametes after warmer winters) but larval survival is buffered, managers can anticipate earlier recruitment in warm years without expecting catastrophic phenological failure—while still monitoring for acidification, which can mask warming’s effects and harm sensitive populations such as Oyster Bay."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#link-adaptive-genotype-to-phenotype",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#link-adaptive-genotype-to-phenotype",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.1 Link adaptive genotype to phenotype",
+    "text": "9.1 Link adaptive genotype to phenotype\nThe outlier loci identified rangewide (developmental, sensory, metabolic, immune, and muscle genes) are candidates, not confirmed adaptive variants. Functional validation—associating specific alleles or methylation states with growth, survival, fecundity, and acidification tolerance—would convert candidate markers into usable selection and monitoring tools."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#disentangle-genetic-epigenetic-and-carryover-contributions",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#disentangle-genetic-epigenetic-and-carryover-contributions",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.2 Disentangle genetic, epigenetic, and carryover contributions",
+    "text": "9.2 Disentangle genetic, epigenetic, and carryover contributions\nMethylation is partly coupled to genotype but partly independent, and carryover effects are heritable yet environment-dependent. Multigenerational designs that simultaneously track genotype, methylome, and parental environment are needed to quantify how much of the population physiotype is hard-wired versus tunable—and how durable epigenetic shifts are across generations."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#extend-physiological-testing-across-the-full-range-and-multiple-stressors",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#extend-physiological-testing-across-the-full-range-and-multiple-stressors",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.3 Extend physiological testing across the full range and multiple stressors",
+    "text": "9.3 Extend physiological testing across the full range and multiple stressors\nPopulation-specific stress responses are documented chiefly for three Puget Sound bays. Comparable acidification, warming, hypoxia, and salinity experiments across the six phylogeographic regions would reveal whether the growth–survival–tolerance trade-off generalizes, and would identify which regional stocks harbor the most valuable adaptive variation for a changing ocean."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#quantify-real-world-larval-dispersal-and-connectivity",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#quantify-real-world-larval-dispersal-and-connectivity",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.4 Quantify real-world larval dispersal and connectivity",
+    "text": "9.4 Quantify real-world larval dispersal and connectivity\nThe brooding life history predicts limited dispersal, but effective connectivity—how far larvae actually move and recruit—remains poorly quantified. Coupling genomic parentage/assignment with biophysical transport models and field recruitment surveys (building on the Becker framework) would define management-unit boundaries empirically and inform restoration network design."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#build-a-genomic-monitoring-and-broodstock-management-toolkit",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#build-a-genomic-monitoring-and-broodstock-management-toolkit",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.5 Build a genomic monitoring and broodstock-management toolkit",
+    "text": "9.5 Build a genomic monitoring and broodstock-management toolkit\nThe existing SNP panels, transcriptomes, and methylation data should be consolidated into a standardized, low-cost genotyping panel for tracking effective population size, diversity, provenance, and adaptive loci in restored and hatchery populations—closing the loop between research findings and operational stock management."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#test-conditioning-and-assisted-adaptation-strategies-operationally",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#test-conditioning-and-assisted-adaptation-strategies-operationally",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "9.6 Test conditioning and assisted-adaptation strategies operationally",
+    "text": "9.6 Test conditioning and assisted-adaptation strategies operationally\nGiven preliminary evidence for beneficial carryover effects, controlled trials of broodstock pre-conditioning and site-matched outplanting—paired with long-term survival monitoring—would establish whether assisted adaptation can be deployed at restoration scale without compromising genetic diversity."
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#suggested-citation",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#suggested-citation",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "10.1 Suggested citation",
+    "text": "10.1 Suggested citation\nRoberts, S. B. 2026. Fundamental Differences Among Olympia Oyster Populations: An Integrated Synthesis of Genetic, Phenotypic, Physiological, and Epigenetic Divergence in Ostrea lurida. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/olympia-oyster-population-synthesis/"
+  },
+  {
+    "objectID": "reports/olympia-oyster-population-synthesis/index.html#version-history",
+    "href": "reports/olympia-oyster-population-synthesis/index.html#version-history",
+    "title": "Fundamental Differences Among Olympia Oyster Populations",
+    "section": "10.2 Version history",
+    "text": "10.2 Version history\n\n\n\nVersion\nDate\nNotes\n\n\n\n\n0.1\n2026-06-17\nMigrated from Oly_population_synthesis.docx"
   }
 ]

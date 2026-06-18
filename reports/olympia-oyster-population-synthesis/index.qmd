@@ -1,0 +1,241 @@
+---
+title: "Fundamental Differences Among Olympia Oyster Populations"
+subtitle: "An integrated synthesis of genetic, phenotypic, physiological, and epigenetic divergence in *Ostrea lurida*"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2026-06-17"
+date-modified: "2026-06-17"
+description: "Synthesis of 11 studies showing Ostrea lurida populations differ heritably across genetics, phenotype, physiology, and methylation—with implications for restoration."
+categories: [oysters, population-structure, epigenetics, genomics, restoration, aquaculture]
+status: "Not peer reviewed"
+report_type: "Literature synthesis"
+lab: "Roberts Lab"
+project: "Olympia oyster"
+species:
+  - Ostrea lurida
+topic:
+  - population structure
+  - local adaptation
+  - DNA methylation
+  - restoration
+  - aquaculture
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical observations, and exploratory work openly available.
+:::
+
+::: {.callout-note}
+## Scope
+
+This is an integrated synthesis of 11 primary studies from the *Ostrea lurida* literature collection, addressing how—and at what scales—Olympia oyster populations differ, and what those differences mean for restoration and aquaculture.
+:::
+
+# Executive Summary
+
+The Olympia oyster (*Ostrea lurida*) is the only oyster native to the west coast of North America. Once forming extensive beds from Baja California to central British Columbia, the species was devastated by commercial overharvest in the late nineteenth and early twentieth centuries and today persists at roughly 2–5% of its historic abundance. As restoration has accelerated over the past two decades, a recurring and consequential question has emerged: are *O. lurida* populations interchangeable, or are they fundamentally different from one another in ways that matter for how they should be managed, bred, and outplanted?
+
+The body of work synthesized here—eleven studies spanning genomics, reciprocal transplants, multigenerational common-garden experiments, reproductive physiology, gene expression, and DNA methylation—answers that question decisively: **Olympia oyster populations are not interchangeable.** They differ at every biological level examined, from neutral and adaptive genetic markers down to the methylome, and crucially these differences manifest as heritable, ecologically relevant phenotypes—growth rate, survival, reproductive timing and output, stress tolerance, and resilience to ocean acidification—that persist when animals are raised together in common conditions for up to four years and two generations.
+
+Two spatial scales of differentiation are evident. At the **rangewide scale**, genome-wide data resolve six phylogeographic regions structured by isolation-by-distance and known marine biogeographic barriers. At the **local (within–Puget Sound) scale**, three populations—Dabob Bay, Oyster Bay, and Fidalgo Bay—display consistent, heritable trade-offs among growth, survival, fecundity, and stress response that recur across independent experiments. These local differences, observed over distances of only tens of kilometers, are the single most important practical finding for restoration: they mean broodstock sourcing decisions carry real fitness consequences, and that mixing or homogenizing stocks risks erasing locally adapted variation that underpins long-term population resilience.
+
+# Background and Scope
+
+*O. lurida* is an estuarine ecosystem engineer that provides structured habitat, filters suspended sediment, and limits eutrophication. Its life history differs fundamentally from the introduced Pacific oyster (*Crassostrea gigas*). *O. lurida* is a rhythmic consecutive (protandric) hermaphrodite that spawns first as male and oscillates between sexes within a season; rather than broadcasting eggs, females retain eggs and capture planktonic sperm, then **brood larvae internally** for roughly 10–14 days before releasing competent D-stage veligers. This brooding life history shortens the effective planktonic dispersal window and creates the potential for reproductive isolation and fine-scale genetic structure—a theme that runs through nearly every paper in this collection.
+
+This synthesis integrates the eleven supplied studies into a single account of how—and at what scales—Olympia oyster populations differ, and what those differences mean for restoration and aquaculture. The studies fall into five complementary lines of evidence, summarized in @tbl-evidence and integrated in the sections that follow.
+
+| Study | Approach | Scale / populations | Core contribution |
+|---|---|---|---|
+| @timminsschiffman2013 | Larval transcriptome sequencing | Species-level (Puget Sound) | First genomic resource (41,136 contigs); stress/immune genes |
+| @white2017 | Genotype-by-sequencing data descriptor | 3 Puget Sound populations | 10,363-locus SNP panel; flags stock-mixing risk |
+| @heare2017 | Reciprocal transplant (F1), 4 sites | Dabob, Oyster, Fidalgo | Population differences in survival, growth, brooding |
+| @silliman2018 | Common garden, F1 and F2 | Dabob, Oyster, Fidalgo | Trait differences heritable across 2 generations |
+| @silliman2019 | Rangewide GBS, 13,424 SNPs | Range: S. CA–Vancouver Is. | Six phylogeographic regions; outlier loci |
+| @heare2018 | Gene expression under stress | Dabob, Oyster, Fidalgo | Population-specific molecular stress response |
+| @becker2020 | Field larval/settlement survey | Fidalgo Bay restoration site | Pre-recruitment processes govern local supply |
+| @spencer2020 | Winter warming × pCO2, carryover | 3 populations + cohort | Intergenerational carryover effects |
+| @spencer2021 | Winter warming × food | Central Puget Sound | Reproduction resilient to winter warming |
+| @spencer2023 | Population-specific OA response | Dabob, Oyster, Fidalgo | Distinct transcriptomic physiotypes |
+| @silliman2023 | Integrated genome + methylome | 2 populations | Genetic–epigenetic coupling (~27%) |
+
+: The evidence base. {#tbl-evidence}
+
+# Genetic Differentiation: Structure Across Two Scales
+
+## Rangewide structure and biogeographic barriers
+
+@silliman2019 provided the first modern, genome-wide test of rangewide structure, genotyping oysters from southern California to Vancouver Island at 13,424 SNPs and analyzing putatively neutral and outlier loci separately. The data reject the null model of panmixia. Instead, allele frequencies follow a strong **isolation-by-distance** gradient—latitude explained roughly 83–86% of variation along the first principal component—overlaid on **six distinct phylogeographic regions**: Northwest British Columbia, Puget Sound + southern BC, Willapa Bay, Oregon, Northern California, and Southern California.
+
+Regional boundaries coincide with recognized marine biogeographic barriers—**Cape Mendocino, Monterey Bay, and the currents around Cape Flattery**—where reduced gene flow (resolved as discrete barriers in EEMS analyses) interrupts the otherwise smooth latitudinal cline. Genetic diversity is highest in the Southern California region, consistent with northward post-glacial recolonization and bottlenecks in the north. Neutral markers resolved finer structure than outlier loci, but both recovered the same regional architecture. The outlier loci under putative selection were annotated to genes for developmental regulation, sensory processing, energy metabolism, immune response, and muscle contraction—candidate targets of local adaptation and useful markers for future genetic monitoring.
+
+This rangewide picture confirms and extends earlier mitochondrial phylogeography (a break north of Willapa Bay; the *O. lurida* / *O. conchaphila* species boundary to the south) and an unpublished microsatellite dissertation, but with far greater resolution. The central message is that *O. lurida* is **regionally structured, not panmictic**, despite a planktonic larval phase—exactly the pattern expected when brooding limits effective dispersal and selective gradients are steep.
+
+## Fine-scale structure within Puget Sound
+
+@heare2017 supplied the first peer-reviewed evidence of structure at the within–Puget Sound scale, and @white2017 released the underlying genotype-by-sequencing resource: a 10,363-locus SNP panel for three geographically and environmentally distinct bays—**Fidalgo Bay** (northern, cold, Strait of Juan de Fuca influence), **Dabob Bay** (a stratified, long-retention fjord arm of Hood Canal), and **Oyster Bay** (south Sound, warm, productive, historically abundant). The brooding life history, the authors argued, plausibly generates reproductive isolation even over these short distances—and the genetic data, combined with the phenotypic results below, bear that out.
+
+@white2017 framed the practical stakes precisely: hatchery production typically uses few broodstock to generate large numbers of outplants, which **reduces effective population size and genetic diversity in the very populations being restored**. Without stock-structure information, well-intentioned transfers of animals among bays can homogenize or erase the genetic differences that distinguish them—leaving restored populations genetically depauperate and less resilient even as census numbers rise.
+
+# Phenotypic Divergence: Heritable Trade-Offs Among Three Puget Sound Populations
+
+The most thoroughly documented differences in this literature are the heritable life-history trade-offs among Dabob Bay, Oyster Bay, and Fidalgo Bay. Two independent experimental designs—a field reciprocal transplant [@heare2017] and a two-generation common garden [@silliman2018]—converge on the same population physiotypes, and later physiological work [@spencer2023] reproduces them yet again.
+
+## Reciprocal transplant (Heare 2017)
+
+First-generation (F1) oysters from each source population were outplanted to four sites spanning the Sound. Performance differed by population in a way that was largely consistent across environments—evidence of intrinsic, population-level differences rather than purely plastic responses to site:
+
+- **Dabob Bay** — highest survival at all sites, but the lowest growth and lowest reproductive activity.
+- **Fidalgo Bay** — fastest growth, but reduced or delayed reproduction; lowest survival in the warm Hood Canal environment.
+- **Oyster Bay** — greatest proportion of brooding females at most sites (highest reproductive effort), with moderate growth and survival.
+
+These patterns describe a classic life-history trade-off: populations cannot simultaneously maximize growth, survival, and reproduction, and each bay's oysters allocate energy differently—Dabob toward survival, Fidalgo toward growth, Oyster Bay toward reproduction.
+
+## Multigenerational common garden (Silliman 2018)
+
+A crucial alternative explanation for the transplant results is transgenerational plasticity (TGP)—parental environment shaping offspring phenotype non-genetically. @silliman2018 addressed this directly by rearing F1 and F2 oysters from the same three populations under common conditions for up to two generations and measuring reproduction, larval growth, and juvenile growth. The population signatures persisted: Fidalgo oysters again grew fastest (their larvae were 6–8% larger by day 7) yet released the fewest larvae (1.1 million vs. 2.7 million for Oyster Bay and 2.4 million for Dabob) and began reproducing latest and most variably. Because these differences held across two laboratory-reared generations, they have a **strongly heritable component that cannot be attributed to plasticity alone**. The fast-growth / delayed-reproduction coupling in Fidalgo is interpreted as a genuine adaptive trade-off.
+
+| Population | Growth | Survival | Reproduction / fecundity | Acidification response [@spencer2023] |
+|---|---|---|---|---|
+| **Dabob Bay** | Slowest | Highest | Low–moderate; delayed | Largest transcriptomic response; no effect on growth/reproduction (primed) |
+| **Fidalgo Bay** | Fastest | Moderate (low in warm sites) | Fewest larvae; delayed, variable onset | Moderate response; minor effects |
+| **Oyster Bay** | Moderate | Lowest | Highest fecundity; earliest spawning (~10 d) | No transcriptomic response; only population with growth/reproduction harmed; larger larvae |
+
+: Convergent population physiotypes across independent studies. The consistency of these rankings across a field transplant, a two-generation common garden, and a multi-year physiological experiment is the strongest possible evidence that the differences are real, heritable, and adaptively meaningful. {#tbl-physiotypes}
+
+# Physiological and Molecular Divergence: Population-Specific Stress Response
+
+## Gene expression under acute stress (Heare 2018)
+
+Having established phenotypic differences, @heare2018 asked whether they have molecular underpinnings. Oysters from the three bays were exposed to heat and mechanical stress and assayed for expression of growth, immune, and gene-regulatory genes. Heat stress altered molecular-regulatory genes; mechanical stress altered immune genes; and—mirroring the phenotypic data—Oyster Bay oysters mounted the most dramatic transcriptional response. These results gave the first mechanistic clue that the population physiotypes are wired in at the level of gene regulation.
+
+## Population-specific response to ocean acidification (Spencer 2023)
+
+The most complete physiological test comes from @spencer2023, which leveraged oysters from the same three populations bred and reared in common conditions for **four years** before exposing them to elevated pCO2. The populations responded as fundamentally different physiotypes, and—remarkably—the response pattern tracked the growth/survival/fecundity trade-off identified years earlier:
+
+- **Dabob Bay** (slow growth, high survival) mounted the largest transcriptional response—132 differentially expressed genes—yet showed no detectable cost to growth or reproduction. It constitutively expressed a distinct suite of antibacterial, antiviral, metabolic, growth, and reproductive genes, suggesting it is physiologically primed and stress-tolerant.
+- **Fidalgo Bay** (fast growth) showed a moderate response (76 DEGs) with only minor effects on sex ratio and none on growth.
+- **Oyster Bay** (high fecundity, low survival) did not respond at the transcript level at all, and was the only population whose growth and reproductive development were negatively affected by acidification—though its larvae were larger, which could partly buffer offspring in the wild.
+
+This is a textbook illustration of why populations are not interchangeable under climate stress: the same stressor produces opposite outcomes depending on source population, and the most stress-tolerant population (Dabob) is also the slowest-growing—exactly the animals a yield-focused program might be tempted to discard.
+
+## Reproductive phenology and intergenerational carryover (Spencer 2020, 2021)
+
+Two further studies examined how the environment—particularly warming winters—interacts with reproduction. @spencer2020 sequentially exposed adults to elevated winter temperature and then elevated pCO2. Winter warming **accelerated spermatogenesis**, causing earlier and more abundant larval release, while high pCO2 negated that acceleration—so the two stressors can mask one another. Critically, offspring of parents exposed to elevated pCO2 had higher survival in two of four outplant bays: an **intergenerational carryover effect** demonstrating that parental conditioning, not just genotype, shapes offspring performance, and that pre-conditioning in stressful conditions can make *O. lurida* more resilient in certain environments.
+
+@spencer2021 refined the picture by adding food availability. Elevated winter temperature (10 °C vs. 7 °C) produced larger, more developed gametes and larger larvae—especially with abundant food—implying low-level gametogenesis continues through winter, below the long-assumed ~12.5 °C threshold. But winter temperature did not affect larval survival or the timing/magnitude of larval production. The conclusion: *O. lurida* reproduction is **largely resilient to winter warming**, and in the hatchery, larval output is not contingent on winter conditions. Together these studies show reproductive phenology is environmentally tunable yet buffered—important context for predicting how wild recruitment will shift under climate change.
+
+## Early life history and recruitment supply (Becker 2020)
+
+Population persistence ultimately depends on local recruitment. @becker2020 mapped brooders, planktonic larvae, and settlers weekly through a spawning season at the Fidalgo Bay restoration site. Brooding peaked in early July (never exceeding ~13% of adults), larvae peaked in mid-July, and settlement was strongly patchy—higher near conspecific adults and near a trestle bridge that altered hydrodynamics, and concentrated at an intermediate intertidal band (~ −0.3 m MLLW) where flow was favorable. Temperature was the dominant driver. The practical lesson is that pre-recruitment processes—larval supply, transport, and settlement microhabitat—govern where oysters establish, so restoration succeeds best when appropriate substrate is added near existing conspecifics and just below mean lower low water.
+
+# Epigenetic Divergence: Methylation Coupled to Genotype
+
+The deepest layer of differentiation comes from @silliman2023, the first genome-wide characterization of DNA methylation in the genus *Ostrea*. Integrating genomic and methylation data for two populations under controlled within-generation conditions, the study identified **3,963 differentially methylated loci between populations** and showed that genetic and epigenetic variation are coupled: roughly **27% of among-individual methylation variation is explained by genotype**, through both CpG-creating/destroying SNPs and more distant methylation quantitative trait loci (mQTLs).
+
+Two nuances matter for interpretation. First, the genetic–epigenetic coupling that is clear genome-wide breaks down when divergence is compared region by region—a caution for the methods commonly used to infer epigenetic–genetic links in marine invertebrates. Second, a substantial fraction of methylation variation is not attributable to genotype or to developmental environment, pointing to additional molecular mechanisms that could produce long-term, potentially heritable shifts in phenotype. This positions methylation as both a partial readout of genetic differentiation and an independent axis of population variation—another reason genetically distinct populations are unlikely to be functionally interchangeable.
+
+# Integration: A Coherent Picture of Population Differentiation
+
+Read together, the eleven studies tell a single, internally consistent story across levels of biological organization:
+
+1. **Genotype.** *O. lurida* is regionally structured rangewide (six phylogeographic regions shaped by isolation-by-distance and biogeographic barriers) and finely structured locally, with the brooding life history limiting effective dispersal.
+2. **Phenotype.** Local populations express heritable trade-offs—Dabob (survival), Fidalgo (growth), Oyster Bay (fecundity)—that persist across two generations and multiple independent experiments.
+3. **Physiology.** Those phenotypes have molecular signatures: population-specific transcriptional responses to heat, mechanical stress, and acidification, with stress tolerance and growth rate inversely related.
+4. **Epigenome.** Methylation differs between populations and is partly coupled to genotype, adding a further heritable axis of divergence.
+5. **Recruitment.** Local environmental and hydrodynamic processes govern larval supply and settlement, so differentiation is continually reinforced by limited, patchy recruitment.
+
+The unifying theme is a **growth–survival–reproduction–stress-tolerance trade-off** that is genetically and epigenetically encoded, environmentally tunable, and ecologically consequential. No single population is best; each represents a different solution to its local estuarine environment, and that diversity is itself the resource worth conserving.
+
+# Implications for Restoration and Aquaculture Practice
+
+The convergent finding that Olympia oyster populations are genetically, phenotypically, physiologically, and epigenetically distinct—and that these differences are heritable and adaptive—has direct, actionable consequences for how restoration and aquaculture should be conducted.
+
+## Treat populations as locally adapted management units
+
+Because differences persist across generations and common environments, populations should be managed as distinct units rather than as a single interchangeable stock. Rangewide, the six phylogeographic regions provide a natural framework for management boundaries; within regions, even bays tens of kilometers apart (Dabob, Oyster, Fidalgo) are demonstrably different. Outplanting decisions should respect these boundaries unless there is an explicit, evidence-based reason to do otherwise.
+
+## Source broodstock locally and avoid homogenizing transfers
+
+Inadvertent transfer of stocks among regions or bays can swamp local adaptation with maladapted alleles and erase the structure that confers resilience. Restoration programs should prioritize local broodstock for local outplanting, document provenance, and avoid moving animals across biogeographic barriers (Cape Mendocino, Monterey Bay, Cape Flattery) or between distinct Puget Sound basins without justification.
+
+## Protect genetic diversity in the hatchery
+
+Hatchery practice that uses few broodstock to produce many outplants reduces effective population size and genetic diversity precisely where restoration aims to build resilience. Programs should use large, representative broodstock panels, spawn many family groups, equalize family contributions where possible, and monitor effective population size and diversity (the existing GBS/SNP panels and outlier loci are well suited to this). The goal is to add genetic resilience, not just census numbers.
+
+## Match source population to restoration goal and future climate
+
+The trade-offs mean there is no universally optimal stock—source choice should follow the objective and the projected environment:
+
+- **For survival and persistence under stress / acidification:** Dabob-type populations (slow growth, high survival, strong primed molecular stress response) are advantageous, especially in corrosive or variable habitats.
+- **For rapid biomass and reef-building:** Fidalgo-type populations (fast growth) may establish structure faster, but with weaker survival in warm sites and lower reproductive output.
+- **For reproductive output and self-recruitment:** Oyster Bay–type populations (high fecundity, early spawning) maximize larval supply, but are the most vulnerable to acidification and have lower adult survival.
+
+Critically, a yield- or growth-focused selection program would tend to favor fast-growing stock and discard the slow-growing Dabob-type animals that are in fact the most stress-tolerant—an outcome that would reduce climate resilience. Selection criteria should therefore weight survival and stress tolerance, not growth alone.
+
+## Leverage parental conditioning (carryover effects)
+
+Because parental exposure to stressors can improve offspring survival in some environments, hatcheries may be able to use deliberate broodstock conditioning to pre-adapt outplants to target sites. This is a promising but still preliminary lever; effects are environment-dependent and should be validated per site before operational use.
+
+## Optimize outplant siting and timing
+
+Field recruitment data indicate restoration is improved by adding suitable substrate near existing conspecifics and at intermediate intertidal elevations (~ −0.3 m MLLW) where flow favors settlement. Because reproductive phenology shifts with temperature (earlier, larger gametes after warmer winters) but larval survival is buffered, managers can anticipate earlier recruitment in warm years without expecting catastrophic phenological failure—while still monitoring for acidification, which can mask warming's effects and harm sensitive populations such as Oyster Bay.
+
+# Next Steps in Research
+
+The synthesized work resolves that populations differ and largely why it matters, but it also defines a clear research agenda. Priorities follow directly from the gaps and open questions in the collection.
+
+## Link adaptive genotype to phenotype
+
+The outlier loci identified rangewide (developmental, sensory, metabolic, immune, and muscle genes) are candidates, not confirmed adaptive variants. Functional validation—associating specific alleles or methylation states with growth, survival, fecundity, and acidification tolerance—would convert candidate markers into usable selection and monitoring tools.
+
+## Disentangle genetic, epigenetic, and carryover contributions
+
+Methylation is partly coupled to genotype but partly independent, and carryover effects are heritable yet environment-dependent. Multigenerational designs that simultaneously track genotype, methylome, and parental environment are needed to quantify how much of the population physiotype is hard-wired versus tunable—and how durable epigenetic shifts are across generations.
+
+## Extend physiological testing across the full range and multiple stressors
+
+Population-specific stress responses are documented chiefly for three Puget Sound bays. Comparable acidification, warming, hypoxia, and salinity experiments across the six phylogeographic regions would reveal whether the growth–survival–tolerance trade-off generalizes, and would identify which regional stocks harbor the most valuable adaptive variation for a changing ocean.
+
+## Quantify real-world larval dispersal and connectivity
+
+The brooding life history predicts limited dispersal, but effective connectivity—how far larvae actually move and recruit—remains poorly quantified. Coupling genomic parentage/assignment with biophysical transport models and field recruitment surveys (building on the Becker framework) would define management-unit boundaries empirically and inform restoration network design.
+
+## Build a genomic monitoring and broodstock-management toolkit
+
+The existing SNP panels, transcriptomes, and methylation data should be consolidated into a standardized, low-cost genotyping panel for tracking effective population size, diversity, provenance, and adaptive loci in restored and hatchery populations—closing the loop between research findings and operational stock management.
+
+## Test conditioning and assisted-adaptation strategies operationally
+
+Given preliminary evidence for beneficial carryover effects, controlled trials of broodstock pre-conditioning and site-matched outplanting—paired with long-term survival monitoring—would establish whether assisted adaptation can be deployed at restoration scale without compromising genetic diversity.
+
+# Conclusion
+
+Across genomes, phenotypes, physiology, and epigenomes, the evidence is unambiguous: Olympia oyster populations are fundamentally and heritably different from one another, at scales ranging from the entire west coast down to neighboring Puget Sound bays. These differences are not noise to be averaged away in restoration—they are adaptive variation that determines how populations grow, survive, reproduce, and withstand a changing ocean. The central recommendation that follows is equally clear: **conserve population structure.** Source locally, protect genetic diversity through hatchery practice, match stock to goal and future climate, and treat the diversity among populations as the foundational resource that makes long-term Olympia oyster recovery possible.
+
+## Suggested citation
+
+Roberts, S. B. 2026. *Fundamental Differences Among Olympia Oyster Populations: An Integrated Synthesis of Genetic, Phenotypic, Physiological, and Epigenetic Divergence in Ostrea lurida*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/olympia-oyster-population-synthesis/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-06-17 | Migrated from Oly_population_synthesis.docx |
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
