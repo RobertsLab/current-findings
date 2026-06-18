@@ -36,6 +36,8 @@ This report is a Roberts Lab working manuscript. It has not been peer reviewed.
 
 It is shared to make small scientific efforts, preliminary analyses, technical
 observations, and exploratory work openly available.
+
+<a href="https://robertslab.github.io/resources/Agentic-Coding-Tools/#five-level-rubric"><img alt="AI Use Level 3: AI-supported analysis or interpretation" src="https://img.shields.io/badge/AI%20Use-Level%203%20Analysis%2FInterpretation-orange"></a>
 :::
 
 ## Background and Summary
