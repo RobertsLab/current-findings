@@ -1,0 +1,188 @@
+---
+title: "Ocean Acidification Experimental Papers: A Summary of Designs and Water-Chemistry Methods"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+date: "2026-06-18"
+date-modified: "2026-06-18"
+description: "Cross-study summary of six Roberts Lab ocean-acidification experiments, comparing experimental designs and seawater carbonate-chemistry manipulation and monitoring methods."
+categories: [ocean-acidification, methods, water-chemistry, carbonate-chemistry, bivalves, crustaceans]
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: "Ocean acidification"
+species:
+  - Panopea generosa
+  - Crassostrea virginica
+  - Chionoecetes opilio
+  - Ruditapes philippinarum
+topic:
+  - ocean acidification
+  - carbonate chemistry
+  - experimental design
+  - seawater pCO2 manipulation
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical
+observations, and exploratory work openly available.
+:::
+
+## Abstract
+
+This note summarizes six Roberts Lab ocean-acidification (OA) studies spanning Pacific geoduck, eastern oyster, snow crab, and Manila clam, with particular attention to how each manipulated, controlled, and characterized seawater carbonate chemistry. For each paper it records the citation, a concise summary of findings, and a detailed account of the water-chemistry experimental setup. A closing section draws out the methodological practices the studies share, including flow-through filtered seawater, header/treatment-tank CO2 dosing under feedback control, discrete carbonate-system characterization, and carbonate-parameter calculation in the seacarb R package.
+
+## Gurr et al. 2021 — *Journal of Experimental Biology* (Jamestown Hatchery)
+
+Gurr, S. J., Wanamaker, S. A., Vadopalas, B., Roberts, S. B., & Putnam, H. M. (2021). Repeat exposure to hypercapnic seawater modifies growth and oxidative status in a tolerant burrowing clam. *Journal of Experimental Biology*, 224(13), jeb233932 [@gurr2021repeat].
+
+### Summary
+
+Pediveliger Pacific geoduck (*Panopea generosa*) were initially conditioned for 110 days under either ambient (~921 µatm) or moderately elevated pCO₂ (~2870 µatm), then subjected to a second 7-day exposure across ambient, moderate, or severe pCO₂ (754, 2750, or 4940 µatm), a 7-day ambient recovery, and a third 7-day exposure to ambient (970 µatm) or moderate pCO₂ (3030 µatm). Clams primed at the postlarval stage to moderate pCO₂ and re-exposed to elevated pCO₂ showed increased respiration rate, organic biomass, and shell size, indicating a stress-intensity-dependent energetic response. Stress-acclimated clams also had lower total antioxidant capacity than ambient-held animals, supporting a hormetic priming framework in which sub-lethal early-life pCO₂ stress can elicit beneficial phenotypic plasticity in a burrowing bivalve.
+
+### Detailed water-chemistry experimental setup
+
+- **Source water:** Bag-filtered (5 µm) and UV-sterilized seawater pumped from 27.5 m depth in Dabob Bay, WA (Jamestown Point Whitney Shellfish Hatchery, Brinnon, WA).
+- **System architecture:** Flow-through, gravity-fed system. Treatment seawater was generated in 250-L head tanks (one per pCO₂ treatment) and gravity-fed to replicate trays (primary 110-day exposure, ~0.1 L min⁻¹) or pumped through pressure-compensating drippers (Raindrip, ~1 gal h⁻¹ ≈ 0.06 L min⁻¹) to randomly interspersed 175-mL plastic cups containing 50 mL of rinsed sand (450–550 µm grain size) for the 21-day reciprocal exposures (~8 turnovers h⁻¹).
+- **pCO₂ control:** Elevated pCO₂ in head tanks was achieved with a pH-stat system using a Neptune Apex Controller and gas solenoid valves that pulsed CO₂ to hit target pH set-points (NBS scale): pH 7.2 for moderate pCO₂ and pH 6.8 for severe pCO₂.
+- **Continuous monitoring:** pH and temperature were logged every 10 s with Neptune Systems probes positioned in head tanks and trays (probe accuracy ±0.01 pH, ±0.1 °C).
+- **Discrete measurements:** Handheld pH (Mettler Toledo, Thermo Scientific Orion Star A325, mV mode), salinity (Orion 013010MD conductivity cell, ±0.01 psu), and temperature (Fisherbrand Traceable Platinum Ultra-Accurate digital thermometer, ±0.05 °C) were measured. pH was QC'd daily against Dickson Tris standard (Batch T27) and converted to total scale.
+- **Total alkalinity (TA):** Open-cell potentiometric titration (Dickson SOP 3b) using certified ~0.1 mol kg⁻¹ HCl titrant in ~0.6 mol kg⁻¹ NaCl (Dickson Lab batches A15, A16); accuracy verified vs. Dickson CO₂ CRM Batch 180 (<1% error).
+- **Carbonate parameter calculation:** Done from measured pH (total scale) and TA, with salinity and temperature inputs, using the **seacarb** R package (R v3.5.1).
+- **Sampling cadence:** Carbonate chemistry measured weekly per tray during the 110-day primary exposure, daily for three randomized cups per treatment during the 21-day experiment, and once per week across all replicate cups.
+- **Realized treatments:** Primary — Ambient 921 ± 41 µatm / Elevated 2870 ± 65 µatm; Second exposure — 754, 2750, 4940 µatm; Recovery — 896 µatm; Third exposure — 967 / 3030 µatm. Salinity ~29 psu, temperature 16.8–18.2 °C throughout.
+
+## Gurr et al. 2022 — *Molecular Ecology* (Jamestown Hatchery)
+
+Gurr, S. J., Trigg, S. A., Vadopalas, B., Roberts, S. B., & Putnam, H. M. (2022). Acclimatory gene expression of primed clams enhances robustness to elevated pCO₂. *Molecular Ecology*, 31(19), 5005–5023 [@gurr2022acclimatory].
+
+### Summary
+
+Whole-juvenile *Panopea generosa* samples from the same hormetic-priming experiment described in [@gurr2021repeat] were profiled with TagSeq to ask whether transcriptional changes underlie the beneficial phenotypes of pCO₂-primed clams. Pre-exposed (primed) geoducks "frontloaded" genes involved in stress response, apoptosis/innate immunity, homeostasis, protein degradation, and transcriptional regulation, and were responsive to subsequent encounters with mitochondrial recycling and immune-defense gene sets, whereas naïve clams enriched fatty-acid degradation and glutathione pathways suggestive of unsustainable energy depletion. The results demonstrate that postlarval pCO₂ priming reshapes constitutive and inducible gene expression in ways that mechanistically support enhanced robustness to repeated ocean-acidification stress.
+
+### Detailed water-chemistry experimental setup
+
+This study analyzed gene expression on samples generated in the same physiological experiment as [@gurr2021repeat]. The water-chemistry manipulation system is therefore identical to that study and is summarized briefly here:
+
+- **Hatchery & water source:** Jamestown Point Whitney Shellfish Hatchery; bag-filtered (5 µm), UV-sterilized seawater from 27.5 m depth, Dabob Bay, WA.
+- **Experimental architecture:** 250-L head tanks → gravity-fed 10-L Heath/Tecna trays for the 110-day priming (N = 4 trays per pCO₂; ~1.5 × 10⁴ pediveligers per tray); juveniles were then split into 36 replicate vessels (175 mL cups with sand, N = 6 vessels per primary × secondary treatment) for the 21-day reciprocal exposures, and split again into 72 vessels for the third 7-day exposure.
+- **pCO₂ control:** Neptune Apex Controller pH-stat system with solenoid-actuated pure-CO₂ injection into head tanks targeting pH 7.2 (moderate) and pH 6.8 (severe) on the NBS scale (transition to target pCO₂ ~3 h; return to ambient ~6–8 h).
+- **Discrete monitoring:** Same hand-probe array (Mettler Toledo pH, Orion conductivity, Fisherbrand digital thermometer); pH calibrated against Dickson Tris (T27) and reported in total scale.
+- **Total alkalinity:** Open-cell Gran titration (Dickson SOP 3b) with certified Dickson Lab HCl titrant (batches A15/A16); CRM Batch 180 used for QC.
+- **Calculations:** seacarb in R using pH (total), TA, salinity, and temperature.
+- **Realized treatments (mean ± SE):** Primary 921 ± 41 vs 2870 ± 65 µatm; Secondary 754 ± 15 / 2750 ± 31 / 4940 ± 45 µatm; Recovery 896 ± 11 µatm; Tertiary 967 ± 9 / 3030 ± 23 µatm.
+- **Justification of pCO₂ levels:** Chosen to be ecologically realistic for the native range of geoduck — Hood Canal, WA shows >2400 µatm and Ωₐᵣ < 0.4 at depth (Feely et al. 2010), and subsurface sediments show Ωₐᵣ 0.4–0.6 (Green et al. 2009).
+
+## Putnam et al. 2022 — bioRxiv preprint (Manchester)
+
+Putnam, H. M., Trigg, S. A., White, S. J., Spencer, L. H., Vadopalas, B., Natarajan, A., Hetzel, J., Jaeger, E., Soohoo, J., Gallardo-Escárate, C., Goetz, F. W., & Roberts, S. B. (2022). Dynamic DNA methylation contributes to carryover effects and beneficial acclimatization in geoduck clams. *bioRxiv*, posted August 26, 2022 [@putnam2022dynamic].
+
+### Summary
+
+The authors generated a chromosome-level *Panopea generosa* reference genome and used reduced-representation bisulfite sequencing to profile shell-growth phenotypes and DNA methylomes of juvenile geoduck exposed to a sequence of seawater pH treatments (pH 7.9, 7.4, 7.0; common-garden recovery; reciprocal secondary exposure to pH 7.9 or 7.4). Within 10 days of low-pH exposure, juveniles had reduced shell size and corresponding differential methylation; after four months of common-garden recovery, previously low-pH clams compensatorily grew larger, with persistent methylation marks (notably across Wnt signaling pathways) consistent with epigenetic carryover. Upon secondary exposure, naïve clams were more sensitive to pH 7.4 than primed clams and showed nearly twofold greater methylation change, demonstrating that DNA methylation is dynamically remodeled during acclimatization and underlies beneficial carryover phenotypes.
+
+### Detailed water-chemistry experimental setup
+
+- **System type:** Flow-through, pH-stat seawater system using 1 µm-filtered hatchery seawater (Jamestown Point Whitney / Manchester Research Station context).
+- **pH control:** Honeywell Durafet III pH probes continuously monitored each header tank and fed pH plus temperature data into a solenoid-controlled gas-injection system. pH set-points were maintained by injecting either ambient air or pure CO₂ into a recirculating water line within each header that cycled water from bottom to top for mixing/equilibration before delivery to treatment tanks.
+- **Initial exposure:** Three pH levels — pH 7.9 (ambient), pH 7.4, pH 7.0 (replicated). Treatment water was delivered to each replicate tank through pressure-compensating drippers at 9.6 ± 0.1 L h⁻¹ (n = 6).
+- **Common-garden phase:** After 23 days of initial exposure, the six replicate tanks were transferred to an indoor ambient common-garden (~14–15 °C, pH ~7.9), with continuous Avtech temperature and Durafet pH monitoring. After 28 indoor days, clams were transferred to three 18-L tanks suspended off a dock at Manchester, WA at ambient bay conditions (~14 °C) for 84 days.
+- **Secondary exposure:** Clams from each initial treatment were re-exposed to two pH levels (pH 7.9 and pH 7.4) in replicate trays (~2.8 L). Treatment water was again delivered through pressure-compensating drippers at 3.14 ± 0.09 L h⁻¹ (n = 36).
+- **Discrete chemistry sampling:** Following Riebesell et al. (2011) best practices. pH measured in mV (Mettler Toledo DG115SC glass probe, resolution 0.01) and back-calculated to total scale using a tris standard regression (Batch 2/14/16, salinity 27.5). Temperature: VWR traceable digital thermometer (±0.05 °C). Salinity: VWR portable conductivity meter (±0.3%).
+- **Total alkalinity:** 120-mL discrete samples preserved with 75 µL HgCl₂ in sealed borosilicate bottles; analyzed by open-cell Gran titration (Dickson SOP 3) on a Mettler Toledo T50 automated titrator. Because many TA bottles were damaged in storage, the mean TA was applied across calculations.
+- **Carbonate calculations:** seacarb R package (Gattuso et al. 2016) with constants of K_F (Perez & Fraga 1987), K_S (Dickson 1990), and K₁/K₂ (Lueker et al. 2000), using inputs of pH (total), TA (µmol kg⁻¹ sw), salinity (psu), and temperature (°C).
+- **Feeding (relevant to chemistry):** Mixed diatom/flagellate diet (*Chaetoceros* sp., *C. muelleri*, *Pavlova pinguis*, *Tisochrysis lutea*); 65,123 ± 3,630 cells mL⁻¹ during initial exposure and 23,721 ± 2,005 cells mL⁻¹ during secondary exposure.
+
+## Venkataraman et al. 2024 — *Environmental Epigenetics* (NEU)
+
+Venkataraman, Y. R., Huffmyer, A. S., White, S. J., Downey-Wall, A., Ashey, J., Becker, D. M., Bengtsson, Z., Putnam, H. M., Strand, E., Rodríguez-Casariego, J. A., Wanamaker, S. A., Lotterhos, K. E., & Roberts, S. B. (2024). DNA methylation correlates with transcriptional noise in response to elevated pCO₂ in the eastern oyster (*Crassostrea virginica*). *Environmental Epigenetics*, 10(1), dvae018 [@venkataraman2024dna].
+
+### Summary
+
+Adult eastern oysters (*Crassostrea virginica*) were reproductively conditioned for 30 days under control (572 ppm) or elevated (2827 ppm) pCO₂, after which paired whole-genome bisulfite sequencing and RNA-seq libraries were prepared from female gonad tissue and male sperm. Although differentially methylated loci were detected (89 in females, 2,916 in males), there were no DEGs and only one differentially expressed transcript in females, but methylation in sperm correlated with the maximum number of transcripts expressed per gene and with the predominant transcript variant expressed. Elevated pCO₂ increased gene-expression variability ("transcriptional noise") in males but decreased it in females, suggesting a sex-specific epigenetic mechanism for maintaining reproductive homeostasis under ocean acidification.
+
+### Detailed water-chemistry experimental setup
+
+The experimental system was that of McNally et al. and is summarized as follows:
+
+- **Pre-exposure acclimation:** Adult *C. virginica* (mean shell length 7.92 ± 1.80 cm) were acclimated for one week to ambient pCO₂ conditions (mean 632 ± 64 ppm) prior to random assignment to treatments.
+- **Treatments and replication:** Two pCO₂ levels — control (572 ± 107 ppm) vs. elevated (2827 ± 360 ppm); the elevated treatment corresponds to seawater undersaturated with respect to aragonite (consistent with estuarine habitats). Four replicate 42-L tanks per pCO₂ condition, 10 oysters per tank.
+- **Duration & temperature:** 30-day exposure at 20 °C during reproductive conditioning.
+- **Delivery system:** A flow-through OA array controlled temperature, salinity, and pCO₂.
+- **Monitoring:** Temperature, salinity, and pH on the total scale (pH_T) were recorded three times per week during the experiment.
+- **Total-alkalinity / DIC sampling:** Discrete seawater samples were collected during the first and third weeks for dissolved inorganic carbon (DIC) and total alkalinity measurement (used to compute Ωₐᵣ; Welch's two-sample *t*-test confirmed Ωₐᵣ differed significantly between treatments, t = 12.33, df = 7, P < 0.0001).
+- **Feeding:** Followed Helm and Bourne best practices for oyster broodstock conditioning.
+- The original tank-control hardware specifications (probe make, gas-injection apparatus, alkalinity titration platform) are not re-described in this paper; readers are directed to McNally et al. for those details.
+
+## Spencer et al. 2026 — bioRxiv preprint (NOAA Alaska)
+
+Spencer, L. H., Spies, I. B., Gardner, J. L., Roberts, S. B., & Long, W. C. (2026). Short-term mechanisms, long-term consequences: molecular effects of ocean acidification on juvenile snow crab. *bioRxiv*, posted February 7, 2026 [@spencer2026short].
+
+### Summary
+
+Juvenile snow crab (*Chionoecetes opilio*) collected from the Bering Sea were held at one of three pH treatments (ambient pH ~8.0, moderate OA pH 7.8, severe OA pH 7.5) and sampled for whole-body RNA-seq after 8 hours and after 88 days of exposure to characterize short-term and chronic transcriptional responses to ocean acidification. The acute (8 h) response in both OA treatments featured strong upregulation of mitochondrial metabolism/biogenesis, protein homeostasis, cuticle maintenance, and immune modulation, with greater magnitude in the severe treatment, while at 88 days expression patterns diverged with sustained activation of stress- and damage-mitigation pathways under pH 7.5. The companion long-term experiment (Long 2026) showed survival declines beginning ~250 days under pH 7.5, and these data identify candidate molecular biomarkers of chronic OA stress that may underlie that eventual mortality.
+
+### Detailed water-chemistry experimental setup
+
+This study used animals and tanks from a larger snow-crab OA experiment (Long 2026); methodological core points are:
+
+- **Animal source & acclimation:** Juvenile snow crab (wet wt 0.24 ± 0.03 g; carapace width 8.3 ± 0.3 mm) were trawl-collected from the Bering Sea in April 2021 and transported to NOAA's Kodiak Laboratory (Alaska Fisheries Science Center). Animals were acclimated in flow-through seawater for 2 weeks at 4 °C and ambient salinity before random assignment to treatments.
+- **Treatments:** Three pH (total scale) treatments — Control / ambient pH_T (~8.0), moderate OA (pH ~7.8), and severe OA (pH ~7.5) — chosen because seasonal lows of ~7.5 are observed in the Bering Sea distribution range of snow crab (Mathis et al. 2014).
+- **Tank system:** 380-L tanks chilled to 4 °C; crabs were housed individually inside mesh-bottom PVC inserts to allow shared water chemistry while preventing intraspecific interactions.
+- **pH control:** CO₂ bubbling with Honeywell Durafet III pH probe feedback maintained target pH within each tank.
+- **Monitoring cadence:** pH measured three times per week with the Durafet III probe; salinity measured weekly with a Mettler Toledo InLab 731-2m salinity probe; temperature measured three times per week and held within a 1 °C range suitable for snow crab (2.7–3.7 °C).
+- **Alkalinity:** Total alkalinity was calculated from weekly salinity values using the established Gulf of Alaska salinity–alkalinity relationship (Evans et al. 2015), rather than measured by titration.
+- **Carbonate parameter calculation:** Remaining carbonate-system parameters (pCO₂, DIC, Ωₐᵣ, Ω_calcite) were computed in seacarb in R (R v4.2.3) from measured T, S, pH and the calculated TA.
+- **Realized parameter table (Day 1 / Day 88 means ± SD):** Temperature 2.8–3.7 °C; salinity ~32 psu; treatments produced the targeted pH separations (≈8.0 / 7.8 / 7.5) over the 88-day window — see paper Table 1 for the full 5-column carbonate-chemistry summary.
+
+## Timmins-Schiffman et al. 2026 — *Aquaculture* (Manchester)
+
+Timmins-Schiffman, E., Root, L., Crim, R., Middleton, M. A., Ewing, M. M., Winnikoff, J., Ham, G., Goetz, G., Roberts, S., & Gavery, M. R. (2026). Mothers know best: Maternal signaling boosts larval resilience under ocean acidification conditions. *Aquaculture*, 613, 743388 [@timminsschiffman2026mothers].
+
+### Summary
+
+Adult Manila clam (*Ruditapes philippinarum*) broodstock were exposed for 78 days during gametogenesis to ambient (pH ~7.8) or low-pH (pH ~7.4) seawater, and the resulting larvae were reared in a fully crossed parental × larval pH design to test whether parental priming buffers larval performance under OA. Larvae from low-pH-primed broodstock had higher survival and faster growth under low pH than larvae from ambient broodstock, while broodstock physiology (gill Na⁺/K⁺-ATPase, condition index) was minimally affected. Egg lipidomes did not differ between parental treatments, but the egg transcriptome contained 48 differentially expressed transcripts (in metabolism, cell cycle, and transcriptional regulation pathways), indicating that subtle maternal mRNA signals — rather than gross lipid provisioning — likely mediate the beneficial transgenerational priming effect.
+
+### Detailed water-chemistry experimental setup
+
+- **Animal source / acclimation:** Manila clams (n = 307; shell height 34.2 ± 4.5 mm) collected by hand-rake from Liberty Bay, Puget Sound, WA on 18 January 2023 and transported to NOAA's Manchester Research Station (Port Orchard, WA). A two-week common-condition acclimation followed (10.0 °C, 29.6 psu).
+- **Broodstock system architecture:** Flow-through with 5 µm-filtered seawater pumped into four 200-L polyethylene header tanks (each with independent temperature and pCO₂ control). Each header gravity-fed two replicate 100-L clam tanks via ball valves at 0.5 ± 0.1 L min⁻¹ (40 clams per replicate, 10 per mesh bag).
+- **pCO₂ control:** Pure CO₂ was directly injected into each header tank through a venturi injector. A Durafet III pH probe in each tank fed a Honeywell UDA analyzer/controller, which actuated a solenoid valve on the CO₂ injection line to maintain the desired pCO₂/pH target.
+- **Treatment ramp:** Two headers were held at ambient (pH ~7.8); the other two were stepped down by 0.1 pH units per day over 6 days to a target of pH 7.4, which represents observed Puget Sound bottom-water values (Feely et al. 2010). Once the target was reached, pH was held constant for the duration of the experiment.
+- **Temperature ramp (gametogenesis cue):** Once treatment pH targets were stable, temperature in all tanks was raised from 9.9 °C by 0.5 °C per 24 h over 20 days to 20 °C, then held there until spawning on 18–19 April 2023.
+- **Larval system:** After fertilization at ambient pH, ~4,000 D-hinge larvae per replicate were placed into 48 µm mesh-bottom silos (~700 mL) inside triplicate sealed chambers with either ambient or low-pH seawater (n = 15 per parental × larval combination). Larval chambers were temperature-controlled at 22 °C in a circulating water bath; water was changed daily and larvae were fed *Tisochrysis lutea*.
+- **Continuous monitoring:** UDA controller plus an Apex data-logging system continuously recorded header-tank temperature and pH.
+- **Discrete monitoring:** Three times per week — temperature and salinity (ThermoScientific Orion Star A322 handheld probe) plus spectrophotometric pH using m-cresol purple dye (samples warmed to 25 °C in Ocean Insight CV-Q-100 cuvettes; spectra acquired with an Ocean Optics Flame mini-spectrometer) following Dickson et al. (2007).
+- **Total alkalinity:** Discrete 120-mL samples (preserved with 50 µL HgCl₂) collected on 7 Feb, 17 Feb, 1 Mar, 13 Mar, 28 Mar, and 10 Apr; titrated on a Mettler Toledo T5 Excellence Titrator with LabX software. TA was forward/back-filled around sampling dates; the larval-experiment TA was estimated from the 10 Apr mean.
+- **Carbonate parameter calculation:** seacarb R package (Gattuso et al. 2021) from measured pH, TA, S, and T to compute pCO₂, DIC, and Ωₐᵣ.
+- **Realized treatments:** Broodstock — ambient pCO₂ ~826 µatm (pH 7.8) vs. low-pH ~2,353 µatm (pH 7.4). Larval — ambient pCO₂ ~672 µatm (pH 7.8) vs. low-pH ~1,942 µatm (pH 7.4); Ωₐᵣ < 0.75 for most of the larval low-pH experiment vs. > 1.5 for ambient.
+
+## Cross-paper notes on water-chemistry approach
+
+All six studies share a coherent set of best practices: (1) flow-through seawater filtered to 1–5 µm; (2) independent header / treatment tanks dosed with pure CO₂ (or, in [@putnam2022dynamic], alternating air/CO₂) under feedback control of solid-state Honeywell Durafet probes ([@putnam2022dynamic], [@spencer2026short], [@timminsschiffman2026mothers]) or Neptune Apex sensors ([@gurr2021repeat], [@gurr2022acclimatory]), via solenoid-actuated injection; (3) discrete characterization of the carbonate system through pH (probe + Tris standard or m-cresol purple spectrophotometry on the total scale), salinity, temperature, and an open-cell potentiometric Gran titration for total alkalinity following Dickson SOP 3 — except in [@spencer2026short] where TA is derived from a regional salinity–alkalinity regression; and (4) carbonate parameters (pCO₂, DIC, Ωₐᵣ, Ω_calcite) calculated in the seacarb R package.
+
+## Data and code availability
+
+This is a summary compilation; primary data and code accompany each original publication. See the DOIs listed for each study above.
+
+## Suggested citation
+
+Roberts, S. B. 2026. *Ocean Acidification Experimental Papers: A Summary of Designs and Water-Chemistry Methods*. Current Findings. Available at: https://robertslab.github.io/current-findings/reports/oa-experimental-water-chemistry-summary/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-06-18 | Initial draft, compiled from a provided multi-paper summary note |

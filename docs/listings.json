@@ -2,6 +2,7 @@
   {
     "listing": "/reports.html",
     "items": [
+      "/reports/oa-experimental-water-chemistry-summary/index.html",
       "/reports/example-report/index.html",
       "/reports/geoduck-gastrula-scrnaseq/index.html",
       "/reports/olympia-oyster-population-synthesis/index.html",

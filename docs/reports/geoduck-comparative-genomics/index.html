@@ -2,20 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Olivia Cattau">
 <meta name="author" content="Steven B. Roberts">
-<meta name="dcterms.date" content="2023-01-01">
+<meta name="dcterms.date" content="2022-12-31">
 <meta name="description" content="Annotation of five geoduck RNA-seq libraries and comparative analysis against Venerida clam genomes to identify tissue-specific and candidate reproductive genes.">
 
 <title>Comparative Genomic Analysis of Geoduck Clam (Panopea generosa) – Current Findings</title>
 <style>
-/* Default styles provided by pandoc.
-** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,6 +28,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -57,16 +55,15 @@ div.csl-indent {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../assets/logo.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-f3a7e4420bdcbdb5f5332fa4f27636c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-7af0013c55bc89f24c80d2b634244bd9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -98,7 +95,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -106,8 +103,7 @@ div.csl-indent {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo light-content">
-    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo dark-content">
+    <img src="../../assets/logo.svg" alt="Current Findings logo" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Current Findings</span>
@@ -217,7 +213,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 1, 2023</p>
+      <p class="date">December 31, 2022</p>
     </div>
   </div>
   
@@ -241,7 +237,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Status
+Status
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -256,12 +252,12 @@ div.csl-indent {
 </section>
 <section id="background" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="background"><span class="header-section-number">2</span> Background</h2>
-<p>Farming of geoduck clams, <em>Panopea generosa</em>, in the cold, nutrient-rich, and clean waters of the Pacific Northwest is a long-standing tradition and important cultural, economic, and ecological part of the coastal communities <span class="citation" data-cites="feldman2004comprehensive">(<a href="#ref-feldman2004comprehensive" role="doc-biblioref">Feldman et al. 2004</a>)</span>. Geoduck clams live deep in the intertidal zone (-2.0 feet and below) but have been observed as deep as 360 feet <span class="citation" data-cites="wdfw2023geoduck">(<a href="#ref-wdfw2023geoduck" role="doc-biblioref">WDFW 2023</a>)</span>. Geoduck clams are large, long-lived, and fecund. They are reproductive as males as early as 2 years old and are often considered market size at 5 years old. In the wild, geoducks are found between 18-80 feet deep and take 15 years to reach full maturation (~7 lbs.). The oldest recorded living geoduck was 173 years old and can be sexually mature up to 50 years <span class="citation" data-cites="edge2021multicentennial">(<a href="#ref-edge2021multicentennial" role="doc-biblioref">Edge et al. 2021</a>)</span>. Due to their long lives and sexual asynchronicity, they have a low effective population size <span class="citation" data-cites="vadopalas2015maturation">(<a href="#ref-vadopalas2015maturation" role="doc-biblioref">Vadopalas et al. 2015</a>)</span>.</p>
-<p>Geoduck clams are an increasingly important fishery and aquaculture product for the Eastern Pacific coast of the US from Baja California to Alaska. The geoduck industry consists of a small number of private operators committed to harvesting, processing, and marketing their product. Geoduck meat is sold primarily outside of the US; siphon meat goes to Japan and Taiwan while body meat is sold in California and the East Coast <span class="citation" data-cites="cheney1986shellfish">(<a href="#ref-cheney1986shellfish" role="doc-biblioref">Cheney and Mumford 1986</a>)</span>. Geoduck aquaculture is considered the most economically important clam fishery in North America <span class="citation" data-cites="hoffman2000modeling">(<a href="#ref-hoffman2000modeling" role="doc-biblioref">Hoffman et al. 2000</a>)</span>, bringing in $24.5 million in sales and over $1 million in state revenue in 2013 <span class="citation" data-cites="washingtonseagrant2015shellfish">(<a href="#ref-washingtonseagrant2015shellfish" role="doc-biblioref">Washington Sea Grant 2015</a>)</span>. Geoduck aquaculture also supports local oyster farming due to its high price per square acre. Recent evidence also suggests that geoduck aquaculture gear can support the recovery of the threatened cockle species in Washington State <span class="citation" data-cites="dimond2022population">(<a href="#ref-dimond2022population" role="doc-biblioref">Dimond et al. 2022</a>)</span>.</p>
+<p>Farming of geoduck clams, <em>Panopea generosa</em>, in the cold, nutrient-rich, and clean waters of the Pacific Northwest is a long-standing tradition and important cultural, economic, and ecological part of the coastal communities <span class="citation" data-cites="feldman2004comprehensive">(<a href="#ref-feldman2004comprehensive" role="doc-biblioref">Feldman et al. 2004</a>)</span>. Geoduck clams live deep in the intertidal zone (-2.0 feet and below) but have been observed as deep as 360 feet <span class="citation" data-cites="wdfw2023geoduck">(<a href="#ref-wdfw2023geoduck" role="doc-biblioref">WDFW 2023</a>)</span>. Geoduck clams are large, long-lived, and fecund. They are reproductive as males as early as 2 years old and are often considered market size at 5 years old. In the wild, geoducks are found between 18-80 feet deep and take 15 years to reach full maturation (~7 lbs.). The oldest recorded living geoduck was 173 years old and can be sexually mature up to 50 years <span class="citation" data-cites="edge2021multicentennial">(<a href="#ref-edge2021multicentennial" role="doc-biblioref">Edge et al. 2021</a>)</span>. Due to their long lives and sexual asynchronicity, they have a low effective population size <span class="citation" data-cites="vadopalas2015maturation">(<a href="#ref-vadopalas2015maturation" role="doc-biblioref">Vadopalas, Davis, and Friedman 2015</a>)</span>.</p>
+<p>Geoduck clams are an increasingly important fishery and aquaculture product for the Eastern Pacific coast of the US from Baja California to Alaska. The geoduck industry consists of a small number of private operators committed to harvesting, processing, and marketing their product. Geoduck meat is sold primarily outside of the US; siphon meat goes to Japan and Taiwan while body meat is sold in California and the East Coast <span class="citation" data-cites="cheney1986shellfish">(<a href="#ref-cheney1986shellfish" role="doc-biblioref">Cheney and Mumford 1986</a>)</span>. Geoduck aquaculture is considered the most economically important clam fishery in North America <span class="citation" data-cites="hoffman2000modeling">(<a href="#ref-hoffman2000modeling" role="doc-biblioref">Hoffman, Bradbury, and Goodwin 2000</a>)</span>, bringing in $24.5 million in sales and over $1 million in state revenue in 2013 <span class="citation" data-cites="washingtonseagrant2015shellfish">(<a href="#ref-washingtonseagrant2015shellfish" role="doc-biblioref">Washington Sea Grant 2015</a>)</span>. Geoduck aquaculture also supports local oyster farming due to its high price per square acre. Recent evidence also suggests that geoduck aquaculture gear can support the recovery of the threatened cockle species in Washington State <span class="citation" data-cites="dimond2022population">(<a href="#ref-dimond2022population" role="doc-biblioref">Dimond et al. 2022</a>)</span>.</p>
 <p>Geoducks are primary consumers of phytoplankton by filter feeding. As filter feeders, geoducks provide essential ecosystem services by removing algae, organic matter, and excess nutrients from the water column <span class="citation" data-cites="cubillo2018ecosystem">(<a href="#ref-cubillo2018ecosystem" role="doc-biblioref">Cubillo et al. 2018</a>)</span>. In addition, when geoducks are harvested, excess nutrients such as nitrogen and phosphorus are removed from the marine ecosystem. Geoducks are a keystone species in the subtidal zones, removing organic matter from the environment and providing a food source for the declining populations of sea otters and crabs.</p>
-<p>Wild populations have been threatened by overharvesting and poaching <span class="citation" data-cites="kuow2015poaching">(<a href="#ref-kuow2015poaching" role="doc-biblioref">KUOW 2015</a>)</span>. Due to concerns of genetic mixing between hatchery and wild populations, most aquaculture of geoduck is done using wild broodstock, but the potential for genetic mixing still exists. Farmed geoducks may become reproductively mature as early as two years old <span class="citation" data-cites="vadopalas2015maturation">(<a href="#ref-vadopalas2015maturation" role="doc-biblioref">Vadopalas et al. 2015</a>)</span>. Due to these concerns, a key area of research focuses on the reproductive biology of geoduck clams. The use of triploid geoduck clams may help alleviate reproductive maturation in farmed clams, akin to research done on ploidy in Pacific oysters <span class="citation" data-cites="allen1986performance">(<a href="#ref-allen1986performance" role="doc-biblioref">Allen and Downing 1986</a>)</span>. Due to issues with triploidy, there is a need to better understand the reproductive genes responsible for sexual maturation to provide resources for future work developing sterility approaches. This work could include the development of gene knock-down strategies.</p>
+<p>Wild populations have been threatened by overharvesting and poaching <span class="citation" data-cites="kuow2015poaching">(<a href="#ref-kuow2015poaching" role="doc-biblioref">KUOW 2015</a>)</span>. Due to concerns of genetic mixing between hatchery and wild populations, most aquaculture of geoduck is done using wild broodstock, but the potential for genetic mixing still exists. Farmed geoducks may become reproductively mature as early as two years old <span class="citation" data-cites="vadopalas2015maturation">(<a href="#ref-vadopalas2015maturation" role="doc-biblioref">Vadopalas, Davis, and Friedman 2015</a>)</span>. Due to these concerns, a key area of research focuses on the reproductive biology of geoduck clams. The use of triploid geoduck clams may help alleviate reproductive maturation in farmed clams, akin to research done on ploidy in Pacific oysters <span class="citation" data-cites="allen1986performance">(<a href="#ref-allen1986performance" role="doc-biblioref">Allen and Downing 1986</a>)</span>. Due to issues with triploidy, there is a need to better understand the reproductive genes responsible for sexual maturation to provide resources for future work developing sterility approaches. This work could include the development of gene knock-down strategies.</p>
 <p>The main objective of this study is to build annotated reference transcriptome libraries. There were three specialized tissue types: gonad, ctenidia, and heart. There were two tissue samples from pooled larvae and pooled juveniles as well. In addition, this study also leveraged tools and resources from previously published genome and transcriptome studies on clams from Venerida.</p>
-<p>The publication of a fully annotated juvenile <em>P. generosa</em> reference genome <span class="citation" data-cites="putnam2022dynamic">(<a href="#ref-putnam2022dynamic" role="doc-biblioref">Putnam et al. 2022</a>)</span>, along with previous studies focusing on geoduck genomics and gene expression in response to environmental stress, contributes to a comprehensive understanding of geoduck and mollusk genomics while shedding light on the role of DNA methylation in environmental acclimatization. Previous work on geoduck genomics focuses on gene expression in response to environmental stress. Work on the <em>P. globosa</em> juvenile transcriptome exposed to chronic and acute thermal stress demonstrated similar gene expression patterns between stressed and non-stressed animals <span class="citation" data-cites="juarez2018transcriptomic">(<a href="#ref-juarez2018transcriptomic" role="doc-biblioref">Juárez et al. 2018</a>)</span>. In the same study there was also a high degree of expression of genes related to DNA repair and transcription regulation in chronically exposed juveniles, where protective genes against oxidative stress were highly expressed in acutely exposed juveniles. <span class="citation" data-cites="timminsschiffman2017integrating">Timmins-Schiffman et al. (<a href="#ref-timminsschiffman2017integrating" role="doc-biblioref">2017</a>)</span> published the first proteomic study of three maturation stages in male and female geoduck clams using gonad proteins. They showed that gonad proteins became increasingly divergent between males and females as maturation progressed. <span class="citation" data-cites="venkataraman2019larval">Venkataraman et al. (<a href="#ref-venkataraman2019larval" role="doc-biblioref">2019</a>)</span> investigated sex-specific broodstock response and differential gene expression in <em>P. generosa</em> in response to low pH. Temperature and dissolved oxygen increases corresponded to differences in protein abundance patterns such as heat shock protein 90-α. In larvae, <span class="citation" data-cites="timminsschiffman2020dynamic">Timmins-Schiffman et al. (<a href="#ref-timminsschiffman2020dynamic" role="doc-biblioref">2020</a>)</span> looked at the proteomics of larval <em>P. generosa</em> with ciliate infection to investigate the molecular underpinnings of the innate immune response of the larvae to a pathogen. Ciliate response proteins included many associated with ribosomal synthesis and protein translation, suggesting the importance of protein synthesis during larval immune response. In juvenile <em>P. generosa</em>, <span class="citation" data-cites="gurr2020metabolic">Gurr et al. (<a href="#ref-gurr2020metabolic" role="doc-biblioref">2020</a>)</span> and <span class="citation" data-cites="gurr2022acclimatory">Gurr et al. (<a href="#ref-gurr2022acclimatory" role="doc-biblioref">2022</a>)</span> conditioned the animals before testing them with elevated pCO2 (~2400 μatm). Following the secondary exposure, neither elevated nor ambient pCO2 altered juvenile respiration rates, indicating ability for metabolic recovery under subsequent conditions. Recently, <span class="citation" data-cites="putnam2022dynamic">Putnam et al. (<a href="#ref-putnam2022dynamic" role="doc-biblioref">2022</a>)</span> published an annotated <em>P. generosa</em> reference genome as part of a larger common-garden ocean acidification study. They looked at the role of DNA methylation on environmental acclimatization. Functional enrichment analysis of differentially methylated genes revealed regulation of signal transduction that influences cell growth, proliferation, tissue and skeletal formation, and cytoskeletal change. This work, as well as the present study, will greatly aid in the collective understanding of not only geoduck genomics but overall mollusk genomics. In this study, five RNA-seq transcriptome libraries from three geoduck tissue types (gonad, heart, ctenidia) and two different life stages (larvae, juvenile) were assembled and annotated with biological Gene Ontology information. A particular emphasis in this study were reproductive genes and the gonad library, as the most likely location for reproductive genes.</p>
+<p>The publication of a fully annotated juvenile <em>P. generosa</em> reference genome <span class="citation" data-cites="putnam2022dynamic">(<a href="#ref-putnam2022dynamic" role="doc-biblioref">Putnam et al. 2022</a>)</span>, along with previous studies focusing on geoduck genomics and gene expression in response to environmental stress, contributes to a comprehensive understanding of geoduck and mollusk genomics while shedding light on the role of DNA methylation in environmental acclimatization. Previous work on geoduck genomics focuses on gene expression in response to environmental stress. Work on the <em>P. globosa</em> juvenile transcriptome exposed to chronic and acute thermal stress demonstrated similar gene expression patterns between stressed and non-stressed animals <span class="citation" data-cites="juarez2018transcriptomic">(<a href="#ref-juarez2018transcriptomic" role="doc-biblioref">Juárez et al. 2018</a>)</span>. In the same study there was also a high degree of expression of genes related to DNA repair and transcription regulation in chronically exposed juveniles, where protective genes against oxidative stress were highly expressed in acutely exposed juveniles. <span class="citation" data-cites="timminsschiffman2017integrating">E. B. Timmins-Schiffman et al. (<a href="#ref-timminsschiffman2017integrating" role="doc-biblioref">2017</a>)</span> published the first proteomic study of three maturation stages in male and female geoduck clams using gonad proteins. They showed that gonad proteins became increasingly divergent between males and females as maturation progressed. <span class="citation" data-cites="venkataraman2019larval">Venkataraman, Spencer, and Roberts (<a href="#ref-venkataraman2019larval" role="doc-biblioref">2019</a>)</span> investigated sex-specific broodstock response and differential gene expression in <em>P. generosa</em> in response to low pH. Temperature and dissolved oxygen increases corresponded to differences in protein abundance patterns such as heat shock protein 90-α. In larvae, <span class="citation" data-cites="timminsschiffman2020dynamic">E. Timmins-Schiffman et al. (<a href="#ref-timminsschiffman2020dynamic" role="doc-biblioref">2020</a>)</span> looked at the proteomics of larval <em>P. generosa</em> with ciliate infection to investigate the molecular underpinnings of the innate immune response of the larvae to a pathogen. Ciliate response proteins included many associated with ribosomal synthesis and protein translation, suggesting the importance of protein synthesis during larval immune response. In juvenile <em>P. generosa</em>, <span class="citation" data-cites="gurr2020metabolic">Gurr et al. (<a href="#ref-gurr2020metabolic" role="doc-biblioref">2020</a>)</span> and <span class="citation" data-cites="gurr2022acclimatory">Gurr et al. (<a href="#ref-gurr2022acclimatory" role="doc-biblioref">2022</a>)</span> conditioned the animals before testing them with elevated pCO2 (~2400 μatm). Following the secondary exposure, neither elevated nor ambient pCO2 altered juvenile respiration rates, indicating ability for metabolic recovery under subsequent conditions. Recently, <span class="citation" data-cites="putnam2022dynamic">Putnam et al. (<a href="#ref-putnam2022dynamic" role="doc-biblioref">2022</a>)</span> published an annotated <em>P. generosa</em> reference genome as part of a larger common-garden ocean acidification study. They looked at the role of DNA methylation on environmental acclimatization. Functional enrichment analysis of differentially methylated genes revealed regulation of signal transduction that influences cell growth, proliferation, tissue and skeletal formation, and cytoskeletal change. This work, as well as the present study, will greatly aid in the collective understanding of not only geoduck genomics but overall mollusk genomics. In this study, five RNA-seq transcriptome libraries from three geoduck tissue types (gonad, heart, ctenidia) and two different life stages (larvae, juvenile) were assembled and annotated with biological Gene Ontology information. A particular emphasis in this study were reproductive genes and the gonad library, as the most likely location for reproductive genes.</p>
 <p>In addition to the five geoduck RNA-seq libraries described in this study, there is also value in leveraging publicly available data for a comparative clam species transcriptome study. <span class="citation" data-cites="mun2017whole">Mun et al. (<a href="#ref-mun2017whole" role="doc-biblioref">2017</a>)</span> published a transcriptome of the Manila clam (<em>Ruditapes philippinarum</em>) as part of a greater effort in selective breeding and disease control. They reported 41,275 annotated sequences in the de novo whole transcriptome assembly of <em>R. philippinarum</em> across three different tissues (foot, gill, and adductor muscle). <span class="citation" data-cites="wang2016clam">Wang et al. (<a href="#ref-wang2016clam" role="doc-biblioref">2016</a>)</span> was the first to publish an annotated transcriptome of the hard clam <em>Mercenaria mercenaria</em>, as part of work investigating the parasite QPX in hard clams. A de novo assembly was constructed and a consensus transcriptome of 62,980 sequences were functionally annotated. A total of 3,131 transcripts were identified as differentially expressed in healthy versus infected tissues. Comparative analysis of annotated genes can reveal the conserved molecular mechanisms between mollusks, such as genes with high homology expressed across the Venerida clade.</p>
 <p>Genome resources for clams in the Venerida clade are more abundant than transcriptome or proteomic resources. A reference genome is available in <em>R. philippinarum</em> <span class="citation" data-cites="mun2017whole">(<a href="#ref-mun2017whole" role="doc-biblioref">Mun et al. 2017</a>)</span> and <em>M. mercenaria</em> <span class="citation" data-cites="wang2016clam">(<a href="#ref-wang2016clam" role="doc-biblioref">Wang et al. 2016</a>)</span> as part of the research mentioned above. To leverage even more clam genomic resources, the genomes of <em>Spisula solida</em>, <em>Mactra quadrangularis</em>, and <em>Archivesica marissinica</em> were also compared to <em>P. generosa</em> for functional analysis. The assembly of the surf clam, <em>S. solida</em>, was based on Hi-C data generated as part of the Darwin Tree of Life Project. The other surf clam, <em>Mactra quadrangularis</em> (or <em>Mactra veneriformis</em>), also has a recently assembled genome <span class="citation" data-cites="sun2022high">(<a href="#ref-sun2022high" role="doc-biblioref">Sun et al. 2022</a>)</span>. Low natural yields in <em>M. quadrangularis</em> in China led to this recent effort to better understand surf clam genomic resources. Using Hi-C assembly, a total of 29,315 protein-coding genes were predicted. From this study, a genome-level phylogenetic tree was constructed demonstrating that <em>M. quadrangularis</em> and <em>R. philippinarum</em> diverged around 231 million years ago. In the Northern quahog clam, <em>Mercenaria mercenaria</em>, <span class="citation" data-cites="farhat2022comparative">Farhat et al. (<a href="#ref-farhat2022comparative" role="doc-biblioref">2022</a>)</span> published the first publicly available genome. Due to high environmental variability on the East Coast of the US, and a desire to understand mass mortality events, the genome of <em>M. mercenaria</em> needed to be assembled. Genome annotation yielded 34,728 predicted protein-coding genes, the most of all the Venerida so far. Using these previously published genomic resources by running a comparative genomic analysis will provide an important resource for future comparative work.</p>
 <p>Limited studies in bivalve genomics have investigated sexual maturation through differential gene expression in various tissue types. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> looked at the basis of sex differentiation in Pacific oysters (<em>Crassostrea gigas</em>) using a microarray assay. Gene expression was studied in the gonad over a yearly reproductive cycle. There were 2,482 genes found to be differentially expressed between males and females during gametogenesis. The expression of 434 genes could be localized to the germ cells or somatic cells of the gonad and between the sexes. Maturation analysis processes like this study can reveal the conserved and diverged genes between male and female gonads.</p>
@@ -363,7 +359,7 @@ Figure&nbsp;2: Percent coverage of the <em>P. generosa</em> gene list represente
 <p>We found that each tissue type exhibited a distinct set of expressed genes, indicating unique functional roles. These genes are categorized into their biological gene ontology (GO) processes by their Gene Ontology Proportional Value into over-abundant or under-abundant relative to the entire <em>P. generosa</em> genome. The most commonly over-abundant GO processes distinct to all tissue types were related to metabolism, gene expression, and protein making (<a href="#fig-go-proportion" class="quarto-xref">Figure&nbsp;1</a>), indicating that metabolism is more important at the specialized tissue level for geoduck. The most common under-abundant GO processes were related to specialized system processes such as renal, endocrine, digestive, and circulatory systems. This is unsurprising, as digestive biological processes are going to be under-expressed in tissue types that don’t specialize in digestion. Most of the over-abundant GO processes unique to specific tissue types were functional to their specific needs. For example, in the gonad, the top over-abundant GO processes were related to mitochondria and metabolism, while in the larvae the top over-abundant GO processes were related to movement and energy allocation systems. For the heart, the top over-abundant GO processes were related to nitrogen cycle metabolism, agreeing with its main function as a mechanical pump as well as its electrical activity <span class="citation" data-cites="drake2012amino">(<a href="#ref-drake2012amino" role="doc-biblioref">Drake et al. 2012</a>)</span>. For the ctenidia, the top over-abundant GO processes were related to cytoplasmic translation. Cytoplasmic translation refers to the process by which mRNA molecules are translated into proteins in the cytoplasm of the cell. This process is important in many cells, including those in the ctenidia, because it allows for rapid and efficient protein synthesis <span class="citation" data-cites="mclean1974rna">(<a href="#ref-mclean1974rna" role="doc-biblioref">McLean and Whiteley 1974</a>)</span>. The juvenile tissue types did not have any highly over-abundant genes due to their later developmental stage.</p>
 <p>Investigating the annotated transcriptome libraries shared between <em>P. generosa</em> and <em>M. mercenaria</em> or <em>R. philippinarum</em> further illuminates foundational gene expression of <em>P. generosa</em>. Genes involved with translation, microtubule-based movement, and cilium organization are all highly expressed in both the <em>M. mercenaria</em> and the <em>R. philippinarum</em> libraries. Interestingly, there is a unique group of conserved genes in <em>M. mercenaria</em> and <em>P. generosa</em> that are not found in <em>R. philippinarum</em>. These genes were related to metabolism and cellular organization. These differences, as well as <em>M. mercenaria</em> having more shared genes than <em>R. philippinarum</em>, may be due to <em>M. mercenaria</em> being a closer phylogenetic relation to <em>P. generosa</em> than <em>R. philippinarum</em> <span class="citation" data-cites="chen2011molecular">(<a href="#ref-chen2011molecular" role="doc-biblioref">Chen et al. 2011</a>)</span>. The inter-species analysis is valuable in determining gene orthologs important for reproduction investigations. Cross-species library comparison is also useful for future studies on gene function in marine bivalves outside of reproductive control, such as studies involving disease tolerance.</p>
 <p>In the <em>P. generosa</em> genome from <span class="citation" data-cites="putnam2022dynamic">Putnam et al. (<a href="#ref-putnam2022dynamic" role="doc-biblioref">2022</a>)</span>, they found the geoduck genome to be almost 2 times larger in size than oyster genomes, with twice as many putative chromosomes. This trend reversed when comparing <em>P. generosa</em> to other clam genomes. <em>R. philippinarum</em>, <em>M. mercenaria</em>, and <em>A. marissinica</em> all have genomes larger than <em>P. generosa</em> and an additional chromosome. Interestingly, regardless of genome size, the relative number of genes was approximately the same (~30,000). The GC content was also highly conserved across species at 32-33% (except for <em>A. marissinica</em> at 39%). Comparing the percent coverage of the <em>P. generosa</em> gene list to the query sequences of the other five clam genomes, <em>A. marissinica</em>, <em>R. philippinarum</em>, and <em>S. solida</em> have shared gene lists with <em>P. generosa</em> of 3,268, 2,263, and 1,629 respectively. <em>M. mercenaria</em> has the most shared genes with <em>P. generosa</em> at 8,736, and <em>M. quadrangularis</em> the least with only 874 (<a href="#fig-genome-coverage" class="quarto-xref">Figure&nbsp;2</a>). Looking at the phylogenetic relationship between <em>M. mercenaria</em> and <em>R. philippinarum</em> <span class="citation" data-cites="chen2011molecular">(<a href="#ref-chen2011molecular" role="doc-biblioref">Chen et al. 2011</a>)</span> reveals that <em>R. philippinarum</em> is more basal than <em>M. mercenaria</em>. As more genomes are fully annotated and made available on NCBI, comparative studies like this will be more robust.</p>
-<p>A key emphasis of this study was to describe reproductive genes in geoduck. Our first approach, using the gonad RNA-seq library, produced a moderately large set of genes (n = 640) with gene expression patterns related to the reproductive process. This is consistent with previous studies <span class="citation" data-cites="timminsschiffman2017integrating">(<a href="#ref-timminsschiffman2017integrating" role="doc-biblioref">Timmins-Schiffman et al. 2017</a>)</span> that have shown reproductive tissues often have unique gene expression profiles. Leveraging the results of <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> provided a list of reproductive genes found in geoducks (74) that are linked to a major expression stage by sex and developmental stage. Looking at highly conserved reproductive genes across species gives us confidence that these are homologous genes for controlling reproduction in Bivalvia. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> described reproductive genes related to mitosis and meiosis regulation, including centromere proteins and kinesin-related proteins. In the <em>P. generosa</em> transcriptional dataset, reproductive genes related to centromere and kinesin-related proteins were: Kinesin-like protein 6, KIF18A, and KIF9, inner centromere protein, centromere protein zw10 homolog, and centromere-associated proteins S, E, and X. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> identified genes associated with female-specific processes such as oogenesis, including vitellogenin, cd63, mitotic apparatus, p62, forkhead box L2, and caveolin. In <em>P. generosa</em>, reproductive genes related to oogenesis were: putative vitellogenin receptor (protein yolkless), forkhead box protein C1 and J3, and RecQ-mediated genome instability protein 1 (M-caveolin).</p>
+<p>A key emphasis of this study was to describe reproductive genes in geoduck. Our first approach, using the gonad RNA-seq library, produced a moderately large set of genes (n = 640) with gene expression patterns related to the reproductive process. This is consistent with previous studies <span class="citation" data-cites="timminsschiffman2017integrating">(<a href="#ref-timminsschiffman2017integrating" role="doc-biblioref">E. B. Timmins-Schiffman et al. 2017</a>)</span> that have shown reproductive tissues often have unique gene expression profiles. Leveraging the results of <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> provided a list of reproductive genes found in geoducks (74) that are linked to a major expression stage by sex and developmental stage. Looking at highly conserved reproductive genes across species gives us confidence that these are homologous genes for controlling reproduction in Bivalvia. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> described reproductive genes related to mitosis and meiosis regulation, including centromere proteins and kinesin-related proteins. In the <em>P. generosa</em> transcriptional dataset, reproductive genes related to centromere and kinesin-related proteins were: Kinesin-like protein 6, KIF18A, and KIF9, inner centromere protein, centromere protein zw10 homolog, and centromere-associated proteins S, E, and X. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> identified genes associated with female-specific processes such as oogenesis, including vitellogenin, cd63, mitotic apparatus, p62, forkhead box L2, and caveolin. In <em>P. generosa</em>, reproductive genes related to oogenesis were: putative vitellogenin receptor (protein yolkless), forkhead box protein C1 and J3, and RecQ-mediated genome instability protein 1 (M-caveolin).</p>
 <p>Between the two approaches for identifying key reproductive genes in <em>P. generosa</em>, there are two genes found using both: <em>Foxl1</em> and <em>Cep57</em>. The <em>Fox</em> genes, which code for forkhead-class transcription factors, are classical orthologs involved in sex determination/differentiation <span class="citation" data-cites="broquard2021gonadal">(<a href="#ref-broquard2021gonadal" role="doc-biblioref">Broquard et al. 2021</a>)</span>. <span class="citation" data-cites="dheilly2012gametogenesis">Dheilly et al. (<a href="#ref-dheilly2012gametogenesis" role="doc-biblioref">2012</a>)</span> found forkhead box L2 genes in <em>C. gigas</em>. Many studies on bivalves have found this gene to be involved in reproduction, having been found in <em>C. gigas</em> and the pearl oyster <em>Pinctada fucata</em>, as well as other bivalves <span class="citation" data-cites="matsumoto2013reproduction">(<a href="#ref-matsumoto2013reproduction" role="doc-biblioref">Matsumoto et al. 2013</a>)</span>. The <em>Cep57</em> gene, which codes for centrosome- and midbody-associated proteins, is not commonly studied for its implications in reproduction in bivalves. A similar ortholog, <em>Cep55</em>, has been documented to be involved in embryonic development in zebrafish <span class="citation" data-cites="jeffery2015cep55">(<a href="#ref-jeffery2015cep55" role="doc-biblioref">Jeffery et al. 2015</a>)</span>, and should be the focus of study in bivalve reproduction going forward. In particular, genes related to vitellogenin, caveolin, forkhead-class transcription factors, and Cep55/57 all appear to be highly conserved across Bivalvia and are very closely related to reproductive development.</p>
 <p>Our results provide a foundation for future studies aimed at understanding the molecular basis of geoduck (<em>Panopea generosa</em>) physiology and development. Comparative analysis with Mercenaria clam and Manila clam transcript libraries provided insights into gene orthologs and conserved functions across species. Annotated RNA-seq libraries facilitated the identification of tissue-specific genes, including a significant number of previously undiscovered reproductive genes in geoduck. Specifically, forkhead and Cep55/57 genes are key genes found. Each tissue type exhibited distinct sets of expressed genes, reflecting their specialized functions. Over-abundant biological gene ontology (GO) terms in all tissue types were related to metabolism, gene expression, and protein synthesis, highlighting the importance of these processes at the tissue level. The study also focused on identifying reproductive genes for potential gene editing efforts, highlighting key genes involved in sex determination, oogenesis, and embryonic development. Overall, these findings lay the groundwork for future studies investigating geoduck physiology, development, and reproductive control, as well as broader investigations into gene function and disease tolerance in marine bivalves. By identifying these tissue-specific gene expression patterns, we can begin to unravel the complex molecular networks that underlie geoduck biology.</p>
 </section>
@@ -401,18 +397,18 @@ Figure&nbsp;2: Percent coverage of the <em>P. generosa</em> gene list represente
 </section>
 <section id="references" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="references"><span class="header-section-number">9</span> References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-allen1986performance" class="csl-entry" role="listitem">
 Allen, S. K., and S. L. Downing. 1986. <span>“Performance of Triploid Pacific Oysters, Crassostrea Gigas (Thunberg). I. Survival, Growth, Glycogen Content, and Sexual Maturation in Yearlings.”</span> <em>Journal of Experimental Marine Biology and Ecology</em> 102 (2–3): 197–208. <a href="https://doi.org/10.1016/0022-0981(86)90176-0">https://doi.org/10.1016/0022-0981(86)90176-0</a>.
 </div>
 <div id="ref-altschul1997gapped" class="csl-entry" role="listitem">
-Altschul, S. F., T. L. Madden, A. A. Schäffer, et al. 1997. <span>“Gapped BLAST and PSI-BLAST: A New Generation of Protein Database Search Programs.”</span> <em>Nucleic Acids Research</em> 25 (17): 3389–402. <a href="https://doi.org/10.1093/nar/25.17.3389">https://doi.org/10.1093/nar/25.17.3389</a>.
+Altschul, S. F., T. L. Madden, A. A. Schäffer, J. Zhang, Z. Zhang, W. Miller, and D. J. Lipman. 1997. <span>“Gapped BLAST and PSI-BLAST: A New Generation of Protein Database Search Programs.”</span> <em>Nucleic Acids Research</em> 25 (17): 3389–3402. <a href="https://doi.org/10.1093/nar/25.17.3389">https://doi.org/10.1093/nar/25.17.3389</a>.
 </div>
 <div id="ref-andrews2010fastqc" class="csl-entry" role="listitem">
-Andrews, S. 2010. <em>FastQC: A Quality Control Tool for High Throughput Sequence Data</em>.
+Andrews, S. 2010. <span>“FastQC: A Quality Control Tool for High Throughput Sequence Data.”</span>
 </div>
 <div id="ref-broquard2021gonadal" class="csl-entry" role="listitem">
-Broquard, C., S. Saowaros, M. Lepoittevin, et al. 2021. <span>“Gonadal Transcriptomes Associated with Sex Phenotypes Provide Potential Male and Female Candidate Genes of Sex Determination or Early Differentiation in Crassostrea Gigas, a Sequential Hermaphrodite Mollusc.”</span> <em>BMC Genomics</em> 22 (1): 609. <a href="https://doi.org/10.1186/s12864-021-07838-1">https://doi.org/10.1186/s12864-021-07838-1</a>.
+Broquard, C., S. Saowaros, M. Lepoittevin, L. Degremont, J. B. Lamy, B. Morga, A. Elizur, and A. S. Martinez. 2021. <span>“Gonadal Transcriptomes Associated with Sex Phenotypes Provide Potential Male and Female Candidate Genes of Sex Determination or Early Differentiation in Crassostrea Gigas, a Sequential Hermaphrodite Mollusc.”</span> <em>BMC Genomics</em> 22 (1): 609. <a href="https://doi.org/10.1186/s12864-021-07838-1">https://doi.org/10.1186/s12864-021-07838-1</a>.
 </div>
 <div id="ref-chen2011molecular" class="csl-entry" role="listitem">
 Chen, J., Q. Li, L. Kong, and X. Zheng. 2011. <span>“Molecular Phylogeny of Venus Clams (Mollusca, Bivalvia, Veneridae) with Emphasis on the Systematic Position of Taxa Along the Coast of Mainland China.”</span> <em>Zoologica Scripta</em> 40 (3): 260–71. <a href="https://doi.org/10.1111/j.1463-6409.2011.00471.x">https://doi.org/10.1111/j.1463-6409.2011.00471.x</a>.
@@ -424,7 +420,7 @@ Cheney, Daniel P., and Thomas F. Mumford. 1986. <em>Shellfish and Seaweed Harves
 Cubillo, A. M., J. G. Ferreira, C. M. Pearce, R. Marshall, D. Cheney, and B. Hudson. 2018. <span>“Ecosystem Services of Geoduck Farming in South Puget Sound, USA: A Modeling Analysis.”</span> <em>Aquaculture International</em> 26 (6): 1427–43. <a href="https://doi.org/10.1007/s10499-018-0291-x">https://doi.org/10.1007/s10499-018-0291-x</a>.
 </div>
 <div id="ref-dheilly2012gametogenesis" class="csl-entry" role="listitem">
-Dheilly, N. M., C. Lelong, A. Huvet, et al. 2012. <span>“Gametogenesis in the Pacific Oyster Crassostrea Gigas: A Microarrays-Based Analysis Identifies Sex and Stage Specific Genes.”</span> <em>PLoS ONE</em> 7 (5): e36353. <a href="https://doi.org/10.1371/journal.pone.0036353">https://doi.org/10.1371/journal.pone.0036353</a>.
+Dheilly, N. M., C. Lelong, A. Huvet, K. Kellner, M. P. Dubos, G. Riviere, P. Boudry, and P. Favrel. 2012. <span>“Gametogenesis in the Pacific Oyster Crassostrea Gigas: A Microarrays-Based Analysis Identifies Sex and Stage Specific Genes.”</span> <em>PLoS ONE</em> 7 (5): e36353. <a href="https://doi.org/10.1371/journal.pone.0036353">https://doi.org/10.1371/journal.pone.0036353</a>.
 </div>
 <div id="ref-dimond2022population" class="csl-entry" role="listitem">
 Dimond, J. L., R. N. Crim, E. Unsell, V. Barry, and J. E. Toft. 2022. <span>“Population Genomics of the Basket Cockle Clinocardium Nuttallii in the Southern Salish Sea: Assessing Genetic Risks of Stock Enhancement for a Culturally Important Marine Bivalve.”</span> <em>Evolutionary Applications</em> 15 (3): 459–70. <a href="https://doi.org/10.1111/eva.13359">https://doi.org/10.1111/eva.13359</a>.
@@ -433,13 +429,13 @@ Dimond, J. L., R. N. Crim, E. Unsell, V. Barry, and J. E. Toft. 2022. <span>“P
 Drake, K. J., V. Y. Sidorov, O. P. McGuinness, D. H. Wasserman, and J. P. Wikswo. 2012. <span>“Amino Acids as Metabolic Substrates During Cardiac Ischemia.”</span> <em>Experimental Biology and Medicine</em> 237 (12): 1369–78. <a href="https://doi.org/10.1258/ebm.2012.012025">https://doi.org/10.1258/ebm.2012.012025</a>.
 </div>
 <div id="ref-edge2021multicentennial" class="csl-entry" role="listitem">
-Edge, D. C., D. J. Reynolds, A. D. Wanamaker, et al. 2021. <span>“A Multicentennial Proxy Record of Northeast Pacific Sea Surface Temperatures from the Annual Growth Increments of Panopea Generosa.”</span> <em>Paleoceanography and Paleoclimatology</em> 36 (9): e2021PA004291. <a href="https://doi.org/10.1029/2021PA004291">https://doi.org/10.1029/2021PA004291</a>.
+Edge, D. C., D. J. Reynolds, A. D. Wanamaker, D. Griffin, D. Bureau, C. Outridge, B. C. Stevick, R. Weng, and B. A. Black. 2021. <span>“A Multicentennial Proxy Record of Northeast Pacific Sea Surface Temperatures from the Annual Growth Increments of Panopea Generosa.”</span> <em>Paleoceanography and Paleoclimatology</em> 36 (9): e2021PA004291. <a href="https://doi.org/10.1029/2021PA004291">https://doi.org/10.1029/2021PA004291</a>.
 </div>
 <div id="ref-farhat2022comparative" class="csl-entry" role="listitem">
-Farhat, S., E. Bonnivard, E. Pales Espinosa, et al. 2022. <span>“Comparative Analysis of the Mercenaria Mercenaria Genome Provides Insights into the Diversity of Transposable Elements and Immune Molecules in Bivalve Mollusks.”</span> <em>BMC Genomics</em> 23 (1). <a href="https://doi.org/10.1186/s12864-021-08262-1">https://doi.org/10.1186/s12864-021-08262-1</a>.
+Farhat, S., E. Bonnivard, E. Pales Espinosa, A. Tanguy, I. Boutet, N. Guiglielmoni, J. F. Flot, and B. Allam. 2022. <span>“Comparative Analysis of the Mercenaria Mercenaria Genome Provides Insights into the Diversity of Transposable Elements and Immune Molecules in Bivalve Mollusks.”</span> <em>BMC Genomics</em> 23 (1). <a href="https://doi.org/10.1186/s12864-021-08262-1">https://doi.org/10.1186/s12864-021-08262-1</a>.
 </div>
 <div id="ref-feldman2004comprehensive" class="csl-entry" role="listitem">
-Feldman, K., B. Vadopalas, D. Armstrong, et al. 2004. <em>Comprehensive Literature Review and Synopsis of Issues Relating to Geoduck (Panopea Abrupta) Ecology and Aquaculture Production</em>.
+Feldman, K., B. Vadopalas, D. Armstrong, C. Friedman, R. Hilborn, K. Naish, J. Orensanz, et al. 2004. <span>“Comprehensive Literature Review and Synopsis of Issues Relating to Geoduck (Panopea Abrupta) Ecology and Aquaculture Production.”</span>
 </div>
 <div id="ref-gurr2022acclimatory" class="csl-entry" role="listitem">
 Gurr, S. J., S. A. Trigg, B. Vadopalas, S. B. Roberts, and H. M. Putnam. 2022. <span>“Acclimatory Gene Expression of Primed Clams Enhances Robustness to Elevated pCO2.”</span> <em>Molecular Ecology</em> 31 (19): 5005–23. <a href="https://doi.org/10.1111/mec.16644">https://doi.org/10.1111/mec.16644</a>.
@@ -451,13 +447,13 @@ Gurr, S. J., B. Vadopalas, S. B. Roberts, and H. M. Putnam. 2020. <span>“Metab
 Hoffman, A., A. Bradbury, and C. L. Goodwin. 2000. <span>“Modeling Geoduck, Panopea Abrupta (Conrad 1849) Population Dynamics.”</span> <em>Journal of Shellfish Research</em> 19: 57–62.
 </div>
 <div id="ref-jeffery2015cep55" class="csl-entry" role="listitem">
-Jeffery, J., C. Neyt, W. Moore, et al. 2015. <span>“Cep55 Regulates Embryonic Growth and Development by Promoting Akt Stability in Zebrafish.”</span> <em>FASEB Journal</em> 29 (5): 1999–2009. <a href="https://doi.org/10.1096/fj.14-265090">https://doi.org/10.1096/fj.14-265090</a>.
+Jeffery, J., C. Neyt, W. Moore, S. Paterson, N. I. Bower, G. Chenevix-Trench, H. Verkade, B. M. Hogan, and K. K. Khanna. 2015. <span>“Cep55 Regulates Embryonic Growth and Development by Promoting Akt Stability in Zebrafish.”</span> <em>FASEB Journal</em> 29 (5): 1999–2009. <a href="https://doi.org/10.1096/fj.14-265090">https://doi.org/10.1096/fj.14-265090</a>.
 </div>
 <div id="ref-juarez2018transcriptomic" class="csl-entry" role="listitem">
-Juárez, O. E., F. Lafarga-De la Cruz, I. Leyva-Valencia, et al. 2018. <span>“Transcriptomic and Metabolic Response to Chronic and Acute Thermal Exposure of Juvenile Geoduck Clams Panopea Globosa.”</span> <em>Marine Genomics</em> 42: 1–13. <a href="https://doi.org/10.1016/j.margen.2018.09.003">https://doi.org/10.1016/j.margen.2018.09.003</a>.
+Juárez, O. E., F. Lafarga-De la Cruz, I. Leyva-Valencia, E. López-Landavery, Z. García-Esquivel, F. Díaz, D. Re-Araujo, B. Vadopalas, and C. E. Galindo-Sánchez. 2018. <span>“Transcriptomic and Metabolic Response to Chronic and Acute Thermal Exposure of Juvenile Geoduck Clams Panopea Globosa.”</span> <em>Marine Genomics</em> 42: 1–13. <a href="https://doi.org/10.1016/j.margen.2018.09.003">https://doi.org/10.1016/j.margen.2018.09.003</a>.
 </div>
 <div id="ref-kuow2015poaching" class="csl-entry" role="listitem">
-KUOW. 2015. <em>Poaching 100-Year-Old Geoducks for Big Money</em>. <a href="https://www.kuow.org/stories/poaching-100-year-old-geoducks-big-money/" class="uri">Https://www.kuow.org/stories/poaching-100-year-old-geoducks-big-money/</a>.
+KUOW. 2015. <span>“Poaching 100-Year-Old Geoducks for Big Money.”</span> <a href="https://www.kuow.org/stories/poaching-100-year-old-geoducks-big-money/" class="uri">https://www.kuow.org/stories/poaching-100-year-old-geoducks-big-money/</a>.
 </div>
 <div id="ref-matsumoto2013reproduction" class="csl-entry" role="listitem">
 Matsumoto, T., T. Masaoka, A. Fujiwara, Y. Nakamura, N. Satoh, and M. Awaji. 2013. <span>“Reproduction-Related Genes in the Pearl Oyster Genome.”</span> <em>Zoological Science</em> 30 (10): 826–50. <a href="https://doi.org/10.2108/zsj.30.826">https://doi.org/10.2108/zsj.30.826</a>.
@@ -466,19 +462,19 @@ Matsumoto, T., T. Masaoka, A. Fujiwara, Y. Nakamura, N. Satoh, and M. Awaji. 201
 McLean, K. W., and A. H. Whiteley. 1974. <span>“RNA Synthesis During the Early Development of the Pacific Oyster, Crassostrea Gigas.”</span> <em>Experimental Cell Research</em> 87 (1): 132–38. <a href="https://doi.org/10.1016/0014-4827(74)90534-5">https://doi.org/10.1016/0014-4827(74)90534-5</a>.
 </div>
 <div id="ref-mun2017whole" class="csl-entry" role="listitem">
-Mun, S., Y. J. Kim, K. Markkandan, et al. 2017. <span>“The Whole-Genome and Transcriptome of the Manila Clam (Ruditapes Philippinarum).”</span> <em>Genome Biology and Evolution</em> 9 (6): 1487–98. <a href="https://doi.org/10.1093/gbe/evx096">https://doi.org/10.1093/gbe/evx096</a>.
+Mun, S., Y. J. Kim, K. Markkandan, W. Shin, S. Oh, J. Woo, J. Yoo, H. An, and K. Han. 2017. <span>“The Whole-Genome and Transcriptome of the Manila Clam (Ruditapes Philippinarum).”</span> <em>Genome Biology and Evolution</em> 9 (6): 1487–98. <a href="https://doi.org/10.1093/gbe/evx096">https://doi.org/10.1093/gbe/evx096</a>.
 </div>
 <div id="ref-putnam2022dynamic" class="csl-entry" role="listitem">
-Putnam, H. M., S. A. Trigg, S. J. White, et al. 2022. <span>“Dynamic DNA Methylation Contributes to Carryover Effects and Beneficial Acclimatization in Geoduck Clams.”</span> <em>bioRxiv</em>, ahead of print. <a href="https://doi.org/10.1101/2022.06.24.497506">https://doi.org/10.1101/2022.06.24.497506</a>.
+Putnam, H. M., S. A. Trigg, S. J. White, L. H. Spencer, B. Vadopalas, A. Natarajan, J. Hetzel, et al. 2022. <span>“Dynamic DNA Methylation Contributes to Carryover Effects and Beneficial Acclimatization in Geoduck Clams.”</span> <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2022.06.24.497506">https://doi.org/10.1101/2022.06.24.497506</a>.
 </div>
 <div id="ref-roberts2018opportunities" class="csl-entry" role="listitem">
 Roberts, S. B., and M. R. Gavery. 2018. <span>“Opportunities in Functional Genomics: A Primer on Lab and Computational Aspects.”</span> <em>Journal of Shellfish Research</em> 37 (4): 747–54. <a href="https://doi.org/10.2983/035.037.0406">https://doi.org/10.2983/035.037.0406</a>.
 </div>
 <div id="ref-sun2022high" class="csl-entry" role="listitem">
-Sun, Y., X. Liu, X. Xie, et al. 2022. <span>“A High-Quality Chromosome-Level Genome Assembly of the Bivalve Mollusk Mactra Veneriformis.”</span> <em>G3: Genes, Genomes, Genetics</em> 12 (11). <a href="https://doi.org/10.1093/g3journal/jkac229">https://doi.org/10.1093/g3journal/jkac229</a>.
+Sun, Y., X. Liu, X. Xie, Y. Bai, S. Wang, W. Teng, D. Li, et al. 2022. <span>“A High-Quality Chromosome-Level Genome Assembly of the Bivalve Mollusk Mactra Veneriformis.”</span> <em>G3: Genes, Genomes, Genetics</em> 12 (11). <a href="https://doi.org/10.1093/g3journal/jkac229">https://doi.org/10.1093/g3journal/jkac229</a>.
 </div>
 <div id="ref-timminsschiffman2017integrating" class="csl-entry" role="listitem">
-Timmins-Schiffman, E. B., G. A. Crandall, B. Vadopalas, M. E. Riffle, B. L. Nunn, and S. B. Roberts. 2017. <span>“Integrating Discovery-Driven Proteomics and Selected Reaction Monitoring to Develop a Noninvasive Assay for Geoduck Reproductive Maturation.”</span> <em>Journal of Proteome Research</em> 16 (9): 3298–309. <a href="https://doi.org/10.1021/acs.jproteome.7b00288">https://doi.org/10.1021/acs.jproteome.7b00288</a>.
+Timmins-Schiffman, E. B., G. A. Crandall, B. Vadopalas, M. E. Riffle, B. L. Nunn, and S. B. Roberts. 2017. <span>“Integrating Discovery-Driven Proteomics and Selected Reaction Monitoring to Develop a Noninvasive Assay for Geoduck Reproductive Maturation.”</span> <em>Journal of Proteome Research</em> 16 (9): 3298–3309. <a href="https://doi.org/10.1021/acs.jproteome.7b00288">https://doi.org/10.1021/acs.jproteome.7b00288</a>.
 </div>
 <div id="ref-timminsschiffman2020dynamic" class="csl-entry" role="listitem">
 Timmins-Schiffman, E., J. M. Guzmán, R. Elliott Thompson, B. Vadopalas, B. Eudeline, and S. B. Roberts. 2020. <span>“Dynamic Response in the Larval Geoduck (Panopea Generosa) Proteome to Elevated pCO2.”</span> <em>Ecology and Evolution</em> 10 (1): 185–97. <a href="https://doi.org/10.1002/ece3.5885">https://doi.org/10.1002/ece3.5885</a>.
@@ -493,10 +489,10 @@ Venkataraman, Y. R., L. H. Spencer, and S. B. Roberts. 2019. <span>“Larval Res
 Wang, K., C. del Castillo, E. Corre, E. P. Espinosa, and B. Allam. 2016. <span>“Clam Focal and Systemic Immune Responses to QPX Infection Revealed by RNA-Seq Technology.”</span> <em>BMC Genomics</em> 17 (1): 1–22. <a href="https://doi.org/10.1186/s12864-016-2493-9">https://doi.org/10.1186/s12864-016-2493-9</a>.
 </div>
 <div id="ref-washingtonseagrant2015shellfish" class="csl-entry" role="listitem">
-Washington Sea Grant. 2015. <em>Shellfish Aquaculture in Washington State</em>. <a href="https://wsg.washington.edu/shellfish-aquaculture" class="uri">Https://wsg.washington.edu/shellfish-aquaculture</a>.
+Washington Sea Grant. 2015. <span>“Shellfish Aquaculture in Washington State.”</span> <a href="https://wsg.washington.edu/shellfish-aquaculture" class="uri">https://wsg.washington.edu/shellfish-aquaculture</a>.
 </div>
 <div id="ref-wdfw2023geoduck" class="csl-entry" role="listitem">
-WDFW. 2023. <em>Geoduck Clam (Panopea Generosa)</em>. <a href="https://wdfw.wa.gov/species-habitats/species/panopea-generosa" class="uri">Https://wdfw.wa.gov/species-habitats/species/panopea-generosa</a>; Washington Department of Fish; Wildlife.
+WDFW. 2023. <span>“Geoduck Clam (Panopea Generosa).”</span> <a href="https://wdfw.wa.gov/species-habitats/species/panopea-generosa" class="uri">https://wdfw.wa.gov/species-habitats/species/panopea-generosa</a>; Washington Department of Fish; Wildlife.
 </div>
 </div>
 
@@ -505,243 +501,236 @@ WDFW. 2023. <em>Geoduck Clam (Panopea Generosa)</em>. <a href="https://wdfw.wa.g
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
     }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/robertslab\.github\.io\/current-findings\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/robertslab\.github\.io\/current-findings\/");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
         }
       }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
     }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
     }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
       } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
         }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
       }
     }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
           }
         } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
+          // See if we can fetch this
+          fetch(url.split('#')[0])
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
+            const note = htmlDoc.getElementById(id);
             if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
+              const html = processXRef(id, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -749,161 +738,185 @@ WDFW. 2023. <em>Geoduck Clam (Panopea Generosa)</em>. <a href="https://wdfw.wa.g
             instance.show();
           });
         }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
       } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
             }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
         });
       }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
     }
-  });
-  </script>
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
