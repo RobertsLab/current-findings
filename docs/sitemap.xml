@@ -2,58 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robertslab.github.io/current-findings/reports/sswd-immune-gene-abundance/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.785Z</lastmod>
+    <lastmod>2026-06-18T11:15:10.740Z</lastmod>
   </url>
   <url>
     <loc>https://robertslab.github.io/current-findings/reports/olympia-oyster-population-synthesis/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.780Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/manila-clam-larvae-pco2-rnaseq/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/geoduck-reproductive-maturation/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.773Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/geoduck-comparative-genomics/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.767Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/chilean-mussel/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.765Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.765Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/about.html</loc>
-    <lastmod>2026-06-18T14:14:25.731Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports.html</loc>
-    <lastmod>2026-06-18T14:14:25.765Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/example-report/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.765Z</lastmod>
-  </url>
-  <url>
-    <loc>https://robertslab.github.io/current-findings/reports/geoduck-gastrula-scrnaseq/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.772Z</lastmod>
+    <lastmod>2026-06-18T11:15:10.733Z</lastmod>
   </url>
   <url>
     <loc>https://robertslab.github.io/current-findings/reports/manila-clam-juvenile-pco2-thermal-stress/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.776Z</lastmod>
+    <lastmod>2026-06-18T11:15:10.729Z</lastmod>
   </url>
   <url>
-    <loc>https://robertslab.github.io/current-findings/reports/oa-experimental-water-chemistry-summary/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.779Z</lastmod>
+    <loc>https://robertslab.github.io/current-findings/reports/geoduck-comparative-genomics/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports/chilean-mussel/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.722Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/about.html</loc>
+    <lastmod>2026-06-18T11:15:10.691Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports.html</loc>
+    <lastmod>2026-06-18T03:37:19.917Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports/example-report/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.723Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports/geoduck-reproductive-maturation/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports/manila-clam-larvae-pco2-rnaseq/index.html</loc>
+    <lastmod>2026-06-18T11:15:10.733Z</lastmod>
   </url>
   <url>
     <loc>https://robertslab.github.io/current-findings/reports/polyic-immune-priming-protocols/index.html</loc>
-    <lastmod>2026-06-18T14:14:25.783Z</lastmod>
+    <lastmod>2026-06-18T11:15:10.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertslab.github.io/current-findings/reports/cockle-reproductive-maturation/index.html</loc>
+    <lastmod>2026-06-18T23:55:49.455Z</lastmod>
   </url>
 </urlset>
