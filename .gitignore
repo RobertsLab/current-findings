@@ -1,6 +1,9 @@
 /.quarto/
 /.quarto-home/
 /_site/
+
+# Rendered site output — built and published to GitHub Pages by CI, not tracked here.
+/docs/
 .DS_Store
 .Rproj.user
 .Rhistory

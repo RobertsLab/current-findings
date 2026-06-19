@@ -5,12 +5,20 @@ on:
     branches: [main]
   workflow_dispatch:
 
-jobs:
-  render:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+# Allow this workflow to publish to GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
+# Only one Pages deployment at a time; let in-progress ones finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -19,7 +27,18 @@ jobs:
       - name: Render site
         run: quarto render
 
-      - name: Commit rendered docs
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          commit_message: Render Quarto site
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
