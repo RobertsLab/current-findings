@@ -5,6 +5,7 @@ project:
     - "*.qmd"
     - "reports/**/*.qmd"
     - "!templates/"
+    - "bivalve-histology-tutorial/**"
 
 execute:
   freeze: auto
