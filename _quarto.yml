@@ -5,6 +5,7 @@ project:
     - "*.qmd"
     - "reports/**/*.qmd"
     - "!templates/"
+  resources:  
     - "bivalve-histology-tutorial/**"
 
 execute:
