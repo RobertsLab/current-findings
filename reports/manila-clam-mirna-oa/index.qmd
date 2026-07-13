@@ -1,0 +1,240 @@
+---
+title: "miRNA Identification and Differential Expression in Manila Clam (Ruditapes philippinarum) Under Ocean Acidification"
+subtitle: "A short non-peer-reviewed scientific report"
+author:
+  - name: Steven Roberts
+    affiliation: University of Washington
+  - name: Sam White
+    affiliation: University of Washington
+  - name: Mackenzie Gavery
+    affiliation: NOAA
+date: "2026-07-13"
+date-modified: "2026-07-13"
+description: "sRNA-seq of 20 Manila clams identifies 37 miRNAs via ShortStack; DESeq2 finds 4 miRNAs and 708 sRNA loci differentially expressed under ocean acidification."
+categories: [ocean-acidification, mirna, small-rna, srna-seq, differential-expression, bivalves, manila-clam]
+status: "Not peer reviewed"
+report_type: "Working manuscript"
+lab: "Roberts Lab"
+project: "Manila clam ocean acidification"
+species:
+  - Ruditapes philippinarum
+topic:
+  - ocean acidification
+  - microRNA
+  - small RNA
+  - differential expression
+  - stress response
+github_repo: ""
+data_url: ""
+format:
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+::: {.callout-warning}
+## Status
+
+This report is a Roberts Lab working manuscript. It has not been peer reviewed.
+
+It is shared to make small scientific efforts, preliminary analyses, technical
+observations, and exploratory work openly available.
+:::
+
+This report describes the identification of microRNAs (miRNAs) in the Manila clam
+(*Ruditapes philippinarum*) from small RNA sequencing data, and their differential
+expression between control and ocean acidification (OA) treatment conditions. The
+underlying analyses are documented in two lab notebook posts: the ShortStack /
+miRBase miRNA identification workflow
+([2024-12-10](https://robertslab.github.io/sams-notebook/posts/2024/2024-12-10-miRNA-Identification---R.phillipinarum-sRNA-seq-Using-ShortStack-and-miRBase-Mature-miRNAs/index.html))
+and the DESeq2 differential expression analysis
+([2025-01-31](https://robertslab.github.io/sams-notebook/posts/2025/2025-01-31-Differential-Expression---R.philippinarum-miRNAs-Using-DEseq2/index.html)).
+
+## Methods
+
+Raw paired-end sRNA-seq data for *Ruditapes philippinarum* (20 adult Manila clam
+samples) were received from Azenta across two sequencing projects (30-1035633055
+and 30-1035633055-TS01). Reads from multiple lanes were concatenated per sample
+and assessed for quality using FastQC v0.12.1 and MultiQC v1.14.
+
+Libraries had been prepared using the NEB NEBNext Small RNA Library Prep Set for
+Illumina and sequenced on an Illumina HiSeq 4000 (150 bp paired-end). Paired-end
+reads were trimmed and merged using fastp v0.24.0. Trimming removed NEB adapter
+sequences and polyG tails (`--trim_poly_g`), required a minimum overlap of 17 bp
+for merging (`--overlap_len_require 17`), and enforced a maximum merged read length
+of 31 bp (`--length_limit 31`), based on the insert peak size determined from
+preliminary trimming tests. The resulting single merged FastQ files were again
+assessed with FastQC v0.12.1 and MultiQC.
+
+Trimmed and merged reads were aligned to the *R. philippinarum* genome
+(GCF_026571515.1, ASM2657151v2) and small RNA loci were annotated using ShortStack
+v4.1.1 [@axtell2013shortstack; @shahid2014identification]. ShortStack was run with
+both de novo miRNA identification (`--dn_mirna`) and known miRNA annotation using
+miRBase v22.1 mature miRNA sequences (`--known_miRNAs`). ShortStack identified 37
+MIRNA loci out of 33,666 total sRNA clusters detected across the genome. This
+identification step is documented in the
+[2024-12-10 notebook post](https://robertslab.github.io/sams-notebook/posts/2024/2024-12-10-miRNA-Identification---R.phillipinarum-sRNA-seq-Using-ShortStack-and-miRBase-Mature-miRNAs/index.html).
+
+Differential expression analysis was performed in R using DESeq2
+[@love2014moderated], using the ShortStack counts matrix as input. Two separate
+analyses were conducted: one restricted to the 37 ShortStack-annotated miRNAs, and
+a second encompassing all 33,666 sRNA clusters. Samples were modeled by treatment
+group (control vs. ocean acidification treatment). A false discovery rate (FDR)
+threshold of 0.05 (adjusted p-value) and a log2 fold change threshold of 0 were
+applied to identify differentially expressed loci. Variance stabilizing
+transformation (VST) was applied to normalized counts for visualization via PCA and
+heatmaps. This analysis is documented in the
+[2025-01-31 notebook post](https://robertslab.github.io/sams-notebook/posts/2025/2025-01-31-Differential-Expression---R.philippinarum-miRNAs-Using-DEseq2/index.html).
+
+## Results
+
+### ShortStack
+
+ShortStack identified a total of 33,666 sRNA-producing loci across the genome. Of
+these, 37 were annotated as miRNAs, meaning they satisfied both the sequence and
+secondary structure (stem-loop hairpin) criteria that ShortStack applies for a
+confident miRNA call [@axtell2013shortstack; @shahid2014identification;
+@axtell2018revisiting]. An additional 91 loci had sequence similarity to miRBase
+v22.1 entries but were not ultimately annotated as miRNAs, most likely because they
+failed the secondary structure requirement — this explains the discrepancy between
+91 miRBase matches and only 37 final miRNA calls. Of the 37 annotated miRNAs, 24
+matched known miRBase entries and 13 appear to be novel, with no miRBase
+counterpart.
+
+The conserved miRNAs identified include orthologs of broadly metazoan miRNA
+families — among them miR-100, let-7, miR-2, miR-9, miR-34, miR-190, miR-219,
+miR-1175, and miR-1985 — suggesting that core miRNA regulatory pathways are active
+and well-conserved in this species [@bartel2018metazoan]. Several of these families
+have been documented across mollusk species [@huang2021discovery; @ding2021identification],
+and miRNA expression has been previously reported in the Manila clam specifically
+[@ding2021identification]. Several of these families were among the most highly
+expressed loci in the dataset, consistent with their well-established roles as
+abundant regulators across animal phyla [@bartel2018metazoan]. The conservation of
+let-7 in particular is notable: its mature sequence is nearly identical across
+bilaterians from nematodes to vertebrates to mollusks, and its temporal expression
+pattern is similarly conserved [@pasquinelli2000conservation]. miR-9 is likewise
+conserved at the nucleotide level from insects to humans [@yuvaaydemir2011microrna9],
+and miR-100 represents one of the most ancient miRNA families in the metazoan
+lineage, tracing its origins to the last common eumetazoan ancestor
+[@santillan2025ancient].
+
+Examining the DicerCall assignments — which report the predominant sRNA size class
+produced at each locus — reveals that the vast majority of loci (33,530) received a
+DicerCall of N, indicating they are not confidently Dicer-derived sRNA clusters.
+Among the 136 loci that did receive a DicerCall size assignment, 22 nt was the most
+common (73 loci), followed by 23 nt (33 loci), 21 nt (20 loci), and 24 nt (10
+loci). The predominance of 22 nt clusters is consistent with canonical miRNA
+biogenesis, in which Dicer cleaves stem-loop precursors into approximately 22 nt
+duplexes [@bartel2018metazoan]. The large number of N-called loci likely reflects
+the well-known abundance of rRNA-derived and tRNA-derived fragments in sRNAseq
+libraries, particularly when size-selection or depletion steps are incomplete
+[@watkins2022multiplex], and is consistent with the heavy representation of reads
+>24 nt observed in the alignment details.
+
+Across the 20 samples, approximately 119.2 million reads mapped uniquely to the
+genome, with a total of roughly 334.8 million read mappings across all mapping
+categories (unique, primary multimapper, repeat-associated, and hairpin-associated).
+
+### sRNA Expression
+
+Differential expression analysis was performed using DESeq2 [@love2014moderated] on
+sRNAseq count data generated by ShortStack from 20 Manila clam (*Ruditapes
+philippinarum*) samples — 10 control individuals and 10 individuals exposed to ocean
+acidification (OA) treatment conditions. Two parallel analyses were conducted: one
+restricted to the 37 loci ShortStack had confidently annotated as miRNAs, and a
+second encompassing all 33,666 sRNA-producing loci identified genome-wide. In both
+cases, an adjusted p-value (false discovery rate, FDR) threshold of 0.05 was
+applied. The log2 fold change (LFC) threshold was initially set to 1 (equivalent to
+a 2-fold difference in expression), but this returned zero differentially expressed
+miRNAs; the threshold was therefore relaxed to 0, meaning any directional change in
+expression was considered, provided it reached statistical significance after
+multiple testing correction.
+
+### miRNA Differential Expression
+
+Of the 37 ShortStack-annotated miRNAs subjected to DESeq2 analysis, 4 were
+differentially expressed between control and OA-treatment conditions at FDR ≤ 0.05.
+Three were upregulated in the treatment group and one was downregulated. The four DE
+miRNAs, their fold changes, and their miRBase annotations are as follows.
+
+Cluster_3720 (log2FC = +2.09, padj = 0.0048) matched miRBase entries cte-miR-190 and
+mle-miR-190-5p, identifying it as an ortholog of the conserved miR-190 family.
+miR-190 is conserved across invertebrate lineages and has been characterized in
+*Drosophila melanogaster* as a regulator of hypoxia responses, where it promotes
+HIF-target gene expression by suppressing the HIF prolyl-4-hydroxylase Fatiga
+[@delellaezcurra2016mir190], and as a modulator of lifespan and neuronal maintenance
+[@fernandes2022sexually]. Its upregulation under OA conditions in Manila clam may
+reflect a conserved role in responding to physiological stress, though functional
+characterization in mollusks remains to be established.
+
+Cluster_29018 (log2FC = +2.42, padj = 0.0048) was the most highly expressed of the
+four DE miRNAs (baseMean = 1,661.6 normalized counts), and matched miRBase entry
+mle-miR-67-3p, identifying it as an ortholog of invertebrate miR-67. In
+*Caenorhabditis elegans*, miR-67 has been shown to regulate pathogen avoidance
+behavior, acting through suppression of the target sax-7 in response to *Pseudomonas
+aeruginosa* exposure [@ma2017mir67]. Its strong upregulation under OA conditions
+suggests a possible role in immune or stress-related gene regulation, consistent
+with the documented role of miRNAs in bivalve stress responses [@aboalela2021microrna].
+
+Cluster_15325 (log2FC = +4.28, padj = 0.0048, baseMean = 27.2) and Cluster_17619
+(log2FC = −2.72, padj = 0.0050, baseMean = 7.7) had no miRBase matches and represent
+novel miRNA candidates without currently characterized orthologs. Cluster_15325
+showed the largest fold change of the four DE miRNAs despite relatively modest
+average expression; Cluster_17619 was the sole downregulated miRNA and had the
+lowest average expression among the four.
+
+Notably, the majority of the 37 miRNAs tested showed no significant differential
+expression. Several of the most abundantly expressed miRNAs in the dataset —
+including the miR-100 ortholog (Cluster_14096, baseMean ≈ 4,004), the miR-1985
+ortholog (Cluster_13708, baseMean ≈ 3,920), the miR-2 cluster (Cluster_15639,
+baseMean ≈ 5,862), and the let-7 ortholog (Cluster_14095, baseMean ≈ 988) — showed
+no statistically significant change between conditions, suggesting that the core
+conserved miRNA regulatory machinery is not broadly perturbed by OA in this tissue
+and time point [@bartel2018metazoan].
+
+### All sRNA Differential Expression
+
+When the analysis was expanded to include all 33,666 sRNA-producing loci, DESeq2's
+independent filtering procedure (which excludes loci with very low mean counts to
+reduce the multiple testing burden and maximize statistical power) retained 33,001
+loci with valid adjusted p-values, excluding approximately 665 loci as
+insufficiently expressed for reliable testing [@love2014moderated]. Of those 33,001
+loci, 708 were differentially expressed at FDR ≤ 0.05, representing approximately
+2.1% of all tested loci. Of these, 335 were upregulated and 373 were downregulated
+in OA-treated animals relative to controls, indicating a modestly asymmetric but
+largely bidirectional transcriptional response at the sRNA level. These 708 DE sRNA
+clusters include the 4 DE miRNAs identified in the miRNA-only analysis, since miRNAs
+are a subset of the full sRNA dataset.
+
+The breadth of the sRNA response — 708 loci, the majority of which are not miRNAs —
+points to widespread changes in sRNA-producing genomic regions under OA. Whether
+these reflect true regulatory sRNAs or altered transcription of other RNA classes
+(e.g., tRNA-derived fragments, rRNA-derived fragments, or repeat-associated sRNAs)
+is difficult to determine from the count data alone, and would require further
+characterization of the individual loci. The detection of a larger fraction of
+downregulated than upregulated loci (373 vs. 335) may reflect a general suppression
+of sRNA-generating activity, though the difference is modest.
+
+Taken together, these results indicate that ocean acidification elicits a
+statistically detectable but relatively limited response in the annotated miRNA
+complement of Manila clam, with only 4 of 37 ShortStack-identified miRNAs reaching
+significance at the relaxed LFC threshold. The fact that no miRNAs were significant
+at the conventional 2-fold change threshold suggests that miRNA expression in this
+context is subtly modulated rather than dramatically reshaped. However, the broader
+sRNA landscape shows a more extensive response, with hundreds of loci displaying
+significant expression differences — a pattern consistent with reports of widespread
+sRNA involvement in bivalve stress responses [@zhao2016high; @aboalela2021microrna].
+
+## Suggested citation
+
+Roberts, S. B., S. White, and M. Gavery. 2026. *miRNA Identification and
+Differential Expression in Manila Clam (Ruditapes philippinarum) Under Ocean
+Acidification*. Current Findings.
+Available at: https://robertslab.github.io/current-findings/reports/manila-clam-mirna-oa/
+
+## Version history
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.1 | 2026-07-13 | Migrated from miRNA.txt; added references to sams-notebook miRNA identification (2024-12-10) and DESeq2 differential expression (2025-01-31) posts |
