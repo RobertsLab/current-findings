@@ -5,8 +5,8 @@ author:
   - name: Steven Roberts
     affiliation: University of Washington
 date: "2026-10-07"
-date-modified: "2026-10-07"
-description: "Across a year-long time series of 30 colonies from three coral species, lncRNAs co-vary with genes within 10 kb well above an expression-matched null, but beyond 2 kb the coupling matches that of neighboring gene pairs."
+date-modified: "2026-10-08"
+description: "In a year-long time series of 30 colonies from three coral species, strong lncRNA–mRNA correlations far exceed chance genome-wide, and lncRNAs co-vary with genes within 10 kb above an expression-matched null; but beyond 2 kb the coupling matches that of neighboring gene pairs."
 categories: [lncrna, gene-expression, coexpression, corals, time-series, pre-registered, e5]
 status: "Not peer reviewed"
 report_type: "Technical note"
@@ -43,11 +43,14 @@ observations, and exploratory work openly available.
 
 Long non-coding RNAs (lncRNAs) are often proposed to regulate neighboring
 genes in cis, usually on the basis of co-expression. We tested this claim as
-a pre-registered hypothesis (H17) in the E5 MOSAiC time series: about 10
+two pre-registered hypotheses (H08, H17) in the E5 MOSAiC time series: about 10
 colonies each of *Acropora pulchra*, *Porites evermanni* and *Pocillopora
 tuahiniensis*, sampled four times across 2020 in Mo'orea, with lncRNA and
 gene expression from the same RNA-seq libraries (38–40 samples per species).
-Within colonies, lncRNAs co-vary with protein-coding genes within 10 kb far
+Genome-wide (H08), strong lncRNA–mRNA correlations (|r| >= 0.8) number in the
+tens to hundreds of thousands per species, where label permutation produces
+almost none, but they track per-sample structure shared by both layers rather
+than lncRNA-specific co-regulation. Within colonies (H17), lncRNAs co-vary with protein-coding genes within 10 kb far
 more than with expression-matched genes on other scaffolds (median r 0.14 to
 0.19 against null medians of 0.00 to 0.05), and the coupling falls steadily
 with distance in all three species. The pre-registered decision rule
@@ -66,9 +69,9 @@ lncRNA function in non-model invertebrates is usually inferred from
 co-expression with nearby genes. Two problems make that inference weak.
 First, with few samples, strong correlations arise by chance. A companion
 pre-registered test (H08) showed that with about 40 samples per species,
-strong lncRNA–mRNA correlations do exceed a permutation null, but that
-genome-wide edges are dominated by per-sample library structure shared by
-both layers. Second, genes that sit close together tend to be co-expressed
+strong lncRNA–mRNA correlations do exceed a permutation null (see Results),
+but that genome-wide edges are dominated by per-sample library structure
+shared by both layers. Second, genes that sit close together tend to be co-expressed
 whatever they encode, because they share chromatin context. A cis claim
 for lncRNAs therefore needs both a null that keeps library structure and a
 comparison with gene–gene neighbors at the same distances.
@@ -80,13 +83,19 @@ coordinates from the E5 MOSAiC data portal (pinned commit `86432e3`). All
 samples with both layers: *A. pulchra* 40, *P. evermanni* 38,
 *P. tuahiniensis* 39; 10 colonies per species, four timepoints.
 
-**Pre-registration.** The hypothesis, model and decision rule were committed
-before analysis ([H17 hypothesis.md](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H17/hypothesis.md)).
+**Pre-registration.** Hypotheses, models and decision rules were committed
+before analysis ([H08](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H08/hypothesis.md),
+[H17](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H17/hypothesis.md)).
 One dated amendment, also written before analysis, records that the
 upstream lncRNA features have no strand. It drops the orientation analysis
 and fixes the details of the null.
 
-**Analysis.** Both layers were variance-stabilized (DESeq2 vst) on the same
+**Genome-wide test (H08).** Pearson r on vst values for every lncRNA ×
+mRNA pair (1.7 to 3.3 × 10^8 pairs per species), counting pairs at |r| >= 0.8,
+0.9 and 0.95, against 200 permutations of lncRNA sample labels (the decision
+null), a within-timepoint permutation, and a colony-residualized version.
+
+**Cis test (H17).** Both layers were variance-stabilized (DESeq2 vst) on the same
 samples and residualized on colony, so correlations reflect within-colony
 co-variation across the year. For every lncRNA–gene pair on the same scaffold
 within 100 kb, we computed Pearson r. The test set was non-overlapping pairs
@@ -101,6 +110,26 @@ dropping all pairs within 2 kb, and repeating the whole procedure with
 gene–gene neighbor pairs.
 
 ## Results
+
+### Genome-wide co-expression exceeds chance (H08, supported)
+
+| Species | Pairs at \|r\| >= 0.8 / 0.9 / 0.95 | Full-permutation null, 95th percentile |
+|---|---|---|
+| *A. pulchra* | 337,796 / 17,285 / 832 | 4 / 0 / 0 |
+| *P. evermanni* | 65,442 / 3,707 / 586 | 4 / 0 / 0 |
+| *P. tuahiniensis* | 91,823 / 2,203 / 282 | 32 / 0 / 0 |
+
+Observed counts exceed every null at every threshold in every species
+(@fig-h08). Shared seasonal signal produces few strong edges (within-timepoint
+null medians 0 to 5 at |r| >= 0.9), and residualizing colony *raises* the
+counts (*A. pulchra* 338k to 1.45M at 0.8). Strong edges therefore come from
+sample-level variation below colony and season, where shared library effects
+(RNA integrity, composition) would also sit. This is why the cis test below
+uses a null measured in the same samples.
+
+![Pairs at or above each |r| threshold (x) against permutation nulls (boxes), primary and colony-residualized analyses.](figures/fig03-h08-edges-vs-null.png){#fig-h08}
+
+### Cis co-variation with neighbors (H17, supported)
 
 lncRNA–gene coupling within 10 kb exceeds the expression-matched null in all
 three species (one-sided p = 0.001, the floor, in each).
@@ -132,7 +161,10 @@ expected from shared reads, they correlate strongly (median r 0.54 to 0.71).
 
 ## Discussion
 
-The data support cis co-variation between lncRNAs and nearby genes. They do
+The genome-wide result (H08) answers a methods question: with about 40
+samples, strong correlations are not a small-sample artifact, unlike the
+n = 5 setting in which a published 0.99 cut sat near the null. It does not
+identify co-regulation. The data support cis co-variation between lncRNAs and nearby genes. They do
 not, by themselves, support cis regulation by lncRNAs. Most of the signal is
 what any two neighboring genes show, consistent with shared local chromatin
 or transcriptional neighborhoods. What remains specific to lncRNAs is
@@ -157,7 +189,7 @@ matched distances alongside any lncRNA cis claim.
 
 - Hypothesis, analysis and full results: [urol-e5/MOSAiC-hypotheses, H17](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H17)
   (`hypothesis.md`, `analysis.qmd`, `RESULT.md`, `output/`)
-- Companion genome-wide test: [H08](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H08)
+- Genome-wide test: [urol-e5/MOSAiC-hypotheses, H08](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H08)
 - Data portal: [urol-e5/MOSAiC](https://github.com/urol-e5/MOSAiC), commit `86432e3e393aecca307be356e514c95981177b7c`
 
 ## Suggested citation
@@ -169,3 +201,4 @@ Roberts, S. B. 2026. *lncRNAs Co-vary with Neighboring Genes in Three Reef Coral
 | Version | Date | Notes |
 |---|---|---|
 | 0.1 | 2026-10-07 | Initial draft from MOSAiC-hypotheses H17 |
+| 0.2 | 2026-10-08 | Added the genome-wide test (H08) |
