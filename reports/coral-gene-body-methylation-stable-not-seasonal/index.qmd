@@ -6,7 +6,7 @@ author:
     affiliation: University of Washington
 date: "2026-10-07"
 date-modified: "2026-10-08"
-description: "A synthesis of seven pre-registered tests in a year-long time series of three coral species: gene-body methylation is associated with higher, steadier expression, but seasonal methylation change is not reproducible across colonies and is not coupled to expression change at the same time or with a lag, and Acropora's larger seasonal plasticity is not concentrated in low-methylation genes."
+description: "A synthesis of eight pre-registered tests in a year-long time series of three coral species: gene-body methylation is associated with higher, steadier expression, but seasonal methylation change is not reproducible across colonies and is not coupled to expression change at the same time or with a lag, Acropora's larger seasonal plasticity is not concentrated in low-methylation genes, and orthologs share methylation rank across species."
 categories: [dna-methylation, gene-expression, epigenetics, corals, time-series, pre-registered, negative-results, e5]
 status: "Not peer reviewed"
 report_type: "Technical note"
@@ -60,7 +60,11 @@ expression variance. A seventh, follow-up test (H23) asked whether the much
 larger seasonal plasticity of *A. pulchra* sits in its low-GBM genes. It was
 inconclusive, but bounded: the *A. pulchra* excess differs between the 25th
 and 75th GBM percentiles by at most about 0.02 vst units, against an excess
-of 0.11. On these observational data from about 10 colonies per
+of 0.11. An eighth (H24) found that orthologs occupy similar GBM ranks in
+all three species, well beyond a null matched for expression, gene length
+and CpG count (Spearman rho 0.29–0.48 against null means of 0.06–0.09). One
+pair fell just below the pre-registered 0.30 minimum, so H24 is also
+inconclusive. On these observational data from about 10 colonies per
 species, GBM behaves as a stable marker of expression level and steadiness,
 not as a seasonal regulator.
 
@@ -75,11 +79,11 @@ other. The E5 MOSAiC design, with the same colonies sampled four times in one
 year, allows each to be tested. The six hypotheses were committed
 separately, each with its own decision rule, before analysis. Because they
 answer one question, they are reported together, each verdict given as
-pre-registered before interpretation. H23 was added afterwards: it was
-proposed and pre-registered on 2026-10-08 because H05 and H02 (*A. pulchra*
-has about ten times more seasonally changing genes than the other species)
-were supported. It reuses the same data, so it is a follow-up, not a
-replication.
+pre-registered before interpretation. H23 and H24 were added afterwards.
+They were proposed and pre-registered on 2026-10-08 because H05 and H02
+(*A. pulchra* has about ten times more seasonally changing genes than the
+other species) were supported. They reuse the same data, so they are
+follow-ups, not replications.
 
 ## Methods
 
@@ -116,6 +120,12 @@ and timepoint as a repeated measure.
   contrast is the *A. pulchra* excess over the other two species at the 25th
   minus the 75th GBM percentile, with 1000 colony-bootstrap resamples. A
   gate requires the gene set to show the *A. pulchra* excess first.
+- **H24**: per species pair, Spearman rho between the two species' per-gene
+  GBM over orthologs eligible in both (91, 678 and 610). The null shuffles
+  ortholog pairings 2,000 times within strata of expression, gene length and
+  CpG count (the finest of a fixed hierarchy with ≥ 10 orthologs per
+  stratum), Holm across pairs; 1000 colony-bootstrap resamples. Supported
+  only if all three pairs have rho > 0.30, CI > 0 and adjusted p < 0.05.
 
 H06 and H18 each carry one dated amendment, written before analysis, that
 fixes the nulls; the decision-rule text was not changed.
@@ -131,8 +141,9 @@ fixes the nulls; the decision-rule text was not changed.
 | H16 | Does expression change precede methylation change? | not supported | beta_EM − beta_ME 0.058 / 0.002 / −0.051; no coefficient differs from null |
 | H18 | Do GBM and cis-lncRNA explain independent parts of expression change? | not supported (hierarchical in Apul, Peve) | unique GBM R² 0.0013 / 0.0003 / 0.0004; unique lncRNA 0.021 / 0.068 / 0.029; shared ≈ 0 |
 | H23 | Is *A. pulchra*'s excess seasonal plasticity concentrated in low-GBM genes? | inconclusive | Apul excess 0.110 (CI 0.019–0.152) vst units; contrast 25th − 75th percentile −0.003 (CI −0.024 to 0.020) |
+| H24 | Do orthologs keep similar GBM ranks across species? | inconclusive | rho Apul–Peve 0.286, Apul–Ptuh 0.479, Peve–Ptuh 0.369 (null means 0.06–0.09; Holm p ≤ 0.019) |
 
-: Seven pre-registered tests of gene-body methylation (GBM) and expression. Species: Apul *A. pulchra*, Peve *P. evermanni*, Ptuh *P. tuahiniensis*. {#tbl-summary}
+: Eight pre-registered tests of gene-body methylation (GBM) and expression. Species: Apul *A. pulchra*, Peve *P. evermanni*, Ptuh *P. tuahiniensis*. {#tbl-summary}
 
 **GBM marks higher, steadier expression (H05, supported).** In all three
 species, mean GBM correlates positively with mean expression and negatively
@@ -215,10 +226,24 @@ negative one. The result is robust in being small, not in its direction.
 
 ![Seasonal amplitude (SD of the four timepoint means, vst) by within-species gene-body methylation decile, three-way orthologs. Points are medians, bars interquartile ranges. From H23.](figures/fig05-h23-amplitude-by-gbm-decile.png){#fig-h23}
 
+**Orthologs share GBM rank across species (H24, inconclusive).** In every
+species pair, orthologs have similar GBM ranks (@fig-h24), far above a null
+that pairs genes matched for expression, gene length and CpG count (null
+means 0.06–0.09; excess over null 0.22–0.39). The two pairs with
+*P. tuahiniensis* meet every condition (rho 0.479 and 0.369, Holm
+p = 0.0015). *A. pulchra*–*P. evermanni*, with only 91 shared eligible
+orthologs, exceeds its null (Holm p = 0.019) but its rho of 0.286 is below
+the pre-registered 0.30 minimum, so the verdict is `inconclusive`. Checks
+on the 88 genes eligible in all three species (0.27 / 0.40 / 0.33) and on
+genes with ≥ 20 CpGs (0.35 / 0.38, Ptuh pairs only) agree. The exception
+is 30 well-annotated *A. pulchra*–*P. evermanni* orthologs (−0.115).
+
+![Within-species GBM percentile of each ortholog in the two species of each pair. From H24.](figures/fig06-h24-gbm-rank-pairs.png){#fig-h24}
+
 ## Discussion
 
-Under their pre-registered rules, these seven tests give one `supported`,
-four `inconclusive` and two `not supported` verdicts. Read together, they
+Under their pre-registered rules, these eight tests give one `supported`,
+five `inconclusive` and two `not supported` verdicts. Read together, they
 describe one pattern. GBM is associated with *which* genes are highly and
 steadily expressed (H05) and with *which colony* a sample came from (H04,
 methylated CpGs). It does not move reproducibly with season (H04 secondary,
@@ -227,7 +252,10 @@ same colony (H06), does not predict later expression or follow earlier
 expression (H16), and explains almost no within-colony expression variance
 (H18). In the primary H23 analysis, *A. pulchra*'s larger seasonal swings
 occur across the GBM range rather than mainly in weakly methylated genes,
-though the checks disagree in direction (H23). Expression, by contrast,
+though the checks disagree in direction (H23). Which genes carry GBM is
+itself partly shared across the three genera: orthologs hold similar GBM
+ranks well beyond what expression, length and CpG content explain (H24),
+consistent with GBM as a long-standing property of the gene. Expression, by contrast,
 shifts with season, strongly in
 *A. pulchra*, where the shift largely reverts as temperature does (H15). On this timescale, GBM
 behaves as a stable property of the gene and the colony, not as a seasonal
@@ -253,7 +281,11 @@ ranking. The design is observational: TP1 and TP3 differ in temperature,
 light, nutrients and reproductive timing, and temporal precedence (H16)
 could not establish causation even if positive. In H23 the low-GBM
 percentiles of *A. pulchra* and *P. evermanni* come from a few hundred,
-probably mostly methylated, genes, and its checks disagree in sign.
+probably mostly methylated, genes, and its checks disagree in sign. H24's
+colony-bootstrap intervals hold the gene set fixed. GBM barely varies among
+colonies, so they are narrow and omit gene-sampling uncertainty, roughly
+±0.2 on rho for the 91 *A. pulchra*–*P. evermanni* orthologs. Its shortfall
+below 0.30 and the 30-gene reversal are within that range.
 Persistence (H15) would need
 a manipulated exposure that induces a clear methylation shift.
 
@@ -269,6 +301,7 @@ Each hypothesis directory holds `hypothesis.md` (with amendments),
 - [H16](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H16): cross-lagged direction
 - [H18](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H18): methylation and cis-lncRNA channels
 - [H23](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H23): species plasticity difference across GBM
+- [H24](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H24): conservation of GBM rank across orthologs
 - Decision D-008 (unequal CpG filtering): [docs/decisions.md](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/docs/decisions.md)
 - Data portal: [urol-e5/MOSAiC](https://github.com/urol-e5/MOSAiC), commit `86432e3e393aecca307be356e514c95981177b7c`
 
@@ -282,3 +315,4 @@ Roberts, S. B. 2026. *Gene-Body Methylation in Three Reef Corals Marks Stable Ex
 |---|---|---|
 | 0.1 | 2026-10-07 | Initial draft, synthesis of MOSAiC-hypotheses H04, H05, H06, H15, H16 and H18 |
 | 0.2 | 2026-10-08 | Added the follow-up test H23 (species plasticity difference across GBM) |
+| 0.3 | 2026-10-08 | Added the follow-up test H24 (conservation of GBM rank across orthologs) |
