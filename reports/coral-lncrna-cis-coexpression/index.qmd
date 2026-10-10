@@ -5,8 +5,8 @@ author:
   - name: Steven Roberts
     affiliation: University of Washington
 date: "2026-10-07"
-date-modified: "2026-10-08"
-description: "In a year-long time series of 30 colonies from three coral species, strong lncRNA–mRNA correlations far exceed chance genome-wide, and lncRNAs co-vary with genes within 10 kb above an expression-matched null; but beyond 2 kb the coupling matches that of neighboring gene pairs."
+date-modified: "2026-10-10"
+description: "In a year-long time series of 30 colonies from three coral species, strong lncRNA–mRNA correlations far exceed chance genome-wide, and lncRNAs co-vary with genes within 10 kb above an expression-matched null; but beyond 2 kb lncRNA–gene coupling is, if anything, weaker than gene–gene coupling, and distal lncRNA associations do not predict gene expression in held-out colonies."
 categories: [lncrna, gene-expression, coexpression, corals, time-series, pre-registered, e5]
 status: "Not peer reviewed"
 report_type: "Technical note"
@@ -43,7 +43,7 @@ observations, and exploratory work openly available.
 
 Long non-coding RNAs (lncRNAs) are often proposed to regulate neighboring
 genes in cis, usually on the basis of co-expression. We tested this claim as
-two pre-registered hypotheses (H08, H17) in the E5 MOSAiC time series: about 10
+four pre-registered hypotheses (H08, H17, H25, H26) in the E5 MOSAiC time series: about 10
 colonies each of *Acropora pulchra*, *Porites evermanni* and *Pocillopora
 tuahiniensis*, sampled four times across 2020 in Mo'orea, with lncRNA and
 gene expression from the same RNA-seq libraries (38–40 samples per species).
@@ -55,13 +55,21 @@ more than with expression-matched genes on other scaffolds (median r 0.14 to
 0.19 against null medians of 0.00 to 0.05), and the coupling falls steadily
 with distance in all three species. The pre-registered decision rule
 returns `supported`. However, a gene–gene control shows that neighboring
-protein-coding genes co-vary almost as strongly. Beyond 2 kb, lncRNA–gene and
-gene–gene coupling are nearly the same. The lncRNA-specific excess is
-concentrated within 2 kb of genes, where unannotated UTRs, read-through and
-antisense transcripts sit. Upstream lncRNA annotations carry no strand, so
-those cannot be separated from regulation. Cis co-variation is real but
-modest (about 2–4% of within-colony variance), and most of it reflects local
-genomic co-expression rather than lncRNA-specific regulation.
+protein-coding genes co-vary almost as strongly. The lncRNA-specific excess
+is concentrated within 2 kb of genes, where unannotated UTRs, read-through
+and antisense transcripts sit. Upstream lncRNA annotations carry no strand,
+so those cannot be separated from regulation. Two follow-ups sharpened this.
+A pre-registered equivalence test beyond 2 kb (H25, `inconclusive`) could not
+show that lncRNA–gene and gene–gene coupling are equivalent: after matching
+for distance and expression, lncRNA–gene coupling was about a third weaker
+in every species (intervals excluding 0 but crossing the ±25% margin). A
+held-out test (H26, `not supported`) found that distal lncRNA–gene
+associations selected in nine colonies made predictions for the tenth worse,
+not better, while the same pipeline with distal genes as predictors improved
+them by 25–52%. Cis co-variation is real but modest (about 2–4% of
+within-colony variance), most of it reflects local genomic co-expression, and
+we find no evidence for distal lncRNA associations that generalize across
+colonies.
 
 ## Background
 
@@ -85,10 +93,17 @@ samples with both layers: *A. pulchra* 40, *P. evermanni* 38,
 
 **Pre-registration.** Hypotheses, models and decision rules were committed
 before analysis ([H08](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H08/hypothesis.md),
-[H17](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H17/hypothesis.md)).
-One dated amendment, also written before analysis, records that the
+[H17](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H17/hypothesis.md),
+[H25](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H25/hypothesis.md),
+[H26](https://github.com/urol-e5/MOSAiC-hypotheses/blob/main/hypotheses/H26/hypothesis.md)).
+One dated amendment to H17, also written before analysis, records that the
 upstream lncRNA features have no strand. It drops the orientation analysis
-and fixes the details of the null.
+and fixes the details of the null. H25 and H26 were proposed on 2026-10-08
+because H17's gene–gene comparison raised the question, and pre-registered
+on 2026-10-09; they reuse the same data, so they are follow-ups, not
+replications. H26 excludes one *P. evermanni* locus on scaffold 167 that
+takes a median 69% of that species' reads (MOSAiC-hypotheses decision
+D-017).
 
 **Genome-wide test (H08).** Pearson r on vst values for every lncRNA ×
 mRNA pair (1.7 to 3.3 × 10^8 pairs per species), counting pairs at |r| >= 0.8,
@@ -108,6 +123,29 @@ observed and null values. The effect size is dr, the observed median r minus
 the mean null median. Pre-registered checks: residualizing timepoint as well,
 dropping all pairs within 2 kb, and repeating the whole procedure with
 gene–gene neighbor pairs.
+
+**Distal equivalence (H25).** Pairs 2–100 kb apart (overlapping pairs and
+pairs within 2 kb removed), Pearson r of vst residualized on colony and
+timepoint, in bins of 2–10, 10–50 and 50–100 kb. lncRNA–gene pairs were
+compared with gene–gene pairs reweighted within strata of gap, the anchor
+gene's expression, and the partner's expression and residual noise. The
+statistic is the bin-averaged difference in median r divided by the
+bin-averaged gene–gene median. Equivalence was tested with two one-sided
+tests against a ±25% margin (2,000 colony-bootstrap resamples within site,
+Holm across species); a scaffold-block bootstrap assessed genomic
+dependence.
+
+**Held-out prediction (H26).** lncRNAs at least 10 kb from any annotated
+gene, with at least 10 kb of assembled flank (297–1,317 per species). In
+each of 10 leave-one-colony-out folds, normalization and selection used the
+training colonies only: for each gene on another scaffold, its strongest
+isolated lncRNA after adjusting for colony, timepoint, log library size and
+the top-10-feature read fraction, keeping up to 100 targets with |r| ≥ 0.6.
+Mixed models with and without the lncRNA predicted the held-out colony; the
+statistic is the variance-scaled reduction in held-out error. The null
+reassigned whole lncRNA colony trajectories within site (1,000 of 14,399
+permutations, the full pipeline re-run each time). Benchmark: the same
+pipeline with expression-matched isolated genes as predictors.
 
 ## Results
 
@@ -159,6 +197,38 @@ over gene–gene pairs is in the 0–2 kb bin: *P. evermanni* 0.35 vs 0.14,
 Pairs where the lncRNA overlaps the gene were excluded from the test. As
 expected from shared reads, they correlate strongly (median r 0.54 to 0.71).
 
+### Beyond 2 kb, equivalence is not established (H25, inconclusive)
+
+After matching, lncRNA–gene pairs co-vary less than gene–gene pairs in every
+species and distance bin (@fig-h25). The relative difference is −0.34
+(*A. pulchra*, 95% interval −0.48 to −0.13), −0.31 (*P. evermanni*, −0.47 to
+−0.10) and −0.32 (*P. tuahiniensis*, −0.42 to −0.05). No species establishes
+equivalence within ±25%, and no interval lies wholly beyond the margin, so
+the pre-registered verdict is `inconclusive`. Every interval excludes 0, in
+both colony and scaffold-block resampling, and the gap shrinks only slightly
+(by 0.05–0.07) when timepoint is left in. The descriptive comparison above,
+which did not match on expression, overstated how similar the two classes
+are beyond 2 kb.
+
+![Median residual r beyond 2 kb for lncRNA–gene pairs and for gene–gene pairs matched on distance and expression, with 95% colony-bootstrap intervals. From H25.](figures/fig04-h25-matched-distal-bins.png){#fig-h25}
+
+### Distal lncRNA associations do not generalize to new colonies (H26, not supported)
+
+Every fold found 100 targets with |r| ≥ 0.6 to an isolated lncRNA (median
+selected |r| about 0.93), but adding that lncRNA made predictions for the
+held-out colony worse (@fig-h26): improvement −0.21 (*A. pulchra*, 95%
+interval −0.71 to 0.30), −0.55 (*P. evermanni*, −0.91 to −0.18) and −0.40
+(*P. tuahiniensis*, −0.79 to −0.14). The pre-registered verdict is `not
+supported`: the upper bound is below the 5% threshold in two species. In
+*A. pulchra* the selected pairs still did better than every permutation
+(p = 0.001), so they carry some reproducible association, but not enough to
+help prediction. Selection concentrated on a few lncRNAs (two supply 68% of
+*A. pulchra*'s pairs). With expression-matched isolated genes as predictors,
+the same pipeline improved held-out prediction by 0.52, 0.25 and 0.39, all
+with intervals above 0.
+
+![Held-out improvement (variance-scaled reduction in prediction error from adding the selected lncRNA) for the observed data (solid line) against 1,000 permutations of lncRNA colony trajectories (histogram); dashed line, the pre-registered 5% threshold. From H26.](figures/fig05-h26-heldout-vs-null.png){#fig-h26}
+
 ## Discussion
 
 The genome-wide result (H08) answers a methods question: with about 40
@@ -178,7 +248,18 @@ explanation. Strand information would separate these cases, and we have
 asked upstream whether stranded coordinates exist
 ([urol-e5/timeseries_molecular#139](https://github.com/urol-e5/timeseries_molecular/issues/139)).
 
-Limitations: about 10 colonies per species; pairs are not independent (one
+The follow-ups narrow what remains. Beyond 2 kb, lncRNAs are not more
+co-expressed with their neighbors than genes are; matched for expression
+they are about a third less so (H25), although the data cannot show whether
+that shortfall exceeds a quarter of the gene–gene signal. And the many strong
+distal lncRNA–mRNA correlations do not carry over to colonies not used to
+find them (H26), while distal gene–gene associations selected the same way
+do. Distal lncRNA edges in these data look like a few lncRNAs tracking broad
+expression axes, or shared library structure, rather than specific
+regulatory links. A less aggressive selection (fewer, stronger edges, or
+shrinkage) could behave differently and would be a new test.
+
+Limitations: about 10 colonies per species (H26 tests each fold on 2–4 samples); pairs are not independent (one
 lncRNA can neighbor several genes); *P. tuahiniensis* reads are mapped to
 the *P. meandrina* reference; correlation cannot establish function, which
 needs perturbation. A practical recommendation for lncRNA studies in corals
@@ -190,6 +271,8 @@ matched distances alongside any lncRNA cis claim.
 - Hypothesis, analysis and full results: [urol-e5/MOSAiC-hypotheses, H17](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H17)
   (`hypothesis.md`, `analysis.qmd`, `RESULT.md`, `output/`)
 - Genome-wide test: [urol-e5/MOSAiC-hypotheses, H08](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H08)
+- Distal equivalence: [urol-e5/MOSAiC-hypotheses, H25](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H25)
+- Held-out prediction: [urol-e5/MOSAiC-hypotheses, H26](https://github.com/urol-e5/MOSAiC-hypotheses/tree/main/hypotheses/H26)
 - Data portal: [urol-e5/MOSAiC](https://github.com/urol-e5/MOSAiC), commit `86432e3e393aecca307be356e514c95981177b7c`
 
 ## Suggested citation
@@ -202,3 +285,4 @@ Roberts, S. B. 2026. *lncRNAs Co-vary with Neighboring Genes in Three Reef Coral
 |---|---|---|
 | 0.1 | 2026-10-07 | Initial draft from MOSAiC-hypotheses H17 |
 | 0.2 | 2026-10-08 | Added the genome-wide test (H08) |
+| 0.3 | 2026-10-10 | Added distal equivalence (H25) and held-out prediction (H26); revised the beyond-2-kb statement |
